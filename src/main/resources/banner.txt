@@ -1,0 +1,28 @@
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMNmdhhyyhhdmNMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMNhso++oossssssoo+/+shNMMMMMMMMMMMMMM
+MMMMMMMMMMMNs++syho+-.```````./+hs+-/yNMMMMMMMMMMM
+MMMMMMMMMm+:oyyyhhhysoo/.````-:yhyyso-.+mMMMMMMMMM
+MMMMMMMNo:oyyyyhhhysssyso..--::ohy+oys--.oNMMMMMMM
+MMMMMMm:/yyyyyyhhyodmmso/ `-mms +hyyys+++:-dMMMMMM
+MMMMMd-/yyysoshhhyymmhy/` `-shd./hhhyyo++-..hMMMMM
+MMMMN-:yyyyyssyhdhsyso- `` `---.odhhyyhs-....dMMMM
+MMMM+.sysyosshyyhoyo- `:/+:`  .::ddhyydmhs:..:MMMM
+MMMN.-yys/:+yhhdhys.```:sso   `-/ddhhmNms++/..hMMM
+MMMh.:yyyyossohdys:`    ``    `:ydmNNNms+om/-.oMMM
+MMMy.-yyyyyyyyhdho-`          .yhmNNNdo+sddho.+MMM
+MMMh..oyyyyyyyhdd+-`         -yhhNNmyooydddho:oMMM
+MMMM-.-syyyyyyhhdy-.        :yhhmdyssydmdddh/-dMMM
+MMMMs..-syyyyyyhhd+-.      /yyhhhyhdmmmdddds:/MMMM
+MMMMM/..-oyyyyyyyhdo-.`   /yhhdmmNmmmddddhh--mMMMM
+MMMMMN/..-syyyyyyyhhy:-.`.yhhNNNNd/+shhhhh:-dMMMMM
+MMMMMMMo../yyyhhyyyyhh:--:hhNNNNyo.odhhhy:/mMMMMMM
+MMMMMMMMd:.yyyydmmmmmd:---ohNNNNmdhoddho-yMMMMMMMM
+MMMMMMMMMMho+shdmmNNh:``  `-/ymmmdddh+:yNMMMMMMMMM
+MMMMMMMMMMMMmo/odmNo-`      `-+mdyo+odNhhNdMMMMMMM
+MMMMMMMMMMMMMMMmysso++////////+ooymMMMMsoooMMMMMMM
+MMMMMMMMMMMMMMMMMMMMNmddhhddmNMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+
+            EURO 2016 BETS BACKEND
+            v${application.version}

@@ -1,0 +1,11 @@
+= Spring Boot Euro 2016 Bets Backend
+
+This is the backend for the ng2-euro-bets application.
+
+This backend uses:
+
+- spring-boot
+- kotlin
+- firebase
+
+It parses a json file retrieved from the guardian website & fills a firebase database.
