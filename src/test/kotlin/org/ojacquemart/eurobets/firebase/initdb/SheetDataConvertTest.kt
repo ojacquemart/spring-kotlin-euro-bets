@@ -33,18 +33,18 @@ class SheetDataConverterTest {
 
         assertThat(fixture1.home.name).isEqualTo("France")
         assertThat(fixture1.home.winner).isFalse()
-        assertThat(fixture1.home.isoCode).isEqualTo("fr")
+        assertThat(fixture1.home.isoAlpha2Code).isEqualTo("fr")
         assertThat(fixture1.home.goals).isEqualTo(0)
         assertThat(fixture1.away.name).isEqualTo("Romania")
         assertThat(fixture1.away.winner).isFalse()
-        assertThat(fixture1.away.isoCode).isEqualTo("ro")
+        assertThat(fixture1.away.isoAlpha2Code).isEqualTo("ro")
         assertThat(fixture1.away.goals).isEqualTo(0)
 
         val group1 = sheetData.groups.get(0)
         assertThat(group1.code).isEqualTo("Group_A")
         assertThat(group1.members).hasSize(4)
         assertThat(group1.members).extracting("country").contains("France", "Romania", "Albania", "Switzerland")
-        assertThat(group1.members).extracting("isoCode").contains("fr", "ro", "al", "ch")
+        assertThat(group1.members).extracting("isoAlpha2Code").contains("fr", "ro", "al", "ch")
     }
 
 }

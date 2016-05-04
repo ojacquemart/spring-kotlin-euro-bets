@@ -1,6 +1,6 @@
 package org.ojacquemart.eurobets.firebase.initdb
 
-import org.ojacquemart.eurobets.firebase.initdb.country.Iso3611Alpha2CodeFinder
+import org.ojacquemart.eurobets.firebase.initdb.country.CountryFinder
 import org.ojacquemart.eurobets.firebase.initdb.fixture.Fixture
 import org.ojacquemart.eurobets.firebase.initdb.fixture.Stadium
 import org.ojacquemart.eurobets.firebase.initdb.fixture.Status
@@ -17,7 +17,7 @@ import java.time.format.DateTimeFormatter
 
 class SheetDataConverter(val rawFixtures: RawFixtures) {
 
-    val iso3611Alpha2CodeFinder = Iso3611Alpha2CodeFinder()
+    val countryFinder = CountryFinder()
     val dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")
 
     // TODO: complete when more info...
@@ -46,10 +46,10 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
                     stadium,
                     rawFixture.phase,
                     Team(rawFixture.homeTeam,
-                            getIso3611Alpha2Code(rawFixture.homeTeam),
+                            getCountryAlpha2Code(rawFixture.homeTeam),
                             safeToIntFromGoals(rawFixture.homeGoals)),
                     Team(rawFixture.awayTeam,
-                            getIso3611Alpha2Code(rawFixture.awayTeam),
+                            getCountryAlpha2Code(rawFixture.awayTeam),
                             safeToIntFromGoals(rawFixture.awayGoals)),
                     status)
         }
@@ -70,7 +70,7 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
         return Group(groupName,
                 members = rawGroupMembers.map { rawGroupMember ->
                     GroupMember(country = rawGroupMember.country,
-                            isoCode = getIso3611Alpha2Code(rawGroupMember.country),
+                            isoAlpha2Code = getCountryAlpha2Code(rawGroupMember.country),
                             points = rawGroupMember.points,
                             win = rawGroupMember.win, lose = rawGroupMember.lose, draw = rawGroupMember.draw,
                             goalsFor = rawGroupMember.goalsFor, goalsAgainst = rawGroupMember.goalsAgainst)
@@ -93,8 +93,8 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
         return STATUS_BY_TEXT.get(status)?.id!!
     }
 
-    fun getIso3611Alpha2Code(countryName: String): String {
-        return iso3611Alpha2CodeFinder.findIso3611Alpha2Code(countryName)
+    fun getCountryAlpha2Code(countryName: String): String {
+        return countryFinder.find(countryName)
     }
 
     fun safeToIntFromGoals(goals: String): Int {

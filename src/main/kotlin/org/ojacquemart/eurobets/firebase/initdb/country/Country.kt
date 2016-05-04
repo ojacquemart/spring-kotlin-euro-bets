@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-data class Iso3166Country(
+data class Country(
     val name: String,
-    @JsonProperty("alpha-2") val alpha2: String) {
+    @JsonProperty("alpha-2") val isoAlpha2Code: String) {
 }

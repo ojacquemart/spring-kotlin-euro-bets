@@ -2,7 +2,7 @@ package org.ojacquemart.eurobets.firebase.initdb.group
 
 data class GroupMember(
         val country: String,
-        val isoCode: String,
+        val isoAlpha2Code: String,
         val points: String,
         val win: String,
         val lose: String,

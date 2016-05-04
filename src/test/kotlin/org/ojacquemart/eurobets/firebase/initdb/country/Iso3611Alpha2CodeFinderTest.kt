@@ -8,12 +8,12 @@ class Iso3611Alpha2CodeFinderTest {
 
     @Test
     fun testFind() {
-        val finder = Iso3611Alpha2CodeFinder()
+        val finder = CountryFinder()
 
-        assertThat(finder.findIso3611Alpha2Code("England")).isEqualTo("gb-eng")
-        assertThat(finder.findIso3611Alpha2Code("Scotland")).isEqualTo("gb-sct")
-        assertThat(finder.findIso3611Alpha2Code("France")).isEqualTo("fr")
-        assertThat(finder.findIso3611Alpha2Code("???")).isEmpty()
+        assertThat(finder.find("England")).isEqualTo("gb-eng")
+        assertThat(finder.find("Scotland")).isEqualTo("gb-sct")
+        assertThat(finder.find("France")).isEqualTo("fr")
+        assertThat(finder.find("???")).isEmpty()
     }
 
 }
