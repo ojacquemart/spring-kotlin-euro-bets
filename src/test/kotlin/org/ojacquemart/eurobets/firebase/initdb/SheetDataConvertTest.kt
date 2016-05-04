@@ -4,6 +4,7 @@ import org.assertj.core.api.AssertionsForInterfaceTypes.assertThat
 import org.junit.Before
 import org.junit.Test
 import org.ojacquemart.eurobets.firebase.initdb.fixture.Status
+import org.ojacquemart.eurobets.firebase.initdb.i18n.I18n
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixturesJsonFileLoader
 
 class SheetDataConverterTest {
@@ -44,6 +45,7 @@ class SheetDataConverterTest {
 
         val group1 = sheetData.groups.get(0)
         assertThat(group1.code).isEqualTo("Group_A")
+        assertThat(group1.label).isEqualTo(I18n("Groupe A", "Group A"))
         assertThat(group1.members).hasSize(4)
         assertThat(group1.members).extracting("country").contains("France", "Romania", "Albania", "Switzerland")
         assertThat(group1.members).extracting("isoAlpha2Code").contains("fr", "ro", "al", "ch")

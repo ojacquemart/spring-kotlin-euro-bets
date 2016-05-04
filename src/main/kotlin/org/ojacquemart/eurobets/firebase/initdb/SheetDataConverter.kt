@@ -8,6 +8,7 @@ import org.ojacquemart.eurobets.firebase.initdb.fixture.Status
 import org.ojacquemart.eurobets.firebase.initdb.fixture.Team
 import org.ojacquemart.eurobets.firebase.initdb.group.Group
 import org.ojacquemart.eurobets.firebase.initdb.group.GroupMember
+import org.ojacquemart.eurobets.firebase.initdb.group.Groups
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixture
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixtures
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawGroupMember
@@ -87,7 +88,8 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
     fun getGroup(groupName: String, rawGroupMembers: List<RawGroupMember>): Group {
         return Group(
                 code = groupName,
-                members= rawGroupMembers.map { rawGroupMember ->
+                label = Groups.getI18n(groupName),
+                members = rawGroupMembers.map { rawGroupMember ->
                     GroupMember(country = rawGroupMember.country,
                             isoAlpha2Code = getCountryAlpha2Code(rawGroupMember.country),
                             points = rawGroupMember.points,
