@@ -3,6 +3,7 @@ package org.ojacquemart.eurobets.firebase.initdb
 import org.assertj.core.api.AssertionsForInterfaceTypes.assertThat
 import org.junit.Before
 import org.junit.Test
+import org.ojacquemart.eurobets.firebase.initdb.fixture.Phase
 import org.ojacquemart.eurobets.firebase.initdb.fixture.Status
 import org.ojacquemart.eurobets.firebase.initdb.i18n.I18n
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixturesJsonFileLoader
@@ -29,7 +30,7 @@ class SheetDataConverterTest {
         assertThat(fixture1.number).isEqualTo(1)
         assertThat(fixture1.date).isEqualTo("10/06/2016")
         assertThat(fixture1.hour).isEqualTo("21:00")
-        assertThat(fixture1.phase).isEqualTo("Group_A")
+        assertThat(fixture1.phase).isEqualTo(Phase("group", I18n("Groupe A", "Group A")))
         assertThat(fixture1.status).isEqualTo(Status.TO_PLAY.id)
 
         assertThat(fixture1.home.name).isEqualTo("France")
@@ -42,6 +43,9 @@ class SheetDataConverterTest {
         assertThat(fixture1.away.goals).isEqualTo(0)
 
         assertThat(fixture1.stadium.city).isEqualTo("Paris")
+
+        val round16Fixture = sheetData.fixtures.find { fixture -> fixture.phase.code === "final" }!!
+        assertThat(round16Fixture.phase).isEqualTo(Phase("final", I18n("Huitième de finale", "Round 16")))
 
         val group1 = sheetData.groups.get(0)
         assertThat(group1.code).isEqualTo("Group_A")

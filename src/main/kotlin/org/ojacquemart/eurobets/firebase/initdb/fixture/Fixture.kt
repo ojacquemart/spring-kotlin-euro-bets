@@ -6,7 +6,7 @@ data class Fixture(
         val hour: String,
         val timestamp: Long,
         val stadium: Stadium,
-        val phase: String,
+        val phase: Phase,
         val home: Team,
         val away: Team,
         val status: Int)

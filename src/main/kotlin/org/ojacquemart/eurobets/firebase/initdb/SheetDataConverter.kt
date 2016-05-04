@@ -2,13 +2,10 @@ package org.ojacquemart.eurobets.firebase.initdb
 
 import org.ojacquemart.eurobets.firebase.initdb.country.Country
 import org.ojacquemart.eurobets.firebase.initdb.country.CountryFinder
-import org.ojacquemart.eurobets.firebase.initdb.fixture.Fixture
-import org.ojacquemart.eurobets.firebase.initdb.fixture.Stadium
-import org.ojacquemart.eurobets.firebase.initdb.fixture.Status
-import org.ojacquemart.eurobets.firebase.initdb.fixture.Team
+import org.ojacquemart.eurobets.firebase.initdb.fixture.*
 import org.ojacquemart.eurobets.firebase.initdb.group.Group
 import org.ojacquemart.eurobets.firebase.initdb.group.GroupMember
-import org.ojacquemart.eurobets.firebase.initdb.group.Groups
+import org.ojacquemart.eurobets.firebase.initdb.i18n.I18ns
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixture
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixtures
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawGroupMember
@@ -47,7 +44,7 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
                     rawFixture.kickoffTimeLocal,
                     getTimestamp(rawFixture),
                     stadium,
-                    rawFixture.phase,
+                    getPhase(rawFixture.phase),
                     Team(rawFixture.homeTeam,
                             getCountryAlpha2Code(rawFixture.homeTeam),
                             safeToIntFromGoals(rawFixture.homeGoals)),
@@ -62,6 +59,12 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
         val dateAsString = rawFixture.date + " " + rawFixture.kickoffTimeLocal
 
         return LocalDateTime.parse(dateAsString, dtf).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli()
+    }
+
+    private fun getPhase(phase: String): Phase {
+        val phaseCode = if (phase.startsWith("Group")) "group" else "final"
+
+        return Phase(phaseCode, I18ns.getPhase(phase))
     }
 
     fun getStatusFromRawStatus(status: String): Int {
@@ -88,7 +91,7 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
     fun getGroup(groupName: String, rawGroupMembers: List<RawGroupMember>): Group {
         return Group(
                 code = groupName,
-                label = Groups.getI18n(groupName),
+                label = I18ns.getGroup(groupName),
                 members = rawGroupMembers.map { rawGroupMember ->
                     GroupMember(country = rawGroupMember.country,
                             isoAlpha2Code = getCountryAlpha2Code(rawGroupMember.country),
