@@ -40,6 +40,8 @@ class SheetDataConverterTest {
         assertThat(fixture1.away.isoAlpha2Code).isEqualTo("ro")
         assertThat(fixture1.away.goals).isEqualTo(0)
 
+        assertThat(fixture1.stadium.city).isEqualTo("Paris")
+
         val group1 = sheetData.groups.get(0)
         assertThat(group1.code).isEqualTo("Group_A")
         assertThat(group1.members).hasSize(4)

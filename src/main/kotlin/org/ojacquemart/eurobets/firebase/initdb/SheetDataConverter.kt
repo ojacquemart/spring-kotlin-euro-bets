@@ -70,7 +70,7 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
     fun getStadiumFromRawCityName(city: String): Stadium {
         val rawStadium = this.rawFixtures.sheets.stadia.find { stadium -> stadium.city == city }!!
 
-        return Stadium(rawStadium.id, rawStadium.name, rawStadium.city)
+        return Stadium(rawStadium.id, rawStadium.name, rawStadium.city.replace(Regex("""\s\(.*\)$"""), ""))
     }
 
     private fun getGroups(sheets: Sheets): List<Group> {
