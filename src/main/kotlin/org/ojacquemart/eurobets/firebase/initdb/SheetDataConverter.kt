@@ -1,5 +1,6 @@
 package org.ojacquemart.eurobets.firebase.initdb
 
+import org.ojacquemart.eurobets.firebase.initdb.country.Country
 import org.ojacquemart.eurobets.firebase.initdb.country.CountryFinder
 import org.ojacquemart.eurobets.firebase.initdb.fixture.Fixture
 import org.ojacquemart.eurobets.firebase.initdb.fixture.Stadium
@@ -30,8 +31,9 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
 
         val fixtures = getFixtures(sheets)
         val groups = getGroups(sheets)
+        val countries = getCountries(groups)
 
-        return SheetData(fixtures, groups)
+        return SheetData(fixtures, groups, countries)
     }
 
     private fun getFixtures(sheets: Sheets): List<Fixture> {
@@ -55,6 +57,22 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
         }
     }
 
+    fun getTimestamp(rawFixture: RawFixture): Long {
+        val dateAsString = rawFixture.date + " " + rawFixture.kickoffTimeLocal
+
+        return LocalDateTime.parse(dateAsString, dtf).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli()
+    }
+
+    fun getStatusFromRawStatus(status: String): Int {
+        return STATUS_BY_TEXT.get(status)?.id!!
+    }
+
+    fun getStadiumFromRawCityName(city: String): Stadium {
+        val rawStadium = this.rawFixtures.sheets.stadia.find { stadium -> stadium.city == city }!!
+
+        return Stadium(rawStadium.id, rawStadium.name, rawStadium.city)
+    }
+
     private fun getGroups(sheets: Sheets): List<Group> {
         return listOf(
                 getGroup("Group_A", sheets.groupA),
@@ -67,8 +85,9 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
     }
 
     fun getGroup(groupName: String, rawGroupMembers: List<RawGroupMember>): Group {
-        return Group(groupName,
-                members = rawGroupMembers.map { rawGroupMember ->
+        return Group(
+                code = groupName,
+                members= rawGroupMembers.map { rawGroupMember ->
                     GroupMember(country = rawGroupMember.country,
                             isoAlpha2Code = getCountryAlpha2Code(rawGroupMember.country),
                             points = rawGroupMember.points,
@@ -77,20 +96,10 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
                 })
     }
 
-    fun getTimestamp(rawFixture: RawFixture): Long {
-        val dateAsString = rawFixture.date + " " + rawFixture.kickoffTimeLocal
-
-        return LocalDateTime.parse(dateAsString, dtf).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli()
-    }
-
-    fun getStadiumFromRawCityName(city: String): Stadium {
-        val rawStadium = this.rawFixtures.sheets.stadia.find { stadium -> stadium.city == city }!!
-
-        return Stadium(rawStadium.id, rawStadium.name, rawStadium.city)
-    }
-
-    fun getStatusFromRawStatus(status: String): Int {
-        return STATUS_BY_TEXT.get(status)?.id!!
+    private fun getCountries(groups: List<Group>): List<Country> {
+        return groups
+                .flatMap { group -> group.members }
+                .map { groupMember -> Country(groupMember.country, groupMember.isoAlpha2Code) }
     }
 
     fun getCountryAlpha2Code(countryName: String): String {

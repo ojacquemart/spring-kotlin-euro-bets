@@ -45,6 +45,11 @@ class SheetDataConverterTest {
         assertThat(group1.members).hasSize(4)
         assertThat(group1.members).extracting("country").contains("France", "Romania", "Albania", "Switzerland")
         assertThat(group1.members).extracting("isoAlpha2Code").contains("fr", "ro", "al", "ch")
+
+        assertThat(sheetData.countries).hasSize(24)
+        val country1 = sheetData.countries.get(0)
+        assertThat(country1.name).isEqualTo("France")
+        assertThat(country1.isoAlpha2Code).isEqualTo("fr")
     }
 
 }
