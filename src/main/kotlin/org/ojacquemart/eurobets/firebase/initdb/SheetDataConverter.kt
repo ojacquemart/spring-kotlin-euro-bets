@@ -45,14 +45,18 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
                     getTimestamp(rawFixture),
                     stadium,
                     getPhase(rawFixture.phase),
-                    Team(rawFixture.homeTeam,
-                            getCountryAlpha2Code(rawFixture.homeTeam),
-                            safeToIntFromGoals(rawFixture.homeGoals)),
-                    Team(rawFixture.awayTeam,
-                            getCountryAlpha2Code(rawFixture.awayTeam),
-                            safeToIntFromGoals(rawFixture.awayGoals)),
-                    status)
+                    home = getTeam(rawFixture.homeTeam, rawFixture.homeGoals),
+                    away = getTeam(rawFixture.awayTeam, rawFixture.awayGoals),
+                    status = status)
         }
+    }
+
+    // teams
+
+    private fun getTeam(teamName: String, teamGoals: String): Team {
+        val country = getCountryByName(teamName)
+
+        return Team(country.i18n, country.isoAlpha2Code, safeToIntFromGoals(teamGoals))
     }
 
     fun getTimestamp(rawFixture: RawFixture): Long {
@@ -77,6 +81,8 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
         return Stadium(rawStadium.id, rawStadium.name, rawStadium.city.replace(Regex("""\s\(.*\)$"""), ""))
     }
 
+    // groups
+
     private fun getGroups(sheets: Sheets): List<Group> {
         return listOf(
                 getGroup("Group_A", sheets.groupA),
@@ -92,22 +98,31 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
         return Group(
                 code = groupName,
                 label = I18ns.getGroup(groupName),
-                members = rawGroupMembers.map { rawGroupMember ->
-                    GroupMember(country = rawGroupMember.country,
-                            isoAlpha2Code = getCountryAlpha2Code(rawGroupMember.country),
-                            points = rawGroupMember.points,
-                            win = rawGroupMember.win, lose = rawGroupMember.lose, draw = rawGroupMember.draw,
-                            goalsFor = rawGroupMember.goalsFor, goalsAgainst = rawGroupMember.goalsAgainst)
-                })
+                members = rawGroupMembers.map { rawGroupMember -> getGroupMember(rawGroupMember) }
+        )
     }
+
+    fun getGroupMember(rawGroupMember: RawGroupMember): GroupMember {
+        val country = getCountryByName(rawGroupMember.country)
+
+        return GroupMember(
+                i18n = country.i18n,
+                isoAlpha2Code = country.isoAlpha2Code,
+                points = rawGroupMember.points,
+                win = rawGroupMember.win, lose = rawGroupMember.lose, draw = rawGroupMember.draw,
+                goalsFor = rawGroupMember.goalsFor, goalsAgainst = rawGroupMember.goalsAgainst)
+
+    }
+
+    // helper methods
 
     private fun getCountries(groups: List<Group>): List<Country> {
         return groups
                 .flatMap { group -> group.members }
-                .map { groupMember -> Country(groupMember.country, groupMember.isoAlpha2Code) }
+                .map { groupMember -> Country(groupMember.i18n, groupMember.isoAlpha2Code) }
     }
 
-    fun getCountryAlpha2Code(countryName: String): String {
+    fun getCountryByName(countryName: String): Country {
         return countryFinder.find(countryName)
     }
 

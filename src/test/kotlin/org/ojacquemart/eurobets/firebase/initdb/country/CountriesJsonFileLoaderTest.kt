@@ -3,7 +3,7 @@ package org.ojacquemart.eurobets.firebase.initdb.country
 import org.assertj.core.api.AssertionsForInterfaceTypes.assertThat
 import org.junit.Test
 
-class Iso3166JsonFileLoaderTest {
+class CountriesJsonFileLoaderTest {
 
     @Test
     fun testLoad() {
@@ -12,6 +12,6 @@ class Iso3166JsonFileLoaderTest {
         assertThat(iso3166Countries).isNotNull()
 
         // make sure that we find england which is a particular case
-        assertThat(iso3166Countries.countries.find{ country -> country.name.equals("England") }!!).isNotNull()
+        assertThat(iso3166Countries.countries.find{ country -> country.i18n.en.equals("England") }!!).isNotNull()
     }
 }
