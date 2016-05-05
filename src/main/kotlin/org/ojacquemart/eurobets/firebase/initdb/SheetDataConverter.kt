@@ -97,7 +97,7 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
     fun getGroup(groupName: String, rawGroupMembers: List<RawGroupMember>): Group {
         return Group(
                 code = groupName,
-                label = I18ns.getGroup(groupName),
+                i18n = I18ns.getGroup(groupName),
                 members = rawGroupMembers.map { rawGroupMember -> getGroupMember(rawGroupMember) }
         )
     }

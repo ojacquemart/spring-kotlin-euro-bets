@@ -51,7 +51,7 @@ class SheetDataConverterTest {
 
         val group1 = sheetData.groups.get(0)
         assertThat(group1.code).isEqualTo("Group_A")
-        assertThat(group1.label).isEqualTo(I18n("Groupe A", "Group A"))
+        assertThat(group1.i18n).isEqualTo(I18n("Groupe A", "Group A"))
         assertThat(group1.members).hasSize(4)
         assertThat(group1.members).extracting("i18n")
                 .contains(I18n("France", "France"), I18n("Roumanie", "Romania"), I18n("Albanie", "Albania"), I18n("Suisse", "Switzerland"))
