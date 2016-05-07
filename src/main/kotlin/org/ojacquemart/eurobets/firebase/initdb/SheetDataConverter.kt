@@ -108,10 +108,10 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
         return GroupMember(
                 i18n = country.i18n,
                 isoAlpha2Code = country.isoAlpha2Code,
-                points = rawGroupMember.points,
-                win = rawGroupMember.win, lose = rawGroupMember.lose, draw = rawGroupMember.draw,
-                goalsFor = rawGroupMember.goalsFor, goalsAgainst = rawGroupMember.goalsAgainst)
-
+                position = rawGroupMember.position.toInt(),
+                points = rawGroupMember.points.toInt(),
+                win = rawGroupMember.win.toInt(), lose = rawGroupMember.lose.toInt(), draw = rawGroupMember.draw.toInt(),
+                goalsFor = rawGroupMember.goalsFor.toInt(), goalsAgainst = rawGroupMember.goalsAgainst.toInt())
     }
 
     // helper methods
