@@ -34,7 +34,9 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
         return SheetData(fixtures, groups, countries)
     }
 
-    private fun getFixtures(sheets: Sheets): List<Fixture> {
+    // fixtures
+
+    private fun getFixtures(sheets: Sheets): Map<String, Fixture> {
         return sheets.fixtures.map { rawFixture ->
             val stadium = getStadiumFromRawCityName(rawFixture.stadiumCity)
             val status = getStatusFromRawStatus(rawFixture.resultFixture)
@@ -48,7 +50,7 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
                     home = getTeam(rawFixture.homeTeam, rawFixture.homeGoals),
                     away = getTeam(rawFixture.awayTeam, rawFixture.awayGoals),
                     status = status)
-        }
+        }.associateBy({ it.number.toString() }, { it })
     }
 
     // teams
