@@ -10,6 +10,7 @@ import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixture
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixtures
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawGroupMember
 import org.ojacquemart.eurobets.firebase.initdb.raw.Sheets
+import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
@@ -17,7 +18,9 @@ import java.time.format.DateTimeFormatter
 class SheetDataConverter(val rawFixtures: RawFixtures) {
 
     val countryFinder = CountryFinder()
-    val dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")
+
+    val ddMMyyyyHHmm = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")
+    val ddMMyyyy = DateTimeFormatter.ofPattern("dd/MM/yyyy")
 
     // TODO: complete when more info...
     val STATUS_BY_TEXT = mapOf(
@@ -43,6 +46,7 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
 
             Fixture(rawFixture.id,
                     rawFixture.date,
+                    getTimestampDate(rawFixture),
                     rawFixture.kickoffTimeLocal,
                     getTimestamp(rawFixture),
                     stadium,
@@ -53,18 +57,25 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
         }.associateBy({ it.number.toString() }, { it })
     }
 
+    private fun getTimestampDate(rawFixture: RawFixture): Long {
+        val dt = LocalDate.parse(rawFixture.date, ddMMyyyy).atStartOfDay(ZoneId.systemDefault())
+
+        return dt.toInstant().toEpochMilli()
+    }
+
+    fun getTimestamp(rawFixture: RawFixture): Long {
+        val dateAsString = rawFixture.date + " " + rawFixture.kickoffTimeLocal
+        val ldt = LocalDateTime.parse(dateAsString, ddMMyyyyHHmm).atZone(ZoneId.systemDefault()).toLocalDateTime()
+
+        return ldt.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli()
+    }
+
     // teams
 
     private fun getTeam(teamName: String, teamGoals: String): Team {
         val country = getCountryByName(teamName)
 
         return Team(country.i18n, country.isoAlpha2Code, safeToIntFromGoals(teamGoals))
-    }
-
-    fun getTimestamp(rawFixture: RawFixture): Long {
-        val dateAsString = rawFixture.date + " " + rawFixture.kickoffTimeLocal
-
-        return LocalDateTime.parse(dateAsString, dtf).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli()
     }
 
     private fun getPhase(phase: String): Phase {
@@ -134,5 +145,4 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
             else -> goals.toInt()
         }
     }
-
 }

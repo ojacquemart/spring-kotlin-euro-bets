@@ -29,6 +29,7 @@ class SheetDataConverterTest {
 
         assertThat(fixture1.number).isEqualTo(1)
         assertThat(fixture1.date).isEqualTo("10/06/2016")
+        assertThat(fixture1.dateTimestamp).isEqualTo(1465509600000)
         assertThat(fixture1.hour).isEqualTo("21:00")
         assertThat(fixture1.phase).isEqualTo(Phase("group", "GroupA", I18n("Groupe A", "Group A")))
         assertThat(fixture1.status).isEqualTo(Status.TO_PLAY.id)
