@@ -45,6 +45,7 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
             val status = getStatusFromRawStatus(rawFixture.resultFixture)
 
             Fixture(rawFixture.id,
+                    rawFixture.dayId.toInt(),
                     rawFixture.date,
                     getTimestampDate(rawFixture),
                     rawFixture.kickoffTimeLocal,
