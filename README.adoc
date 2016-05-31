@@ -9,3 +9,11 @@ This backend uses:
 - firebase
 
 It parses a json file retrieved from the guardian website & fills a firebase database.
+
+== Setup
+
+Imagine you have an app https://foobar.firebaseio.com
+
+You have to provide 2 vm args to the spring-boot: the instance & a secret token:
+
+`-Dfirebase.app=foobar -Dfirebase.secret=Zm9vYmFycWl4...`
