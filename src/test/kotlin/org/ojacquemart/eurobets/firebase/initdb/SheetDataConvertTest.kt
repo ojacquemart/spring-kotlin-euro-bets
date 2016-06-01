@@ -4,7 +4,7 @@ import org.assertj.core.api.AssertionsForInterfaceTypes.assertThat
 import org.junit.Before
 import org.junit.Test
 import org.ojacquemart.eurobets.firebase.initdb.fixture.Phase
-import org.ojacquemart.eurobets.firebase.initdb.fixture.Status
+import org.ojacquemart.eurobets.firebase.misc.Status
 import org.ojacquemart.eurobets.firebase.initdb.i18n.I18n
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixturesJsonFileLoader
 
