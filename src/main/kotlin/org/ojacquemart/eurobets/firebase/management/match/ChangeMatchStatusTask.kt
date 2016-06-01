@@ -21,12 +21,8 @@ open class ChangeMatchStatusTask(val schedulingConfig: SchedulingSettings,
 
     @PostConstruct
     fun changeStatuses() {
-        val obsMatches: Observable<List<Match>> = RxFirebase.observe(ref.firebase.child(Collections.matches))
-                .map { ds -> ds!!.children }
-                .map { ds ->
-                    ds.map { data -> data.getValue(Match::class.java) }
-                            .filter { match -> match.status == Status.TO_PLAY.id }
-                }
+        val obsMatches: Observable<List<Match>> = RxFirebase.observeList(ref.firebase.child(Collections.matches), Match::class.java)
+                .map { matches -> matches.filter { match -> match.status == Status.TO_PLAY.id } }
 
         obsMatches.subscribe { matches ->
             if (!matches.isEmpty()) {
