@@ -1,0 +1,4 @@
+scheduling:
+  # every hour
+  cron-started: 0 * * * * ?
+  cron-matches: 0 * * * * ?
