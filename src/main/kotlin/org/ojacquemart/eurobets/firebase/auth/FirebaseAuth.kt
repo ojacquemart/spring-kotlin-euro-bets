@@ -25,12 +25,12 @@ object FirebaseAuth {
         return Observable.create { subscriber ->
             ref.firebase.authWithCustomToken(ref.settings.secret, object : Firebase.AuthResultHandler {
                 override fun onAuthenticated(authData: AuthData) {
-                    println("Auth OK!")
+                    println("Auth OK on ${ref.settings.app}!")
                     subscriber.onNext(authData)
                 }
 
                 override fun onAuthenticationError(firebaseError: FirebaseError) {
-                    println("Auth KO!")
+                    println("Auth KO on ${ref.settings.app}!")
                     subscriber.onError(firebaseError.toException())
                 }
             })
