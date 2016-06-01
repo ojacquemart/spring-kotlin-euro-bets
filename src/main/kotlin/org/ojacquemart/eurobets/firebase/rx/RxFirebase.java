@@ -7,6 +7,10 @@ import rx.functions.Action0;
 import rx.functions.Func1;
 import rx.subscriptions.Subscriptions;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
 /**
  * @see https://gist.github.com/gsoltis/86210e3259dcc6998801
  */
@@ -111,12 +115,37 @@ public class RxFirebase {
                 });
 
                 // When the subscription is cancelled, remove the listener
-                subscriber.add(Subscriptions.create(new Action0() {
+                subscriber.add(Subscriptions.create(() -> ref.removeEventListener(listener)));
+            }
+        });
+    }
+
+    public static <T> Observable<List<T>> observeList(final Query ref, Class<T> clazz) {
+
+        return Observable.create(new Observable.OnSubscribe<List<T>>() {
+
+            @Override
+            public void call(final Subscriber<? super List<T>> subscriber) {
+                final ValueEventListener listener = ref.addValueEventListener(new ValueEventListener() {
                     @Override
-                    public void call() {
-                        ref.removeEventListener(listener);
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        List<T> items = new ArrayList<>();
+                        for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                            items.add(ds.getValue(clazz));
+                        }
+
+                        subscriber.onNext(items);
                     }
-                }));
+
+                    @Override
+                    public void onCancelled(FirebaseError error) {
+                        // Turn the FirebaseError into a throwable to conform to the API
+                        subscriber.onError(new FirebaseException(error.getMessage()));
+                    }
+                });
+
+                // When the subscription is cancelled, remove the listener
+                subscriber.add(Subscriptions.create(() -> ref.removeEventListener(listener)));
             }
         });
     }
