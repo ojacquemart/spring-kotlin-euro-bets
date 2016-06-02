@@ -1,3 +1,10 @@
+mailing.smtp:
+  host: in.mailjet.com
+  auth: true
+  port: 465
+  socket-factory-class: javax.net.ssl.SSLSocketFactory
+  socket-factory-port: 465
+
 scheduling:
   # every hour
   cron-started: 0 * * * * ?
