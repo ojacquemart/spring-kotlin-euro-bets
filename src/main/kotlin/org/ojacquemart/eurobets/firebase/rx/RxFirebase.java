@@ -9,7 +9,6 @@ import rx.subscriptions.Subscriptions;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 /**
  * @see https://gist.github.com/gsoltis/86210e3259dcc6998801
