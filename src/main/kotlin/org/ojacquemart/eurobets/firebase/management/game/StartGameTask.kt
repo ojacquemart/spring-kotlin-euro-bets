@@ -4,6 +4,7 @@ import org.ojacquemart.eurobets.firebase.Collections
 import org.ojacquemart.eurobets.firebase.config.FirebaseRef
 import org.ojacquemart.eurobets.firebase.config.SchedulingSettings
 import org.ojacquemart.eurobets.firebase.rx.RxFirebase
+import org.ojacquemart.eurobets.lang.loggerFor
 import org.springframework.scheduling.TaskScheduler
 import org.springframework.scheduling.support.CronTrigger
 import org.springframework.stereotype.Component
@@ -15,6 +16,8 @@ import javax.annotation.PostConstruct
 open class StartGameTask(val schedulingConfig: SchedulingSettings,
                          val ref: FirebaseRef,
                          val taskScheduler: TaskScheduler) {
+
+    private val log = loggerFor<StartGameTask>()
 
     var scheduled: ScheduledFuture<*>? = null
 
@@ -29,15 +32,15 @@ open class StartGameTask(val schedulingConfig: SchedulingSettings,
     }
 
     private fun handleStartedFlag(gameSettings: GameSettings) {
-        println("Game is started: ${gameSettings.started}")
+        log.info("Game started status: ${gameSettings.started}")
 
         when (gameSettings.started) {
             true -> if (scheduled != null) {
-                println("Game is started. Cancel the scheduled task.")
+                log.debug("Game is started. Cancel the scheduled task.")
                 scheduled!!.cancel(true);
             }
             false -> {
-                println("Game is not started. Set up the scheduled with cron=${schedulingConfig.cronStarted}")
+                log.info("Game is not started. Set up the scheduled with cron=${schedulingConfig.cronStarted}")
                 val updater = SettingsUpdater(ref)
                 scheduled = taskScheduler.schedule(StartGameCheckRunnable(gameSettings, updater), CronTrigger(schedulingConfig.cronStarted))
             }

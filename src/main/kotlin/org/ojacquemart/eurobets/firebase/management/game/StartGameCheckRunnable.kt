@@ -1,15 +1,19 @@
 package org.ojacquemart.eurobets.firebase.management.game
 
+import org.ojacquemart.eurobets.lang.loggerFor
+
 class StartGameCheckRunnable(val gameSettings: GameSettings, val updater: SettingsUpdater): Runnable {
 
+    private val log = loggerFor<StartGameCheckRunnable>()
+
     override fun run() {
-        println("Check if game is started...")
+        log.info("Check if game is started...")
 
         if (gameSettings.isStarted(System.currentTimeMillis())) {
-            println("Game started...")
+            log.info("Game started...")
             updater.start()
         } else {
-            println("Game not started yet. Nothing to do!")
+            log.debug("Game not started yet. Nothing to do!")
         }
     }
 

@@ -5,6 +5,7 @@ import org.ojacquemart.eurobets.firebase.config.FirebaseRef
 import org.ojacquemart.eurobets.firebase.config.SchedulingSettings
 import org.ojacquemart.eurobets.firebase.misc.Status
 import org.ojacquemart.eurobets.firebase.rx.RxFirebase
+import org.ojacquemart.eurobets.lang.loggerFor
 import org.springframework.scheduling.TaskScheduler
 import org.springframework.scheduling.support.CronTrigger
 import org.springframework.stereotype.Component
@@ -17,6 +18,8 @@ open class ChangeMatchStatusTask(val schedulingConfig: SchedulingSettings,
                                  val ref: FirebaseRef,
                                  val taskScheduler: TaskScheduler) {
 
+    private val log = loggerFor<org.ojacquemart.eurobets.firebase.management.match.ChangeMatchStatusTask>()
+
     var scheduled: ScheduledFuture<*>? = null
 
     @PostConstruct
@@ -28,13 +31,13 @@ open class ChangeMatchStatusTask(val schedulingConfig: SchedulingSettings,
             if (!matches.isEmpty()) {
                 handleMatches(matches)
             } else {
-                println("All matches have been started!")
+                log.info("All matches have been started!")
             }
         }
     }
 
     private fun handleMatches(matches: List<Match>) {
-        println("Schedule task to update ${matches.size} matches")
+        log.info("Schedule task to update ${matches.size} matches")
         if (scheduled != null) scheduled!!.cancel(true)
 
         scheduled = taskScheduler.schedule(ChangeMatchCheckTaskRunnable(matches, ref), CronTrigger(schedulingConfig.cronMatches))

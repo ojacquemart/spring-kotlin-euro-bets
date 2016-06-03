@@ -4,6 +4,7 @@ import org.ojacquemart.eurobets.firebase.Collections
 import org.ojacquemart.eurobets.firebase.config.FirebaseRef
 import org.ojacquemart.eurobets.firebase.config.FirebaseSettings
 import org.ojacquemart.eurobets.firebase.rx.RxFirebase
+import org.ojacquemart.eurobets.lang.loggerFor
 import org.springframework.stereotype.Component
 import rx.Observable
 import javax.annotation.PostConstruct
@@ -11,13 +12,15 @@ import javax.annotation.PostConstruct
 @Component
 class ImageModeration(val ref: FirebaseRef, val mailSender: MailSender<League>) {
 
+    private val log = loggerFor<ImageModeration>()
+
     @PostConstruct
     fun init() {
         moderate()
     }
 
     private fun moderate() {
-        println("Leagues images moderation")
+        log.info("Leagues images moderation")
 
         RxFirebase.observeList(this.ref.firebase.child(Collections.leagues), League::class.java)
                 .flatMapIterable { it -> it }
@@ -25,7 +28,7 @@ class ImageModeration(val ref: FirebaseRef, val mailSender: MailSender<League>) 
                 .flatMap { it -> copyWithImageAsDataUrl(it) }
                 .map { it -> getMessage(ref.settings, it) }
                 .subscribe { it ->
-                    println("Send mail for ${it.item.name}")
+                    log.info("Send mail for ${it.item.name}")
                     mailSender.sendMail(it)
                 }
     }
