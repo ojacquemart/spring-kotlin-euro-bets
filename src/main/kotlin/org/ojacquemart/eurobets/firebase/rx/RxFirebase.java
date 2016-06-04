@@ -104,7 +104,8 @@ public class RxFirebase {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         subscriber.onNext(dataSnapshot);
-                    }
+                        subscriber.onCompleted();
+                        }
 
                     @Override
                     public void onCancelled(FirebaseError error) {
@@ -120,6 +121,10 @@ public class RxFirebase {
     }
 
     public static <T> Observable<List<T>> observeList(final Query ref, Class<T> clazz) {
+        return observeList(ref, clazz, false);
+    }
+
+    public static <T> Observable<List<T>> observeList(final Query ref, Class<T> clazz, boolean callOnCompleted) {
 
         return Observable.create(new Observable.OnSubscribe<List<T>>() {
 
@@ -134,6 +139,9 @@ public class RxFirebase {
                         }
 
                         subscriber.onNext(items);
+                        if (callOnCompleted) {
+                            subscriber.onCompleted();
+                        }
                     }
 
                     @Override

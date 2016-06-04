@@ -1,5 +1,8 @@
 package org.ojacquemart.eurobets.firebase.initdb.fixture
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 data class Fixture(
         val number: Int,
         val dayId: Int,
@@ -8,7 +11,7 @@ data class Fixture(
         val hour: String,
         val timestamp: Long,
         val stadium: Stadium,
-        val phase: Phase,
-        val home: Team,
-        val away: Team,
+        val phase: Phase18n,
+        val home: TeamI18n,
+        val away: TeamI18n,
         val status: Int)

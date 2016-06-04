@@ -74,16 +74,16 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
 
     // teams
 
-    private fun getTeam(teamName: String, teamGoals: String): Team {
+    private fun getTeam(teamName: String, teamGoals: String): TeamI18n {
         val country = getCountryByName(teamName)
 
-        return Team(country.i18n, country.isoAlpha2Code, safeToIntFromGoals(teamGoals))
+        return TeamI18n(country.i18n, country.isoAlpha2Code, safeToIntFromGoals(teamGoals))
     }
 
-    private fun getPhase(phase: String): Phase {
+    private fun getPhase(phase: String): Phase18n {
         val phaseCode = if (phase.startsWith("Group")) "group" else "final"
 
-        return Phase(state = phaseCode, code = Phases.clean(phase), i18n = I18ns.getPhase(phase))
+        return Phase18n(state = phaseCode, code = Phases.clean(phase), i18n = I18ns.getPhase(phase))
     }
 
     fun getStatusFromRawStatus(status: String): Int {

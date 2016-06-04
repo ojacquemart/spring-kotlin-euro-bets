@@ -3,10 +3,10 @@ package org.ojacquemart.eurobets.firebase.initdb
 import org.assertj.core.api.AssertionsForInterfaceTypes.assertThat
 import org.junit.Before
 import org.junit.Test
-import org.ojacquemart.eurobets.firebase.initdb.fixture.Phase
-import org.ojacquemart.eurobets.firebase.misc.Status
+import org.ojacquemart.eurobets.firebase.initdb.fixture.Phase18n
 import org.ojacquemart.eurobets.firebase.initdb.i18n.I18n
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixturesJsonFileLoader
+import org.ojacquemart.eurobets.firebase.misc.Status
 
 class SheetDataConverterTest {
 
@@ -32,7 +32,7 @@ class SheetDataConverterTest {
         assertThat(fixture1.date).isEqualTo("10/06/2016")
         assertThat(fixture1.dateTimestamp).isEqualTo(1465509600000)
         assertThat(fixture1.hour).isEqualTo("21:00")
-        assertThat(fixture1.phase).isEqualTo(Phase("group", "GroupA", I18n("Groupe A", "Group A")))
+        assertThat(fixture1.phase).isEqualTo(Phase18n("group", "GroupA", I18n("Groupe A", "Group A")))
         assertThat(fixture1.status).isEqualTo(Status.TO_PLAY.id)
 
         assertThat(fixture1.home.i18n.fr).isEqualTo("France")
@@ -50,7 +50,7 @@ class SheetDataConverterTest {
 
         val round16Fixture = sheetData.fixtures.filter { entry -> entry.value.phase.state === "final" }.values.iterator().next()
         assertThat(round16Fixture.dayId).isEqualTo(4)
-        assertThat(round16Fixture.phase).isEqualTo(Phase("final", "Round16", I18n("Huitième de finale", "Round 16")))
+        assertThat(round16Fixture.phase).isEqualTo(Phase18n("final", "Round16", I18n("Huitième de finale", "Round 16")))
 
         val group1 = sheetData.groups.get(0)
         assertThat(group1.code).isEqualTo("GroupA")
