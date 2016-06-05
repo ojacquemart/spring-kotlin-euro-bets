@@ -10,9 +10,9 @@ import rx.Observable
 import javax.annotation.PostConstruct
 
 @Component
-class ImageModeration(val ref: FirebaseRef, val mailSender: MailSender<League>) {
+class ImageModerator(val ref: FirebaseRef, val mailSender: MailSender<League>) {
 
-    private val log = loggerFor<ImageModeration>()
+    private val log = loggerFor<ImageModerator>()
 
     @PostConstruct
     fun init() {
