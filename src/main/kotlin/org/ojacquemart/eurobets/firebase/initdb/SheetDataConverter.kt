@@ -10,6 +10,7 @@ import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixture
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixtures
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawGroupMember
 import org.ojacquemart.eurobets.firebase.initdb.raw.Sheets
+import org.ojacquemart.eurobets.firebase.misc.Settings
 import org.ojacquemart.eurobets.firebase.misc.Status
 import java.time.LocalDate
 import java.time.LocalDateTime
@@ -35,7 +36,7 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
         val groups = getGroups(sheets)
         val countries = getCountries(groups)
 
-        return SheetData(fixtures, groups, countries)
+        return SheetData(Settings(), fixtures, groups, countries)
     }
 
     // fixtures

@@ -3,6 +3,7 @@ package org.ojacquemart.eurobets.firebase.management.game
 import org.ojacquemart.eurobets.firebase.Collections
 import org.ojacquemart.eurobets.firebase.config.FirebaseRef
 import org.ojacquemart.eurobets.firebase.config.SchedulingSettings
+import org.ojacquemart.eurobets.firebase.misc.Settings
 import org.ojacquemart.eurobets.firebase.rx.RxFirebase
 import org.ojacquemart.eurobets.lang.loggerFor
 import org.springframework.scheduling.TaskScheduler
@@ -23,18 +24,18 @@ open class StartGameTask(val schedulingConfig: SchedulingSettings,
 
     @PostConstruct
     fun checkStart() {
-        val obsGameSettings: Observable<GameSettings> = RxFirebase.observe(ref.firebase.child(Collections.settings))
-                .map { ds -> ds.getValue(GameSettings::class.java) }
+        val obsSettings: Observable<Settings> = RxFirebase.observe(ref.firebase.child(Collections.settings))
+                .map { ds -> ds.getValue(Settings::class.java) }
 
-        obsGameSettings.subscribe { settings ->
+        obsSettings.subscribe { settings ->
             handleStartedFlag(settings)
         }
     }
 
-    private fun handleStartedFlag(gameSettings: GameSettings) {
-        log.info("Game started status: ${gameSettings.started}")
+    private fun handleStartedFlag(settings: Settings) {
+        log.info("Game started status: ${settings.started}")
 
-        when (gameSettings.started) {
+        when (settings.started) {
             true -> if (scheduled != null) {
                 log.debug("Game is started. Cancel the scheduled task.")
                 scheduled!!.cancel(true);
@@ -42,7 +43,7 @@ open class StartGameTask(val schedulingConfig: SchedulingSettings,
             false -> {
                 log.info("Game is not started. Set up the scheduled with cron=${schedulingConfig.cronStarted}")
                 val updater = SettingsUpdater(ref)
-                scheduled = taskScheduler.schedule(StartGameCheckRunnable(gameSettings, updater), CronTrigger(schedulingConfig.cronStarted))
+                scheduled = taskScheduler.schedule(StartGameCheckRunnable(settings, updater), CronTrigger(schedulingConfig.cronStarted))
             }
         }
     }

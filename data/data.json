@@ -1,2612 +1,2550 @@
 {
-  "settings": {
-    "dayId": 3,
-    "started": false,
-    "startedAt": 1465585200000,
-    "phase": "group"
+  "settings" : {
+    "dayId" : 3,
+    "phase" : "group",
+    "startedAt" : 1465585200000,
+    "started" : false
   },
-  "fixtures": {
-    "1": {
-      "number": 1,
-      "dayId": 1,
-      "date": "10/06/2016",
-      "dateTimestamp": 1465509600000,
-      "hour": "21:00",
-      "timestamp": 1465585200000,
-      "stadium": {
-        "id": 3,
-        "name": "Stade de France",
-        "city": "Paris"
+  "fixtures" : {
+    "1" : {
+      "number" : 1,
+      "dayId" : 1,
+      "date" : "10/06/2016",
+      "dateTimestamp" : 1465509600000,
+      "hour" : "21:00",
+      "timestamp" : 1465585200000,
+      "stadium" : {
+        "id" : 3,
+        "name" : "Stade de France",
+        "city" : "Paris"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupA",
-        "i18n": {
-          "fr": "Groupe A",
-          "en": "Group A"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupA",
+        "i18n" : {
+          "fr" : "Groupe A",
+          "en" : "Group A"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "France",
-          "en": "France"
+      "home" : {
+        "i18n" : {
+          "fr" : "France",
+          "en" : "France"
         },
-        "isoAlpha2Code": "fr",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "fr",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Roumanie",
-          "en": "Romania"
+      "away" : {
+        "i18n" : {
+          "fr" : "Roumanie",
+          "en" : "Romania"
         },
-        "isoAlpha2Code": "ro",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "ro",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "2": {
-      "number": 2,
-      "dayId": 1,
-      "date": "11/06/2016",
-      "dateTimestamp": 1465596000000,
-      "hour": "15:00",
-      "timestamp": 1465650000000,
-      "stadium": {
-        "id": 2,
-        "name": "Stade Bollaert-Delelis",
-        "city": "Lens"
+    "2" : {
+      "number" : 2,
+      "dayId" : 1,
+      "date" : "11/06/2016",
+      "dateTimestamp" : 1465596000000,
+      "hour" : "15:00",
+      "timestamp" : 1465650000000,
+      "stadium" : {
+        "id" : 2,
+        "name" : "Stade Bollaert-Delelis",
+        "city" : "Lens"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupA",
-        "i18n": {
-          "fr": "Groupe A",
-          "en": "Group A"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupA",
+        "i18n" : {
+          "fr" : "Groupe A",
+          "en" : "Group A"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Albanie",
-          "en": "Albania"
+      "home" : {
+        "i18n" : {
+          "fr" : "Albanie",
+          "en" : "Albania"
         },
-        "isoAlpha2Code": "al",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "al",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Suisse",
-          "en": "Switzerland"
+      "away" : {
+        "i18n" : {
+          "fr" : "Suisse",
+          "en" : "Switzerland"
         },
-        "isoAlpha2Code": "ch",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "ch",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "3": {
-      "number": 3,
-      "dayId": 1,
-      "date": "11/06/2016",
-      "dateTimestamp": 1465596000000,
-      "hour": "18:00",
-      "timestamp": 1465660800000,
-      "stadium": {
-        "id": 5,
-        "name": "Stade de Bordeaux",
-        "city": "Bordeaux"
+    "3" : {
+      "number" : 3,
+      "dayId" : 1,
+      "date" : "11/06/2016",
+      "dateTimestamp" : 1465596000000,
+      "hour" : "18:00",
+      "timestamp" : 1465660800000,
+      "stadium" : {
+        "id" : 5,
+        "name" : "Stade de Bordeaux",
+        "city" : "Bordeaux"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupB",
-        "i18n": {
-          "fr": "Groupe B",
-          "en": "Group B"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupB",
+        "i18n" : {
+          "fr" : "Groupe B",
+          "en" : "Group B"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Pays de Galles",
-          "en": "Wales"
+      "home" : {
+        "i18n" : {
+          "fr" : "Pays de Galles",
+          "en" : "Wales"
         },
-        "isoAlpha2Code": "gb-wls",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "gb-wls",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Slovaquie",
-          "en": "Slovakia"
+      "away" : {
+        "i18n" : {
+          "fr" : "Slovaquie",
+          "en" : "Slovakia"
         },
-        "isoAlpha2Code": "sk",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "sk",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "4": {
-      "number": 4,
-      "dayId": 1,
-      "date": "11/06/2016",
-      "dateTimestamp": 1465596000000,
-      "hour": "21:00",
-      "timestamp": 1465671600000,
-      "stadium": {
-        "id": 9,
-        "name": "Stade Vélodrome",
-        "city": "Marseille"
+    "4" : {
+      "number" : 4,
+      "dayId" : 1,
+      "date" : "11/06/2016",
+      "dateTimestamp" : 1465596000000,
+      "hour" : "21:00",
+      "timestamp" : 1465671600000,
+      "stadium" : {
+        "id" : 9,
+        "name" : "Stade Vélodrome",
+        "city" : "Marseille"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupB",
-        "i18n": {
-          "fr": "Groupe B",
-          "en": "Group B"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupB",
+        "i18n" : {
+          "fr" : "Groupe B",
+          "en" : "Group B"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Angleterre",
-          "en": "England"
+      "home" : {
+        "i18n" : {
+          "fr" : "Angleterre",
+          "en" : "England"
         },
-        "isoAlpha2Code": "gb-eng",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "gb-eng",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Russie",
-          "en": "Russia"
+      "away" : {
+        "i18n" : {
+          "fr" : "Russie",
+          "en" : "Russia"
         },
-        "isoAlpha2Code": "ru",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "ru",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "5": {
-      "number": 5,
-      "dayId": 1,
-      "date": "12/06/2016",
-      "dateTimestamp": 1465682400000,
-      "hour": "15:00",
-      "timestamp": 1465736400000,
-      "stadium": {
-        "id": 4,
-        "name": "Parc des Princes",
-        "city": "Paris"
+    "5" : {
+      "number" : 5,
+      "dayId" : 1,
+      "date" : "12/06/2016",
+      "dateTimestamp" : 1465682400000,
+      "hour" : "15:00",
+      "timestamp" : 1465736400000,
+      "stadium" : {
+        "id" : 4,
+        "name" : "Parc des Princes",
+        "city" : "Paris"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupD",
-        "i18n": {
-          "fr": "Groupe D",
-          "en": "Group D"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupD",
+        "i18n" : {
+          "fr" : "Groupe D",
+          "en" : "Group D"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Turquie",
-          "en": "Turkey"
+      "home" : {
+        "i18n" : {
+          "fr" : "Turquie",
+          "en" : "Turkey"
         },
-        "isoAlpha2Code": "tr",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "tr",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Croatie",
-          "en": "Croatia"
+      "away" : {
+        "i18n" : {
+          "fr" : "Croatie",
+          "en" : "Croatia"
         },
-        "isoAlpha2Code": "hr",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "hr",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "6": {
-      "number": 6,
-      "dayId": 1,
-      "date": "12/06/2016",
-      "dateTimestamp": 1465682400000,
-      "hour": "18:00",
-      "timestamp": 1465747200000,
-      "stadium": {
-        "id": 10,
-        "name": "Stade de Nice",
-        "city": "Nice"
+    "6" : {
+      "number" : 6,
+      "dayId" : 1,
+      "date" : "12/06/2016",
+      "dateTimestamp" : 1465682400000,
+      "hour" : "18:00",
+      "timestamp" : 1465747200000,
+      "stadium" : {
+        "id" : 10,
+        "name" : "Stade de Nice",
+        "city" : "Nice"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupC",
-        "i18n": {
-          "fr": "Groupe C",
-          "en": "Group C"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupC",
+        "i18n" : {
+          "fr" : "Groupe C",
+          "en" : "Group C"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Pologne",
-          "en": "Poland"
+      "home" : {
+        "i18n" : {
+          "fr" : "Pologne",
+          "en" : "Poland"
         },
-        "isoAlpha2Code": "pl",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "pl",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Irlande du Nord",
-          "en": "Northern Ireland"
+      "away" : {
+        "i18n" : {
+          "fr" : "Irlande du Nord",
+          "en" : "Northern Ireland"
         },
-        "isoAlpha2Code": "gb-nir",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "gb-nir",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "7": {
-      "number": 7,
-      "dayId": 1,
-      "date": "12/06/2016",
-      "dateTimestamp": 1465682400000,
-      "hour": "21:00",
-      "timestamp": 1465758000000,
-      "stadium": {
-        "id": 1,
-        "name": "Stade Pierre Mauroy",
-        "city": "Lille"
+    "7" : {
+      "number" : 7,
+      "dayId" : 1,
+      "date" : "12/06/2016",
+      "dateTimestamp" : 1465682400000,
+      "hour" : "21:00",
+      "timestamp" : 1465758000000,
+      "stadium" : {
+        "id" : 1,
+        "name" : "Stade Pierre Mauroy",
+        "city" : "Lille"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupC",
-        "i18n": {
-          "fr": "Groupe C",
-          "en": "Group C"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupC",
+        "i18n" : {
+          "fr" : "Groupe C",
+          "en" : "Group C"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Allemagne",
-          "en": "Germany"
+      "home" : {
+        "i18n" : {
+          "fr" : "Allemagne",
+          "en" : "Germany"
         },
-        "isoAlpha2Code": "de",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "de",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Ukraine",
-          "en": "Ukraine"
+      "away" : {
+        "i18n" : {
+          "fr" : "Ukraine",
+          "en" : "Ukraine"
         },
-        "isoAlpha2Code": "ua",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "ua",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "8": {
-      "number": 8,
-      "dayId": 1,
-      "date": "13/06/2016",
-      "dateTimestamp": 1465768800000,
-      "hour": "15:00",
-      "timestamp": 1465822800000,
-      "stadium": {
-        "id": 6,
-        "name": "Stadium de Toulouse",
-        "city": "Toulouse"
+    "8" : {
+      "number" : 8,
+      "dayId" : 1,
+      "date" : "13/06/2016",
+      "dateTimestamp" : 1465768800000,
+      "hour" : "15:00",
+      "timestamp" : 1465822800000,
+      "stadium" : {
+        "id" : 6,
+        "name" : "Stadium de Toulouse",
+        "city" : "Toulouse"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupD",
-        "i18n": {
-          "fr": "Groupe D",
-          "en": "Group D"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupD",
+        "i18n" : {
+          "fr" : "Groupe D",
+          "en" : "Group D"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Espagne",
-          "en": "Spain"
+      "home" : {
+        "i18n" : {
+          "fr" : "Espagne",
+          "en" : "Spain"
         },
-        "isoAlpha2Code": "es",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "es",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "République tchèque",
-          "en": "Czech Republic"
+      "away" : {
+        "i18n" : {
+          "fr" : "République tchèque",
+          "en" : "Czech Republic"
         },
-        "isoAlpha2Code": "cz",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "cz",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "9": {
-      "number": 9,
-      "dayId": 1,
-      "date": "13/06/2016",
-      "dateTimestamp": 1465768800000,
-      "hour": "18:00",
-      "timestamp": 1465833600000,
-      "stadium": {
-        "id": 3,
-        "name": "Stade de France",
-        "city": "Paris"
+    "9" : {
+      "number" : 9,
+      "dayId" : 1,
+      "date" : "13/06/2016",
+      "dateTimestamp" : 1465768800000,
+      "hour" : "18:00",
+      "timestamp" : 1465833600000,
+      "stadium" : {
+        "id" : 3,
+        "name" : "Stade de France",
+        "city" : "Paris"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupE",
-        "i18n": {
-          "fr": "Groupe E",
-          "en": "Group E"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupE",
+        "i18n" : {
+          "fr" : "Groupe E",
+          "en" : "Group E"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Irlande",
-          "en": "Republic of Ireland"
+      "home" : {
+        "i18n" : {
+          "fr" : "Irlande",
+          "en" : "Republic of Ireland"
         },
-        "isoAlpha2Code": "ie",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "ie",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Suède",
-          "en": "Sweden"
+      "away" : {
+        "i18n" : {
+          "fr" : "Suède",
+          "en" : "Sweden"
         },
-        "isoAlpha2Code": "se",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "se",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "10": {
-      "number": 10,
-      "dayId": 1,
-      "date": "13/06/2016",
-      "dateTimestamp": 1465768800000,
-      "hour": "21:00",
-      "timestamp": 1465844400000,
-      "stadium": {
-        "id": 8,
-        "name": "Stade de Lyon",
-        "city": "Lyon"
+    "10" : {
+      "number" : 10,
+      "dayId" : 1,
+      "date" : "13/06/2016",
+      "dateTimestamp" : 1465768800000,
+      "hour" : "21:00",
+      "timestamp" : 1465844400000,
+      "stadium" : {
+        "id" : 8,
+        "name" : "Stade de Lyon",
+        "city" : "Lyon"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupE",
-        "i18n": {
-          "fr": "Groupe E",
-          "en": "Group E"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupE",
+        "i18n" : {
+          "fr" : "Groupe E",
+          "en" : "Group E"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Belgique",
-          "en": "Belgium"
+      "home" : {
+        "i18n" : {
+          "fr" : "Belgique",
+          "en" : "Belgium"
         },
-        "isoAlpha2Code": "be",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "be",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Italie",
-          "en": "Italy"
+      "away" : {
+        "i18n" : {
+          "fr" : "Italie",
+          "en" : "Italy"
         },
-        "isoAlpha2Code": "it",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "it",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "11": {
-      "number": 11,
-      "dayId": 1,
-      "date": "14/06/2016",
-      "dateTimestamp": 1465855200000,
-      "hour": "18:00",
-      "timestamp": 1465920000000,
-      "stadium": {
-        "id": 5,
-        "name": "Stade de Bordeaux",
-        "city": "Bordeaux"
+    "11" : {
+      "number" : 11,
+      "dayId" : 1,
+      "date" : "14/06/2016",
+      "dateTimestamp" : 1465855200000,
+      "hour" : "18:00",
+      "timestamp" : 1465920000000,
+      "stadium" : {
+        "id" : 5,
+        "name" : "Stade de Bordeaux",
+        "city" : "Bordeaux"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupF",
-        "i18n": {
-          "fr": "Groupe F",
-          "en": "Group F"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupF",
+        "i18n" : {
+          "fr" : "Groupe F",
+          "en" : "Group F"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Autriche",
-          "en": "Austria"
+      "home" : {
+        "i18n" : {
+          "fr" : "Autriche",
+          "en" : "Austria"
         },
-        "isoAlpha2Code": "at",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "at",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Hongrie",
-          "en": "Hungary"
+      "away" : {
+        "i18n" : {
+          "fr" : "Hongrie",
+          "en" : "Hungary"
         },
-        "isoAlpha2Code": "hu",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "hu",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "12": {
-      "number": 12,
-      "dayId": 1,
-      "date": "14/06/2016",
-      "dateTimestamp": 1465855200000,
-      "hour": "21:00",
-      "timestamp": 1465930800000,
-      "stadium": {
-        "id": 7,
-        "name": "Stade Geoffroy Guichard",
-        "city": "Saint-Étienne"
+    "12" : {
+      "number" : 12,
+      "dayId" : 1,
+      "date" : "14/06/2016",
+      "dateTimestamp" : 1465855200000,
+      "hour" : "21:00",
+      "timestamp" : 1465930800000,
+      "stadium" : {
+        "id" : 7,
+        "name" : "Stade Geoffroy Guichard",
+        "city" : "Saint-Étienne"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupF",
-        "i18n": {
-          "fr": "Groupe F",
-          "en": "Group F"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupF",
+        "i18n" : {
+          "fr" : "Groupe F",
+          "en" : "Group F"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Portugal",
-          "en": "Portugal"
+      "home" : {
+        "i18n" : {
+          "fr" : "Portugal",
+          "en" : "Portugal"
         },
-        "isoAlpha2Code": "pt",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "pt",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Islande",
-          "en": "Iceland"
+      "away" : {
+        "i18n" : {
+          "fr" : "Islande",
+          "en" : "Iceland"
         },
-        "isoAlpha2Code": "is",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "is",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "13": {
-      "number": 13,
-      "dayId": 2,
-      "date": "15/06/2016",
-      "dateTimestamp": 1465941600000,
-      "hour": "15:00",
-      "timestamp": 1465995600000,
-      "stadium": {
-        "id": 1,
-        "name": "Stade Pierre Mauroy",
-        "city": "Lille"
+    "13" : {
+      "number" : 13,
+      "dayId" : 2,
+      "date" : "15/06/2016",
+      "dateTimestamp" : 1465941600000,
+      "hour" : "15:00",
+      "timestamp" : 1465995600000,
+      "stadium" : {
+        "id" : 1,
+        "name" : "Stade Pierre Mauroy",
+        "city" : "Lille"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupB",
-        "i18n": {
-          "fr": "Groupe B",
-          "en": "Group B"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupB",
+        "i18n" : {
+          "fr" : "Groupe B",
+          "en" : "Group B"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Russie",
-          "en": "Russia"
+      "home" : {
+        "i18n" : {
+          "fr" : "Russie",
+          "en" : "Russia"
         },
-        "isoAlpha2Code": "ru",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "ru",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Slovaquie",
-          "en": "Slovakia"
+      "away" : {
+        "i18n" : {
+          "fr" : "Slovaquie",
+          "en" : "Slovakia"
         },
-        "isoAlpha2Code": "sk",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "sk",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "14": {
-      "number": 14,
-      "dayId": 2,
-      "date": "15/06/2016",
-      "dateTimestamp": 1465941600000,
-      "hour": "18:00",
-      "timestamp": 1466006400000,
-      "stadium": {
-        "id": 4,
-        "name": "Parc des Princes",
-        "city": "Paris"
+    "14" : {
+      "number" : 14,
+      "dayId" : 2,
+      "date" : "15/06/2016",
+      "dateTimestamp" : 1465941600000,
+      "hour" : "18:00",
+      "timestamp" : 1466006400000,
+      "stadium" : {
+        "id" : 4,
+        "name" : "Parc des Princes",
+        "city" : "Paris"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupA",
-        "i18n": {
-          "fr": "Groupe A",
-          "en": "Group A"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupA",
+        "i18n" : {
+          "fr" : "Groupe A",
+          "en" : "Group A"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Roumanie",
-          "en": "Romania"
+      "home" : {
+        "i18n" : {
+          "fr" : "Roumanie",
+          "en" : "Romania"
         },
-        "isoAlpha2Code": "ro",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "ro",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Suisse",
-          "en": "Switzerland"
+      "away" : {
+        "i18n" : {
+          "fr" : "Suisse",
+          "en" : "Switzerland"
         },
-        "isoAlpha2Code": "ch",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "ch",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "15": {
-      "number": 15,
-      "dayId": 2,
-      "date": "15/06/2016",
-      "dateTimestamp": 1465941600000,
-      "hour": "21:00",
-      "timestamp": 1466017200000,
-      "stadium": {
-        "id": 9,
-        "name": "Stade Vélodrome",
-        "city": "Marseille"
+    "15" : {
+      "number" : 15,
+      "dayId" : 2,
+      "date" : "15/06/2016",
+      "dateTimestamp" : 1465941600000,
+      "hour" : "21:00",
+      "timestamp" : 1466017200000,
+      "stadium" : {
+        "id" : 9,
+        "name" : "Stade Vélodrome",
+        "city" : "Marseille"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupA",
-        "i18n": {
-          "fr": "Groupe A",
-          "en": "Group A"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupA",
+        "i18n" : {
+          "fr" : "Groupe A",
+          "en" : "Group A"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "France",
-          "en": "France"
+      "home" : {
+        "i18n" : {
+          "fr" : "France",
+          "en" : "France"
         },
-        "isoAlpha2Code": "fr",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "fr",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Albanie",
-          "en": "Albania"
+      "away" : {
+        "i18n" : {
+          "fr" : "Albanie",
+          "en" : "Albania"
         },
-        "isoAlpha2Code": "al",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "al",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "16": {
-      "number": 16,
-      "dayId": 2,
-      "date": "16/06/2016",
-      "dateTimestamp": 1466028000000,
-      "hour": "15:00",
-      "timestamp": 1466082000000,
-      "stadium": {
-        "id": 2,
-        "name": "Stade Bollaert-Delelis",
-        "city": "Lens"
+    "16" : {
+      "number" : 16,
+      "dayId" : 2,
+      "date" : "16/06/2016",
+      "dateTimestamp" : 1466028000000,
+      "hour" : "15:00",
+      "timestamp" : 1466082000000,
+      "stadium" : {
+        "id" : 2,
+        "name" : "Stade Bollaert-Delelis",
+        "city" : "Lens"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupB",
-        "i18n": {
-          "fr": "Groupe B",
-          "en": "Group B"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupB",
+        "i18n" : {
+          "fr" : "Groupe B",
+          "en" : "Group B"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Angleterre",
-          "en": "England"
+      "home" : {
+        "i18n" : {
+          "fr" : "Angleterre",
+          "en" : "England"
         },
-        "isoAlpha2Code": "gb-eng",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "gb-eng",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Pays de Galles",
-          "en": "Wales"
+      "away" : {
+        "i18n" : {
+          "fr" : "Pays de Galles",
+          "en" : "Wales"
         },
-        "isoAlpha2Code": "gb-wls",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "gb-wls",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "17": {
-      "number": 17,
-      "dayId": 2,
-      "date": "16/06/2016",
-      "dateTimestamp": 1466028000000,
-      "hour": "18:00",
-      "timestamp": 1466092800000,
-      "stadium": {
-        "id": 8,
-        "name": "Stade de Lyon",
-        "city": "Lyon"
+    "17" : {
+      "number" : 17,
+      "dayId" : 2,
+      "date" : "16/06/2016",
+      "dateTimestamp" : 1466028000000,
+      "hour" : "18:00",
+      "timestamp" : 1466092800000,
+      "stadium" : {
+        "id" : 8,
+        "name" : "Stade de Lyon",
+        "city" : "Lyon"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupC",
-        "i18n": {
-          "fr": "Groupe C",
-          "en": "Group C"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupC",
+        "i18n" : {
+          "fr" : "Groupe C",
+          "en" : "Group C"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Ukraine",
-          "en": "Ukraine"
+      "home" : {
+        "i18n" : {
+          "fr" : "Ukraine",
+          "en" : "Ukraine"
         },
-        "isoAlpha2Code": "ua",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "ua",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Irlande du Nord",
-          "en": "Northern Ireland"
+      "away" : {
+        "i18n" : {
+          "fr" : "Irlande du Nord",
+          "en" : "Northern Ireland"
         },
-        "isoAlpha2Code": "gb-nir",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "gb-nir",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "18": {
-      "number": 18,
-      "dayId": 2,
-      "date": "16/06/2016",
-      "dateTimestamp": 1466028000000,
-      "hour": "21:00",
-      "timestamp": 1466103600000,
-      "stadium": {
-        "id": 3,
-        "name": "Stade de France",
-        "city": "Paris"
+    "18" : {
+      "number" : 18,
+      "dayId" : 2,
+      "date" : "16/06/2016",
+      "dateTimestamp" : 1466028000000,
+      "hour" : "21:00",
+      "timestamp" : 1466103600000,
+      "stadium" : {
+        "id" : 3,
+        "name" : "Stade de France",
+        "city" : "Paris"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupC",
-        "i18n": {
-          "fr": "Groupe C",
-          "en": "Group C"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupC",
+        "i18n" : {
+          "fr" : "Groupe C",
+          "en" : "Group C"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Allemagne",
-          "en": "Germany"
+      "home" : {
+        "i18n" : {
+          "fr" : "Allemagne",
+          "en" : "Germany"
         },
-        "isoAlpha2Code": "de",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "de",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Pologne",
-          "en": "Poland"
+      "away" : {
+        "i18n" : {
+          "fr" : "Pologne",
+          "en" : "Poland"
         },
-        "isoAlpha2Code": "pl",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "pl",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "19": {
-      "number": 19,
-      "dayId": 2,
-      "date": "17/06/2016",
-      "dateTimestamp": 1466114400000,
-      "hour": "15:00",
-      "timestamp": 1466168400000,
-      "stadium": {
-        "id": 6,
-        "name": "Stadium de Toulouse",
-        "city": "Toulouse"
+    "19" : {
+      "number" : 19,
+      "dayId" : 2,
+      "date" : "17/06/2016",
+      "dateTimestamp" : 1466114400000,
+      "hour" : "15:00",
+      "timestamp" : 1466168400000,
+      "stadium" : {
+        "id" : 6,
+        "name" : "Stadium de Toulouse",
+        "city" : "Toulouse"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupE",
-        "i18n": {
-          "fr": "Groupe E",
-          "en": "Group E"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupE",
+        "i18n" : {
+          "fr" : "Groupe E",
+          "en" : "Group E"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Italie",
-          "en": "Italy"
+      "home" : {
+        "i18n" : {
+          "fr" : "Italie",
+          "en" : "Italy"
         },
-        "isoAlpha2Code": "it",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "it",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Suède",
-          "en": "Sweden"
+      "away" : {
+        "i18n" : {
+          "fr" : "Suède",
+          "en" : "Sweden"
         },
-        "isoAlpha2Code": "se",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "se",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "20": {
-      "number": 20,
-      "dayId": 2,
-      "date": "17/06/2016",
-      "dateTimestamp": 1466114400000,
-      "hour": "18:00",
-      "timestamp": 1466179200000,
-      "stadium": {
-        "id": 7,
-        "name": "Stade Geoffroy Guichard",
-        "city": "Saint-Étienne"
+    "20" : {
+      "number" : 20,
+      "dayId" : 2,
+      "date" : "17/06/2016",
+      "dateTimestamp" : 1466114400000,
+      "hour" : "18:00",
+      "timestamp" : 1466179200000,
+      "stadium" : {
+        "id" : 7,
+        "name" : "Stade Geoffroy Guichard",
+        "city" : "Saint-Étienne"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupD",
-        "i18n": {
-          "fr": "Groupe D",
-          "en": "Group D"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupD",
+        "i18n" : {
+          "fr" : "Groupe D",
+          "en" : "Group D"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "République tchèque",
-          "en": "Czech Republic"
+      "home" : {
+        "i18n" : {
+          "fr" : "République tchèque",
+          "en" : "Czech Republic"
         },
-        "isoAlpha2Code": "cz",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "cz",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Croatie",
-          "en": "Croatia"
+      "away" : {
+        "i18n" : {
+          "fr" : "Croatie",
+          "en" : "Croatia"
         },
-        "isoAlpha2Code": "hr",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "hr",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "21": {
-      "number": 21,
-      "dayId": 2,
-      "date": "17/06/2016",
-      "dateTimestamp": 1466114400000,
-      "hour": "21:00",
-      "timestamp": 1466190000000,
-      "stadium": {
-        "id": 10,
-        "name": "Stade de Nice",
-        "city": "Nice"
+    "21" : {
+      "number" : 21,
+      "dayId" : 2,
+      "date" : "17/06/2016",
+      "dateTimestamp" : 1466114400000,
+      "hour" : "21:00",
+      "timestamp" : 1466190000000,
+      "stadium" : {
+        "id" : 10,
+        "name" : "Stade de Nice",
+        "city" : "Nice"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupD",
-        "i18n": {
-          "fr": "Groupe D",
-          "en": "Group D"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupD",
+        "i18n" : {
+          "fr" : "Groupe D",
+          "en" : "Group D"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Espagne",
-          "en": "Spain"
+      "home" : {
+        "i18n" : {
+          "fr" : "Espagne",
+          "en" : "Spain"
         },
-        "isoAlpha2Code": "es",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "es",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Turquie",
-          "en": "Turkey"
+      "away" : {
+        "i18n" : {
+          "fr" : "Turquie",
+          "en" : "Turkey"
         },
-        "isoAlpha2Code": "tr",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "tr",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "22": {
-      "number": 22,
-      "dayId": 2,
-      "date": "18/06/2016",
-      "dateTimestamp": 1466200800000,
-      "hour": "15:00",
-      "timestamp": 1466254800000,
-      "stadium": {
-        "id": 5,
-        "name": "Stade de Bordeaux",
-        "city": "Bordeaux"
+    "22" : {
+      "number" : 22,
+      "dayId" : 2,
+      "date" : "18/06/2016",
+      "dateTimestamp" : 1466200800000,
+      "hour" : "15:00",
+      "timestamp" : 1466254800000,
+      "stadium" : {
+        "id" : 5,
+        "name" : "Stade de Bordeaux",
+        "city" : "Bordeaux"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupE",
-        "i18n": {
-          "fr": "Groupe E",
-          "en": "Group E"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupE",
+        "i18n" : {
+          "fr" : "Groupe E",
+          "en" : "Group E"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Belgique",
-          "en": "Belgium"
+      "home" : {
+        "i18n" : {
+          "fr" : "Belgique",
+          "en" : "Belgium"
         },
-        "isoAlpha2Code": "be",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "be",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Irlande",
-          "en": "Republic of Ireland"
+      "away" : {
+        "i18n" : {
+          "fr" : "Irlande",
+          "en" : "Republic of Ireland"
         },
-        "isoAlpha2Code": "ie",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "ie",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "23": {
-      "number": 23,
-      "dayId": 2,
-      "date": "18/06/2016",
-      "dateTimestamp": 1466200800000,
-      "hour": "18:00",
-      "timestamp": 1466265600000,
-      "stadium": {
-        "id": 9,
-        "name": "Stade Vélodrome",
-        "city": "Marseille"
+    "23" : {
+      "number" : 23,
+      "dayId" : 2,
+      "date" : "18/06/2016",
+      "dateTimestamp" : 1466200800000,
+      "hour" : "18:00",
+      "timestamp" : 1466265600000,
+      "stadium" : {
+        "id" : 9,
+        "name" : "Stade Vélodrome",
+        "city" : "Marseille"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupF",
-        "i18n": {
-          "fr": "Groupe F",
-          "en": "Group F"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupF",
+        "i18n" : {
+          "fr" : "Groupe F",
+          "en" : "Group F"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Islande",
-          "en": "Iceland"
+      "home" : {
+        "i18n" : {
+          "fr" : "Islande",
+          "en" : "Iceland"
         },
-        "isoAlpha2Code": "is",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "is",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Hongrie",
-          "en": "Hungary"
+      "away" : {
+        "i18n" : {
+          "fr" : "Hongrie",
+          "en" : "Hungary"
         },
-        "isoAlpha2Code": "hu",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "hu",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "24": {
-      "number": 24,
-      "dayId": 2,
-      "date": "18/06/2016",
-      "dateTimestamp": 1466200800000,
-      "hour": "21:00",
-      "timestamp": 1466276400000,
-      "stadium": {
-        "id": 4,
-        "name": "Parc des Princes",
-        "city": "Paris"
+    "24" : {
+      "number" : 24,
+      "dayId" : 2,
+      "date" : "18/06/2016",
+      "dateTimestamp" : 1466200800000,
+      "hour" : "21:00",
+      "timestamp" : 1466276400000,
+      "stadium" : {
+        "id" : 4,
+        "name" : "Parc des Princes",
+        "city" : "Paris"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupF",
-        "i18n": {
-          "fr": "Groupe F",
-          "en": "Group F"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupF",
+        "i18n" : {
+          "fr" : "Groupe F",
+          "en" : "Group F"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Portugal",
-          "en": "Portugal"
+      "home" : {
+        "i18n" : {
+          "fr" : "Portugal",
+          "en" : "Portugal"
         },
-        "isoAlpha2Code": "pt",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "pt",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Autriche",
-          "en": "Austria"
+      "away" : {
+        "i18n" : {
+          "fr" : "Autriche",
+          "en" : "Austria"
         },
-        "isoAlpha2Code": "at",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "at",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "25": {
-      "number": 25,
-      "dayId": 3,
-      "date": "19/06/2016",
-      "dateTimestamp": 1466287200000,
-      "hour": "21:00",
-      "timestamp": 1466362800000,
-      "stadium": {
-        "id": 8,
-        "name": "Stade de Lyon",
-        "city": "Lyon"
+    "25" : {
+      "number" : 25,
+      "dayId" : 3,
+      "date" : "19/06/2016",
+      "dateTimestamp" : 1466287200000,
+      "hour" : "21:00",
+      "timestamp" : 1466362800000,
+      "stadium" : {
+        "id" : 8,
+        "name" : "Stade de Lyon",
+        "city" : "Lyon"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupA",
-        "i18n": {
-          "fr": "Groupe A",
-          "en": "Group A"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupA",
+        "i18n" : {
+          "fr" : "Groupe A",
+          "en" : "Group A"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Roumanie",
-          "en": "Romania"
+      "home" : {
+        "i18n" : {
+          "fr" : "Roumanie",
+          "en" : "Romania"
         },
-        "isoAlpha2Code": "ro",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "ro",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Albanie",
-          "en": "Albania"
+      "away" : {
+        "i18n" : {
+          "fr" : "Albanie",
+          "en" : "Albania"
         },
-        "isoAlpha2Code": "al",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "al",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "26": {
-      "number": 26,
-      "dayId": 3,
-      "date": "19/06/2016",
-      "dateTimestamp": 1466287200000,
-      "hour": "21:00",
-      "timestamp": 1466362800000,
-      "stadium": {
-        "id": 1,
-        "name": "Stade Pierre Mauroy",
-        "city": "Lille"
+    "26" : {
+      "number" : 26,
+      "dayId" : 3,
+      "date" : "19/06/2016",
+      "dateTimestamp" : 1466287200000,
+      "hour" : "21:00",
+      "timestamp" : 1466362800000,
+      "stadium" : {
+        "id" : 1,
+        "name" : "Stade Pierre Mauroy",
+        "city" : "Lille"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupA",
-        "i18n": {
-          "fr": "Groupe A",
-          "en": "Group A"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupA",
+        "i18n" : {
+          "fr" : "Groupe A",
+          "en" : "Group A"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Suisse",
-          "en": "Switzerland"
+      "home" : {
+        "i18n" : {
+          "fr" : "Suisse",
+          "en" : "Switzerland"
         },
-        "isoAlpha2Code": "ch",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "ch",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "France",
-          "en": "France"
+      "away" : {
+        "i18n" : {
+          "fr" : "France",
+          "en" : "France"
         },
-        "isoAlpha2Code": "fr",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "fr",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "27": {
-      "number": 27,
-      "dayId": 3,
-      "date": "20/06/2016",
-      "dateTimestamp": 1466373600000,
-      "hour": "21:00",
-      "timestamp": 1466449200000,
-      "stadium": {
-        "id": 6,
-        "name": "Stadium de Toulouse",
-        "city": "Toulouse"
+    "27" : {
+      "number" : 27,
+      "dayId" : 3,
+      "date" : "20/06/2016",
+      "dateTimestamp" : 1466373600000,
+      "hour" : "21:00",
+      "timestamp" : 1466449200000,
+      "stadium" : {
+        "id" : 6,
+        "name" : "Stadium de Toulouse",
+        "city" : "Toulouse"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupB",
-        "i18n": {
-          "fr": "Groupe B",
-          "en": "Group B"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupB",
+        "i18n" : {
+          "fr" : "Groupe B",
+          "en" : "Group B"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Russie",
-          "en": "Russia"
+      "home" : {
+        "i18n" : {
+          "fr" : "Russie",
+          "en" : "Russia"
         },
-        "isoAlpha2Code": "ru",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "ru",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Pays de Galles",
-          "en": "Wales"
+      "away" : {
+        "i18n" : {
+          "fr" : "Pays de Galles",
+          "en" : "Wales"
         },
-        "isoAlpha2Code": "gb-wls",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "gb-wls",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "28": {
-      "number": 28,
-      "dayId": 3,
-      "date": "20/06/2016",
-      "dateTimestamp": 1466373600000,
-      "hour": "21:00",
-      "timestamp": 1466449200000,
-      "stadium": {
-        "id": 7,
-        "name": "Stade Geoffroy Guichard",
-        "city": "Saint-Étienne"
+    "28" : {
+      "number" : 28,
+      "dayId" : 3,
+      "date" : "20/06/2016",
+      "dateTimestamp" : 1466373600000,
+      "hour" : "21:00",
+      "timestamp" : 1466449200000,
+      "stadium" : {
+        "id" : 7,
+        "name" : "Stade Geoffroy Guichard",
+        "city" : "Saint-Étienne"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupB",
-        "i18n": {
-          "fr": "Groupe B",
-          "en": "Group B"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupB",
+        "i18n" : {
+          "fr" : "Groupe B",
+          "en" : "Group B"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Slovaquie",
-          "en": "Slovakia"
+      "home" : {
+        "i18n" : {
+          "fr" : "Slovaquie",
+          "en" : "Slovakia"
         },
-        "isoAlpha2Code": "sk",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "sk",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Angleterre",
-          "en": "England"
+      "away" : {
+        "i18n" : {
+          "fr" : "Angleterre",
+          "en" : "England"
         },
-        "isoAlpha2Code": "gb-eng",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "gb-eng",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "29": {
-      "number": 29,
-      "dayId": 3,
-      "date": "21/06/2016",
-      "dateTimestamp": 1466460000000,
-      "hour": "18:00",
-      "timestamp": 1466524800000,
-      "stadium": {
-        "id": 9,
-        "name": "Stade Vélodrome",
-        "city": "Marseille"
+    "29" : {
+      "number" : 29,
+      "dayId" : 3,
+      "date" : "21/06/2016",
+      "dateTimestamp" : 1466460000000,
+      "hour" : "18:00",
+      "timestamp" : 1466524800000,
+      "stadium" : {
+        "id" : 9,
+        "name" : "Stade Vélodrome",
+        "city" : "Marseille"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupC",
-        "i18n": {
-          "fr": "Groupe C",
-          "en": "Group C"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupC",
+        "i18n" : {
+          "fr" : "Groupe C",
+          "en" : "Group C"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Ukraine",
-          "en": "Ukraine"
+      "home" : {
+        "i18n" : {
+          "fr" : "Ukraine",
+          "en" : "Ukraine"
         },
-        "isoAlpha2Code": "ua",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "ua",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Pologne",
-          "en": "Poland"
+      "away" : {
+        "i18n" : {
+          "fr" : "Pologne",
+          "en" : "Poland"
         },
-        "isoAlpha2Code": "pl",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "pl",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "30": {
-      "number": 30,
-      "dayId": 3,
-      "date": "21/06/2016",
-      "dateTimestamp": 1466460000000,
-      "hour": "18:00",
-      "timestamp": 1466524800000,
-      "stadium": {
-        "id": 4,
-        "name": "Parc des Princes",
-        "city": "Paris"
+    "30" : {
+      "number" : 30,
+      "dayId" : 3,
+      "date" : "21/06/2016",
+      "dateTimestamp" : 1466460000000,
+      "hour" : "18:00",
+      "timestamp" : 1466524800000,
+      "stadium" : {
+        "id" : 4,
+        "name" : "Parc des Princes",
+        "city" : "Paris"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupC",
-        "i18n": {
-          "fr": "Groupe C",
-          "en": "Group C"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupC",
+        "i18n" : {
+          "fr" : "Groupe C",
+          "en" : "Group C"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Irlande du Nord",
-          "en": "Northern Ireland"
+      "home" : {
+        "i18n" : {
+          "fr" : "Irlande du Nord",
+          "en" : "Northern Ireland"
         },
-        "isoAlpha2Code": "gb-nir",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "gb-nir",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Allemagne",
-          "en": "Germany"
+      "away" : {
+        "i18n" : {
+          "fr" : "Allemagne",
+          "en" : "Germany"
         },
-        "isoAlpha2Code": "de",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "de",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "31": {
-      "number": 31,
-      "dayId": 3,
-      "date": "21/06/2016",
-      "dateTimestamp": 1466460000000,
-      "hour": "21:00",
-      "timestamp": 1466535600000,
-      "stadium": {
-        "id": 2,
-        "name": "Stade Bollaert-Delelis",
-        "city": "Lens"
+    "31" : {
+      "number" : 31,
+      "dayId" : 3,
+      "date" : "21/06/2016",
+      "dateTimestamp" : 1466460000000,
+      "hour" : "21:00",
+      "timestamp" : 1466535600000,
+      "stadium" : {
+        "id" : 2,
+        "name" : "Stade Bollaert-Delelis",
+        "city" : "Lens"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupD",
-        "i18n": {
-          "fr": "Groupe D",
-          "en": "Group D"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupD",
+        "i18n" : {
+          "fr" : "Groupe D",
+          "en" : "Group D"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "République tchèque",
-          "en": "Czech Republic"
+      "home" : {
+        "i18n" : {
+          "fr" : "République tchèque",
+          "en" : "Czech Republic"
         },
-        "isoAlpha2Code": "cz",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "cz",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Turquie",
-          "en": "Turkey"
+      "away" : {
+        "i18n" : {
+          "fr" : "Turquie",
+          "en" : "Turkey"
         },
-        "isoAlpha2Code": "tr",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "tr",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "32": {
-      "number": 32,
-      "dayId": 3,
-      "date": "21/06/2016",
-      "dateTimestamp": 1466460000000,
-      "hour": "21:00",
-      "timestamp": 1466535600000,
-      "stadium": {
-        "id": 5,
-        "name": "Stade de Bordeaux",
-        "city": "Bordeaux"
+    "32" : {
+      "number" : 32,
+      "dayId" : 3,
+      "date" : "21/06/2016",
+      "dateTimestamp" : 1466460000000,
+      "hour" : "21:00",
+      "timestamp" : 1466535600000,
+      "stadium" : {
+        "id" : 5,
+        "name" : "Stade de Bordeaux",
+        "city" : "Bordeaux"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupD",
-        "i18n": {
-          "fr": "Groupe D",
-          "en": "Group D"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupD",
+        "i18n" : {
+          "fr" : "Groupe D",
+          "en" : "Group D"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Croatie",
-          "en": "Croatia"
+      "home" : {
+        "i18n" : {
+          "fr" : "Croatie",
+          "en" : "Croatia"
         },
-        "isoAlpha2Code": "hr",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "hr",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Espagne",
-          "en": "Spain"
+      "away" : {
+        "i18n" : {
+          "fr" : "Espagne",
+          "en" : "Spain"
         },
-        "isoAlpha2Code": "es",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "es",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "33": {
-      "number": 33,
-      "dayId": 3,
-      "date": "22/06/2016",
-      "dateTimestamp": 1466546400000,
-      "hour": "18:00",
-      "timestamp": 1466611200000,
-      "stadium": {
-        "id": 3,
-        "name": "Stade de France",
-        "city": "Paris"
+    "33" : {
+      "number" : 33,
+      "dayId" : 3,
+      "date" : "22/06/2016",
+      "dateTimestamp" : 1466546400000,
+      "hour" : "18:00",
+      "timestamp" : 1466611200000,
+      "stadium" : {
+        "id" : 3,
+        "name" : "Stade de France",
+        "city" : "Paris"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupF",
-        "i18n": {
-          "fr": "Groupe F",
-          "en": "Group F"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupF",
+        "i18n" : {
+          "fr" : "Groupe F",
+          "en" : "Group F"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Islande",
-          "en": "Iceland"
+      "home" : {
+        "i18n" : {
+          "fr" : "Islande",
+          "en" : "Iceland"
         },
-        "isoAlpha2Code": "is",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "is",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Autriche",
-          "en": "Austria"
+      "away" : {
+        "i18n" : {
+          "fr" : "Autriche",
+          "en" : "Austria"
         },
-        "isoAlpha2Code": "at",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "at",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "34": {
-      "number": 34,
-      "dayId": 3,
-      "date": "22/06/2016",
-      "dateTimestamp": 1466546400000,
-      "hour": "18:00",
-      "timestamp": 1466611200000,
-      "stadium": {
-        "id": 8,
-        "name": "Stade de Lyon",
-        "city": "Lyon"
+    "34" : {
+      "number" : 34,
+      "dayId" : 3,
+      "date" : "22/06/2016",
+      "dateTimestamp" : 1466546400000,
+      "hour" : "18:00",
+      "timestamp" : 1466611200000,
+      "stadium" : {
+        "id" : 8,
+        "name" : "Stade de Lyon",
+        "city" : "Lyon"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupF",
-        "i18n": {
-          "fr": "Groupe F",
-          "en": "Group F"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupF",
+        "i18n" : {
+          "fr" : "Groupe F",
+          "en" : "Group F"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Hongrie",
-          "en": "Hungary"
+      "home" : {
+        "i18n" : {
+          "fr" : "Hongrie",
+          "en" : "Hungary"
         },
-        "isoAlpha2Code": "hu",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "hu",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Portugal",
-          "en": "Portugal"
+      "away" : {
+        "i18n" : {
+          "fr" : "Portugal",
+          "en" : "Portugal"
         },
-        "isoAlpha2Code": "pt",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "pt",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "35": {
-      "number": 35,
-      "dayId": 3,
-      "date": "22/06/2016",
-      "dateTimestamp": 1466546400000,
-      "hour": "21:00",
-      "timestamp": 1466622000000,
-      "stadium": {
-        "id": 1,
-        "name": "Stade Pierre Mauroy",
-        "city": "Lille"
+    "35" : {
+      "number" : 35,
+      "dayId" : 3,
+      "date" : "22/06/2016",
+      "dateTimestamp" : 1466546400000,
+      "hour" : "21:00",
+      "timestamp" : 1466622000000,
+      "stadium" : {
+        "id" : 1,
+        "name" : "Stade Pierre Mauroy",
+        "city" : "Lille"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupE",
-        "i18n": {
-          "fr": "Groupe E",
-          "en": "Group E"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupE",
+        "i18n" : {
+          "fr" : "Groupe E",
+          "en" : "Group E"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Italie",
-          "en": "Italy"
+      "home" : {
+        "i18n" : {
+          "fr" : "Italie",
+          "en" : "Italy"
         },
-        "isoAlpha2Code": "it",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "it",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Irlande",
-          "en": "Republic of Ireland"
+      "away" : {
+        "i18n" : {
+          "fr" : "Irlande",
+          "en" : "Republic of Ireland"
         },
-        "isoAlpha2Code": "ie",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "ie",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "36": {
-      "number": 36,
-      "dayId": 3,
-      "date": "22/06/2016",
-      "dateTimestamp": 1466546400000,
-      "hour": "21:00",
-      "timestamp": 1466622000000,
-      "stadium": {
-        "id": 10,
-        "name": "Stade de Nice",
-        "city": "Nice"
+    "36" : {
+      "number" : 36,
+      "dayId" : 3,
+      "date" : "22/06/2016",
+      "dateTimestamp" : 1466546400000,
+      "hour" : "21:00",
+      "timestamp" : 1466622000000,
+      "stadium" : {
+        "id" : 10,
+        "name" : "Stade de Nice",
+        "city" : "Nice"
       },
-      "phase": {
-        "state": "group",
-        "code": "GroupE",
-        "i18n": {
-          "fr": "Groupe E",
-          "en": "Group E"
+      "phase" : {
+        "state" : "group",
+        "code" : "GroupE",
+        "i18n" : {
+          "fr" : "Groupe E",
+          "en" : "Group E"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Suède",
-          "en": "Sweden"
+      "home" : {
+        "i18n" : {
+          "fr" : "Suède",
+          "en" : "Sweden"
         },
-        "isoAlpha2Code": "se",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "se",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Belgique",
-          "en": "Belgium"
+      "away" : {
+        "i18n" : {
+          "fr" : "Belgique",
+          "en" : "Belgium"
         },
-        "isoAlpha2Code": "be",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "be",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "37": {
-      "number": 37,
-      "dayId": 4,
-      "date": "25/06/2016",
-      "dateTimestamp": 1466805600000,
-      "hour": "15:00",
-      "timestamp": 1466859600000,
-      "stadium": {
-        "id": 7,
-        "name": "Stade Geoffroy Guichard",
-        "city": "Saint-Étienne"
+    "37" : {
+      "number" : 37,
+      "dayId" : 4,
+      "date" : "25/06/2016",
+      "dateTimestamp" : 1466805600000,
+      "hour" : "15:00",
+      "timestamp" : 1466859600000,
+      "stadium" : {
+        "id" : 7,
+        "name" : "Stade Geoffroy Guichard",
+        "city" : "Saint-Étienne"
       },
-      "phase": {
-        "state": "final",
-        "code": "Round16",
-        "i18n": {
-          "fr": "Huitième de finale",
-          "en": "Round 16"
+      "phase" : {
+        "state" : "round16",
+        "code" : "Round16",
+        "i18n" : {
+          "fr" : "Huitième de finale",
+          "en" : "Round 16"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "2nd group A",
-          "en": "2nd group A"
+      "home" : {
+        "i18n" : {
+          "fr" : "2nd group A",
+          "en" : "2nd group A"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "2nd group C",
-          "en": "2nd group C"
+      "away" : {
+        "i18n" : {
+          "fr" : "2nd group C",
+          "en" : "2nd group C"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "38": {
-      "number": 38,
-      "dayId": 4,
-      "date": "25/06/2016",
-      "dateTimestamp": 1466805600000,
-      "hour": "18:00",
-      "timestamp": 1466870400000,
-      "stadium": {
-        "id": 4,
-        "name": "Parc des Princes",
-        "city": "Paris"
+    "38" : {
+      "number" : 38,
+      "dayId" : 4,
+      "date" : "25/06/2016",
+      "dateTimestamp" : 1466805600000,
+      "hour" : "18:00",
+      "timestamp" : 1466870400000,
+      "stadium" : {
+        "id" : 4,
+        "name" : "Parc des Princes",
+        "city" : "Paris"
       },
-      "phase": {
-        "state": "final",
-        "code": "Round16",
-        "i18n": {
-          "fr": "Huitième de finale",
-          "en": "Round 16"
+      "phase" : {
+        "state" : "round16",
+        "code" : "Round16",
+        "i18n" : {
+          "fr" : "Huitième de finale",
+          "en" : "Round 16"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "1st group B",
-          "en": "1st group B"
+      "home" : {
+        "i18n" : {
+          "fr" : "1st group B",
+          "en" : "1st group B"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "3rd group A C D",
-          "en": "3rd group A C D"
+      "away" : {
+        "i18n" : {
+          "fr" : "3rd group A C D",
+          "en" : "3rd group A C D"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "39": {
-      "number": 39,
-      "dayId": 4,
-      "date": "25/06/2016",
-      "dateTimestamp": 1466805600000,
-      "hour": "21:00",
-      "timestamp": 1466881200000,
-      "stadium": {
-        "id": 2,
-        "name": "Stade Bollaert-Delelis",
-        "city": "Lens"
+    "39" : {
+      "number" : 39,
+      "dayId" : 4,
+      "date" : "25/06/2016",
+      "dateTimestamp" : 1466805600000,
+      "hour" : "21:00",
+      "timestamp" : 1466881200000,
+      "stadium" : {
+        "id" : 2,
+        "name" : "Stade Bollaert-Delelis",
+        "city" : "Lens"
       },
-      "phase": {
-        "state": "final",
-        "code": "Round16",
-        "i18n": {
-          "fr": "Huitième de finale",
-          "en": "Round 16"
+      "phase" : {
+        "state" : "round16",
+        "code" : "Round16",
+        "i18n" : {
+          "fr" : "Huitième de finale",
+          "en" : "Round 16"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "1st group D",
-          "en": "1st group D"
+      "home" : {
+        "i18n" : {
+          "fr" : "1st group D",
+          "en" : "1st group D"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "3rd group B E F",
-          "en": "3rd group B E F"
+      "away" : {
+        "i18n" : {
+          "fr" : "3rd group B E F",
+          "en" : "3rd group B E F"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "40": {
-      "number": 40,
-      "dayId": 4,
-      "date": "26/06/2016",
-      "dateTimestamp": 1466892000000,
-      "hour": "15:00",
-      "timestamp": 1466946000000,
-      "stadium": {
-        "id": 8,
-        "name": "Stade de Lyon",
-        "city": "Lyon"
+    "40" : {
+      "number" : 40,
+      "dayId" : 4,
+      "date" : "26/06/2016",
+      "dateTimestamp" : 1466892000000,
+      "hour" : "15:00",
+      "timestamp" : 1466946000000,
+      "stadium" : {
+        "id" : 8,
+        "name" : "Stade de Lyon",
+        "city" : "Lyon"
       },
-      "phase": {
-        "state": "final",
-        "code": "Round16",
-        "i18n": {
-          "fr": "Huitième de finale",
-          "en": "Round 16"
+      "phase" : {
+        "state" : "round16",
+        "code" : "Round16",
+        "i18n" : {
+          "fr" : "Huitième de finale",
+          "en" : "Round 16"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "1st group A",
-          "en": "1st group A"
+      "home" : {
+        "i18n" : {
+          "fr" : "1st group A",
+          "en" : "1st group A"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "3rd group C D E",
-          "en": "3rd group C D E"
+      "away" : {
+        "i18n" : {
+          "fr" : "3rd group C D E",
+          "en" : "3rd group C D E"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "41": {
-      "number": 41,
-      "dayId": 4,
-      "date": "26/06/2016",
-      "dateTimestamp": 1466892000000,
-      "hour": "18:00",
-      "timestamp": 1466956800000,
-      "stadium": {
-        "id": 1,
-        "name": "Stade Pierre Mauroy",
-        "city": "Lille"
+    "41" : {
+      "number" : 41,
+      "dayId" : 4,
+      "date" : "26/06/2016",
+      "dateTimestamp" : 1466892000000,
+      "hour" : "18:00",
+      "timestamp" : 1466956800000,
+      "stadium" : {
+        "id" : 1,
+        "name" : "Stade Pierre Mauroy",
+        "city" : "Lille"
       },
-      "phase": {
-        "state": "final",
-        "code": "Round16",
-        "i18n": {
-          "fr": "Huitième de finale",
-          "en": "Round 16"
+      "phase" : {
+        "state" : "round16",
+        "code" : "Round16",
+        "i18n" : {
+          "fr" : "Huitième de finale",
+          "en" : "Round 16"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "1st group C",
-          "en": "1st group C"
+      "home" : {
+        "i18n" : {
+          "fr" : "1st group C",
+          "en" : "1st group C"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "3rd group A B F",
-          "en": "3rd group A B F"
+      "away" : {
+        "i18n" : {
+          "fr" : "3rd group A B F",
+          "en" : "3rd group A B F"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "42": {
-      "number": 42,
-      "dayId": 4,
-      "date": "26/06/2016",
-      "dateTimestamp": 1466892000000,
-      "hour": "21:00",
-      "timestamp": 1466967600000,
-      "stadium": {
-        "id": 6,
-        "name": "Stadium de Toulouse",
-        "city": "Toulouse"
+    "42" : {
+      "number" : 42,
+      "dayId" : 4,
+      "date" : "26/06/2016",
+      "dateTimestamp" : 1466892000000,
+      "hour" : "21:00",
+      "timestamp" : 1466967600000,
+      "stadium" : {
+        "id" : 6,
+        "name" : "Stadium de Toulouse",
+        "city" : "Toulouse"
       },
-      "phase": {
-        "state": "final",
-        "code": "Round16",
-        "i18n": {
-          "fr": "Huitième de finale",
-          "en": "Round 16"
+      "phase" : {
+        "state" : "round16",
+        "code" : "Round16",
+        "i18n" : {
+          "fr" : "Huitième de finale",
+          "en" : "Round 16"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "1st group F",
-          "en": "1st group F"
+      "home" : {
+        "i18n" : {
+          "fr" : "1st group F",
+          "en" : "1st group F"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "2nd group E",
-          "en": "2nd group E"
+      "away" : {
+        "i18n" : {
+          "fr" : "2nd group E",
+          "en" : "2nd group E"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "43": {
-      "number": 43,
-      "dayId": 4,
-      "date": "27/06/2016",
-      "dateTimestamp": 1466978400000,
-      "hour": "18:00",
-      "timestamp": 1467043200000,
-      "stadium": {
-        "id": 3,
-        "name": "Stade de France",
-        "city": "Paris"
+    "43" : {
+      "number" : 43,
+      "dayId" : 4,
+      "date" : "27/06/2016",
+      "dateTimestamp" : 1466978400000,
+      "hour" : "18:00",
+      "timestamp" : 1467043200000,
+      "stadium" : {
+        "id" : 3,
+        "name" : "Stade de France",
+        "city" : "Paris"
       },
-      "phase": {
-        "state": "final",
-        "code": "Round16",
-        "i18n": {
-          "fr": "Huitième de finale",
-          "en": "Round 16"
+      "phase" : {
+        "state" : "round16",
+        "code" : "Round16",
+        "i18n" : {
+          "fr" : "Huitième de finale",
+          "en" : "Round 16"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "1st group E",
-          "en": "1st group E"
+      "home" : {
+        "i18n" : {
+          "fr" : "1st group E",
+          "en" : "1st group E"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "2nd group D",
-          "en": "2nd group D"
+      "away" : {
+        "i18n" : {
+          "fr" : "2nd group D",
+          "en" : "2nd group D"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "44": {
-      "number": 44,
-      "dayId": 4,
-      "date": "27/06/2016",
-      "dateTimestamp": 1466978400000,
-      "hour": "21:00",
-      "timestamp": 1467054000000,
-      "stadium": {
-        "id": 10,
-        "name": "Stade de Nice",
-        "city": "Nice"
+    "44" : {
+      "number" : 44,
+      "dayId" : 4,
+      "date" : "27/06/2016",
+      "dateTimestamp" : 1466978400000,
+      "hour" : "21:00",
+      "timestamp" : 1467054000000,
+      "stadium" : {
+        "id" : 10,
+        "name" : "Stade de Nice",
+        "city" : "Nice"
       },
-      "phase": {
-        "state": "final",
-        "code": "Round16",
-        "i18n": {
-          "fr": "Huitième de finale",
-          "en": "Round 16"
+      "phase" : {
+        "state" : "round16",
+        "code" : "Round16",
+        "i18n" : {
+          "fr" : "Huitième de finale",
+          "en" : "Round 16"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "2nd group B",
-          "en": "2nd group B"
+      "home" : {
+        "i18n" : {
+          "fr" : "2nd group B",
+          "en" : "2nd group B"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "2nd group F",
-          "en": "2nd group F"
+      "away" : {
+        "i18n" : {
+          "fr" : "2nd group F",
+          "en" : "2nd group F"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "45": {
-      "number": 45,
-      "dayId": 5,
-      "date": "30/06/2016",
-      "dateTimestamp": 1467237600000,
-      "hour": "21:00",
-      "timestamp": 1467313200000,
-      "stadium": {
-        "id": 9,
-        "name": "Stade Vélodrome",
-        "city": "Marseille"
+    "45" : {
+      "number" : 45,
+      "dayId" : 5,
+      "date" : "30/06/2016",
+      "dateTimestamp" : 1467237600000,
+      "hour" : "21:00",
+      "timestamp" : 1467313200000,
+      "stadium" : {
+        "id" : 9,
+        "name" : "Stade Vélodrome",
+        "city" : "Marseille"
       },
-      "phase": {
-        "state": "final",
-        "code": "QuarterFinal",
-        "i18n": {
-          "fr": "Quarts de finale",
-          "en": "Quarter final"
+      "phase" : {
+        "state" : "quarterfinal",
+        "code" : "QuarterFinal",
+        "i18n" : {
+          "fr" : "Quarts de finale",
+          "en" : "Quarter final"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Winner Match 1",
-          "en": "Winner Match 1"
+      "home" : {
+        "i18n" : {
+          "fr" : "Winner Match 1",
+          "en" : "Winner Match 1"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Winner Match 3",
-          "en": "Winner Match 3"
+      "away" : {
+        "i18n" : {
+          "fr" : "Winner Match 3",
+          "en" : "Winner Match 3"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "46": {
-      "number": 46,
-      "dayId": 5,
-      "date": "01/07/2016",
-      "dateTimestamp": 1467324000000,
-      "hour": "21:00",
-      "timestamp": 1467399600000,
-      "stadium": {
-        "id": 1,
-        "name": "Stade Pierre Mauroy",
-        "city": "Lille"
+    "46" : {
+      "number" : 46,
+      "dayId" : 5,
+      "date" : "01/07/2016",
+      "dateTimestamp" : 1467324000000,
+      "hour" : "21:00",
+      "timestamp" : 1467399600000,
+      "stadium" : {
+        "id" : 1,
+        "name" : "Stade Pierre Mauroy",
+        "city" : "Lille"
       },
-      "phase": {
-        "state": "final",
-        "code": "QuarterFinal",
-        "i18n": {
-          "fr": "Quarts de finale",
-          "en": "Quarter final"
+      "phase" : {
+        "state" : "quarterfinal",
+        "code" : "QuarterFinal",
+        "i18n" : {
+          "fr" : "Quarts de finale",
+          "en" : "Quarter final"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Winner Match 2",
-          "en": "Winner Match 2"
+      "home" : {
+        "i18n" : {
+          "fr" : "Winner Match 2",
+          "en" : "Winner Match 2"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Winner Match 6",
-          "en": "Winner Match 6"
+      "away" : {
+        "i18n" : {
+          "fr" : "Winner Match 6",
+          "en" : "Winner Match 6"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "47": {
-      "number": 47,
-      "dayId": 5,
-      "date": "02/07/2016",
-      "dateTimestamp": 1467410400000,
-      "hour": "21:00",
-      "timestamp": 1467486000000,
-      "stadium": {
-        "id": 5,
-        "name": "Stade de Bordeaux",
-        "city": "Bordeaux"
+    "47" : {
+      "number" : 47,
+      "dayId" : 5,
+      "date" : "02/07/2016",
+      "dateTimestamp" : 1467410400000,
+      "hour" : "21:00",
+      "timestamp" : 1467486000000,
+      "stadium" : {
+        "id" : 5,
+        "name" : "Stade de Bordeaux",
+        "city" : "Bordeaux"
       },
-      "phase": {
-        "state": "final",
-        "code": "QuarterFinal",
-        "i18n": {
-          "fr": "Quarts de finale",
-          "en": "Quarter final"
+      "phase" : {
+        "state" : "quarterfinal",
+        "code" : "QuarterFinal",
+        "i18n" : {
+          "fr" : "Quarts de finale",
+          "en" : "Quarter final"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Winner Match 5",
-          "en": "Winner Match 5"
+      "home" : {
+        "i18n" : {
+          "fr" : "Winner Match 5",
+          "en" : "Winner Match 5"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Winner Match 7",
-          "en": "Winner Match 7"
+      "away" : {
+        "i18n" : {
+          "fr" : "Winner Match 7",
+          "en" : "Winner Match 7"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "48": {
-      "number": 48,
-      "dayId": 5,
-      "date": "03/07/2016",
-      "dateTimestamp": 1467496800000,
-      "hour": "21:00",
-      "timestamp": 1467572400000,
-      "stadium": {
-        "id": 3,
-        "name": "Stade de France",
-        "city": "Paris"
+    "48" : {
+      "number" : 48,
+      "dayId" : 5,
+      "date" : "03/07/2016",
+      "dateTimestamp" : 1467496800000,
+      "hour" : "21:00",
+      "timestamp" : 1467572400000,
+      "stadium" : {
+        "id" : 3,
+        "name" : "Stade de France",
+        "city" : "Paris"
       },
-      "phase": {
-        "state": "final",
-        "code": "QuarterFinal",
-        "i18n": {
-          "fr": "Quarts de finale",
-          "en": "Quarter final"
+      "phase" : {
+        "state" : "quarterfinal",
+        "code" : "QuarterFinal",
+        "i18n" : {
+          "fr" : "Quarts de finale",
+          "en" : "Quarter final"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Winner Match 4",
-          "en": "Winner Match 4"
+      "home" : {
+        "i18n" : {
+          "fr" : "Winner Match 4",
+          "en" : "Winner Match 4"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Winner Match 8",
-          "en": "Winner Match 8"
+      "away" : {
+        "i18n" : {
+          "fr" : "Winner Match 8",
+          "en" : "Winner Match 8"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "49": {
-      "number": 49,
-      "dayId": 6,
-      "date": "06/07/2016",
-      "dateTimestamp": 1467756000000,
-      "hour": "21:00",
-      "timestamp": 1467831600000,
-      "stadium": {
-        "id": 8,
-        "name": "Stade de Lyon",
-        "city": "Lyon"
+    "49" : {
+      "number" : 49,
+      "dayId" : 6,
+      "date" : "06/07/2016",
+      "dateTimestamp" : 1467756000000,
+      "hour" : "21:00",
+      "timestamp" : 1467831600000,
+      "stadium" : {
+        "id" : 8,
+        "name" : "Stade de Lyon",
+        "city" : "Lyon"
       },
-      "phase": {
-        "state": "final",
-        "code": "SemiFinal",
-        "i18n": {
-          "fr": "Demi-finale",
-          "en": "Semi final"
+      "phase" : {
+        "state" : "semifinal",
+        "code" : "SemiFinal",
+        "i18n" : {
+          "fr" : "Demi-finale",
+          "en" : "Semi final"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Winner Quarter Final 1",
-          "en": "Winner Quarter Final 1"
+      "home" : {
+        "i18n" : {
+          "fr" : "Winner Quarter Final 1",
+          "en" : "Winner Quarter Final 1"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Winner Quarter Final 2",
-          "en": "Winner Quarter Final 2"
+      "away" : {
+        "i18n" : {
+          "fr" : "Winner Quarter Final 2",
+          "en" : "Winner Quarter Final 2"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "50": {
-      "number": 50,
-      "dayId": 6,
-      "date": "07/07/2016",
-      "dateTimestamp": 1467842400000,
-      "hour": "21:00",
-      "timestamp": 1467918000000,
-      "stadium": {
-        "id": 9,
-        "name": "Stade Vélodrome",
-        "city": "Marseille"
+    "50" : {
+      "number" : 50,
+      "dayId" : 6,
+      "date" : "07/07/2016",
+      "dateTimestamp" : 1467842400000,
+      "hour" : "21:00",
+      "timestamp" : 1467918000000,
+      "stadium" : {
+        "id" : 9,
+        "name" : "Stade Vélodrome",
+        "city" : "Marseille"
       },
-      "phase": {
-        "state": "final",
-        "code": "SemiFinal",
-        "i18n": {
-          "fr": "Demi-finale",
-          "en": "Semi final"
+      "phase" : {
+        "state" : "semifinal",
+        "code" : "SemiFinal",
+        "i18n" : {
+          "fr" : "Demi-finale",
+          "en" : "Semi final"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Winner Quarter Final 3",
-          "en": "Winner Quarter Final 3"
+      "home" : {
+        "i18n" : {
+          "fr" : "Winner Quarter Final 3",
+          "en" : "Winner Quarter Final 3"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Winner Quarter Final 4",
-          "en": "Winner Quarter Final 4"
+      "away" : {
+        "i18n" : {
+          "fr" : "Winner Quarter Final 4",
+          "en" : "Winner Quarter Final 4"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     },
-    "51": {
-      "number": 51,
-      "dayId": 7,
-      "date": "10/07/2016",
-      "dateTimestamp": 1468101600000,
-      "hour": "21:00",
-      "timestamp": 1468177200000,
-      "stadium": {
-        "id": 3,
-        "name": "Stade de France",
-        "city": "Paris"
+    "51" : {
+      "number" : 51,
+      "dayId" : 7,
+      "date" : "10/07/2016",
+      "dateTimestamp" : 1468101600000,
+      "hour" : "21:00",
+      "timestamp" : 1468177200000,
+      "stadium" : {
+        "id" : 3,
+        "name" : "Stade de France",
+        "city" : "Paris"
       },
-      "phase": {
-        "state": "final",
-        "code": "Final",
-        "i18n": {
-          "fr": "Finale",
-          "en": "Final"
+      "phase" : {
+        "state" : "final",
+        "code" : "Final",
+        "i18n" : {
+          "fr" : "Finale",
+          "en" : "Final"
         }
       },
-      "home": {
-        "i18n": {
-          "fr": "Winner Semi Final 1",
-          "en": "Winner Semi Final 1"
+      "home" : {
+        "i18n" : {
+          "fr" : "Winner Semi Final 1",
+          "en" : "Winner Semi Final 1"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "away": {
-        "i18n": {
-          "fr": "Winner Semi Final 2",
-          "en": "Winner Semi Final 2"
+      "away" : {
+        "i18n" : {
+          "fr" : "Winner Semi Final 2",
+          "en" : "Winner Semi Final 2"
         },
-        "isoAlpha2Code": "???",
-        "goals": 0,
-        "winner": false
+        "isoAlpha2Code" : "???",
+        "goals" : 0,
+        "winner" : false
       },
-      "status": 0
+      "status" : 0
     }
   },
-  "groups": [
-    {
-      "code": "GroupA",
-      "i18n": {
-        "fr": "Groupe A",
-        "en": "Group A"
-      },
-      "members": [
-        {
-          "i18n": {
-            "fr": "France",
-            "en": "France"
-          },
-          "isoAlpha2Code": "fr",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "Roumanie",
-            "en": "Romania"
-          },
-          "isoAlpha2Code": "ro",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "Albanie",
-            "en": "Albania"
-          },
-          "isoAlpha2Code": "al",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "Suisse",
-            "en": "Switzerland"
-          },
-          "isoAlpha2Code": "ch",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        }
-      ]
+  "groups" : [ {
+    "code" : "GroupA",
+    "i18n" : {
+      "fr" : "Groupe A",
+      "en" : "Group A"
     },
-    {
-      "code": "GroupB",
-      "i18n": {
-        "fr": "Groupe B",
-        "en": "Group B"
+    "members" : [ {
+      "i18n" : {
+        "fr" : "France",
+        "en" : "France"
       },
-      "members": [
-        {
-          "i18n": {
-            "fr": "Angleterre",
-            "en": "England"
-          },
-          "isoAlpha2Code": "gb-eng",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "Russie",
-            "en": "Russia"
-          },
-          "isoAlpha2Code": "ru",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "Pays de Galles",
-            "en": "Wales"
-          },
-          "isoAlpha2Code": "gb-wls",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "Slovaquie",
-            "en": "Slovakia"
-          },
-          "isoAlpha2Code": "sk",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        }
-      ]
+      "isoAlpha2Code" : "fr",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "Roumanie",
+        "en" : "Romania"
+      },
+      "isoAlpha2Code" : "ro",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "Albanie",
+        "en" : "Albania"
+      },
+      "isoAlpha2Code" : "al",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "Suisse",
+        "en" : "Switzerland"
+      },
+      "isoAlpha2Code" : "ch",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    } ]
+  }, {
+    "code" : "GroupB",
+    "i18n" : {
+      "fr" : "Groupe B",
+      "en" : "Group B"
     },
-    {
-      "code": "GroupC",
-      "i18n": {
-        "fr": "Groupe C",
-        "en": "Group C"
+    "members" : [ {
+      "i18n" : {
+        "fr" : "Angleterre",
+        "en" : "England"
       },
-      "members": [
-        {
-          "i18n": {
-            "fr": "Allemagne",
-            "en": "Germany"
-          },
-          "isoAlpha2Code": "de",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "Ukraine",
-            "en": "Ukraine"
-          },
-          "isoAlpha2Code": "ua",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "Pologne",
-            "en": "Poland"
-          },
-          "isoAlpha2Code": "pl",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "Irlande du Nord",
-            "en": "Northern Ireland"
-          },
-          "isoAlpha2Code": "gb-nir",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        }
-      ]
+      "isoAlpha2Code" : "gb-eng",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "Russie",
+        "en" : "Russia"
+      },
+      "isoAlpha2Code" : "ru",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "Pays de Galles",
+        "en" : "Wales"
+      },
+      "isoAlpha2Code" : "gb-wls",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "Slovaquie",
+        "en" : "Slovakia"
+      },
+      "isoAlpha2Code" : "sk",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    } ]
+  }, {
+    "code" : "GroupC",
+    "i18n" : {
+      "fr" : "Groupe C",
+      "en" : "Group C"
     },
-    {
-      "code": "GroupD",
-      "i18n": {
-        "fr": "Groupe D",
-        "en": "Group D"
+    "members" : [ {
+      "i18n" : {
+        "fr" : "Allemagne",
+        "en" : "Germany"
       },
-      "members": [
-        {
-          "i18n": {
-            "fr": "Espagne",
-            "en": "Spain"
-          },
-          "isoAlpha2Code": "es",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "République tchèque",
-            "en": "Czech Republic"
-          },
-          "isoAlpha2Code": "cz",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "Turquie",
-            "en": "Turkey"
-          },
-          "isoAlpha2Code": "tr",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "Croatie",
-            "en": "Croatia"
-          },
-          "isoAlpha2Code": "hr",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        }
-      ]
+      "isoAlpha2Code" : "de",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "Ukraine",
+        "en" : "Ukraine"
+      },
+      "isoAlpha2Code" : "ua",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "Pologne",
+        "en" : "Poland"
+      },
+      "isoAlpha2Code" : "pl",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "Irlande du Nord",
+        "en" : "Northern Ireland"
+      },
+      "isoAlpha2Code" : "gb-nir",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    } ]
+  }, {
+    "code" : "GroupD",
+    "i18n" : {
+      "fr" : "Groupe D",
+      "en" : "Group D"
     },
-    {
-      "code": "GroupE",
-      "i18n": {
-        "fr": "Groupe E",
-        "en": "Group E"
+    "members" : [ {
+      "i18n" : {
+        "fr" : "Espagne",
+        "en" : "Spain"
       },
-      "members": [
-        {
-          "i18n": {
-            "fr": "Belgique",
-            "en": "Belgium"
-          },
-          "isoAlpha2Code": "be",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "Italie",
-            "en": "Italy"
-          },
-          "isoAlpha2Code": "it",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "Irlande",
-            "en": "Republic of Ireland"
-          },
-          "isoAlpha2Code": "ie",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "Suède",
-            "en": "Sweden"
-          },
-          "isoAlpha2Code": "se",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        }
-      ]
+      "isoAlpha2Code" : "es",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "République tchèque",
+        "en" : "Czech Republic"
+      },
+      "isoAlpha2Code" : "cz",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "Turquie",
+        "en" : "Turkey"
+      },
+      "isoAlpha2Code" : "tr",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "Croatie",
+        "en" : "Croatia"
+      },
+      "isoAlpha2Code" : "hr",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    } ]
+  }, {
+    "code" : "GroupE",
+    "i18n" : {
+      "fr" : "Groupe E",
+      "en" : "Group E"
     },
-    {
-      "code": "GroupF",
-      "i18n": {
-        "fr": "Groupe F",
-        "en": "Group F"
+    "members" : [ {
+      "i18n" : {
+        "fr" : "Belgique",
+        "en" : "Belgium"
       },
-      "members": [
-        {
-          "i18n": {
-            "fr": "Portugal",
-            "en": "Portugal"
-          },
-          "isoAlpha2Code": "pt",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "Islande",
-            "en": "Iceland"
-          },
-          "isoAlpha2Code": "is",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "Autriche",
-            "en": "Austria"
-          },
-          "isoAlpha2Code": "at",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        {
-          "i18n": {
-            "fr": "Hongrie",
-            "en": "Hungary"
-          },
-          "isoAlpha2Code": "hu",
-          "position": 0,
-          "points": 0,
-          "win": 0,
-          "lose": 0,
-          "draw": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        }
-      ]
-    }
-  ],
-  "countries": [
-    {
-      "i18n": {
-        "fr": "France",
-        "en": "France"
+      "isoAlpha2Code" : "be",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "Italie",
+        "en" : "Italy"
       },
-      "isoAlpha2Code": "fr"
+      "isoAlpha2Code" : "it",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "Irlande",
+        "en" : "Republic of Ireland"
+      },
+      "isoAlpha2Code" : "ie",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "Suède",
+        "en" : "Sweden"
+      },
+      "isoAlpha2Code" : "se",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    } ]
+  }, {
+    "code" : "GroupF",
+    "i18n" : {
+      "fr" : "Groupe F",
+      "en" : "Group F"
     },
-    {
-      "i18n": {
-        "fr": "Roumanie",
-        "en": "Romania"
+    "members" : [ {
+      "i18n" : {
+        "fr" : "Portugal",
+        "en" : "Portugal"
       },
-      "isoAlpha2Code": "ro"
+      "isoAlpha2Code" : "pt",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "Islande",
+        "en" : "Iceland"
+      },
+      "isoAlpha2Code" : "is",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "Autriche",
+        "en" : "Austria"
+      },
+      "isoAlpha2Code" : "at",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    }, {
+      "i18n" : {
+        "fr" : "Hongrie",
+        "en" : "Hungary"
+      },
+      "isoAlpha2Code" : "hu",
+      "position" : 0,
+      "points" : 0,
+      "win" : 0,
+      "lose" : 0,
+      "draw" : 0,
+      "goalsFor" : 0,
+      "goalsAgainst" : 0
+    } ]
+  } ],
+  "countries" : [ {
+    "i18n" : {
+      "fr" : "France",
+      "en" : "France"
     },
-    {
-      "i18n": {
-        "fr": "Albanie",
-        "en": "Albania"
-      },
-      "isoAlpha2Code": "al"
+    "isoAlpha2Code" : "fr"
+  }, {
+    "i18n" : {
+      "fr" : "Roumanie",
+      "en" : "Romania"
     },
-    {
-      "i18n": {
-        "fr": "Suisse",
-        "en": "Switzerland"
-      },
-      "isoAlpha2Code": "ch"
+    "isoAlpha2Code" : "ro"
+  }, {
+    "i18n" : {
+      "fr" : "Albanie",
+      "en" : "Albania"
     },
-    {
-      "i18n": {
-        "fr": "Angleterre",
-        "en": "England"
-      },
-      "isoAlpha2Code": "gb-eng"
+    "isoAlpha2Code" : "al"
+  }, {
+    "i18n" : {
+      "fr" : "Suisse",
+      "en" : "Switzerland"
     },
-    {
-      "i18n": {
-        "fr": "Russie",
-        "en": "Russia"
-      },
-      "isoAlpha2Code": "ru"
+    "isoAlpha2Code" : "ch"
+  }, {
+    "i18n" : {
+      "fr" : "Angleterre",
+      "en" : "England"
     },
-    {
-      "i18n": {
-        "fr": "Pays de Galles",
-        "en": "Wales"
-      },
-      "isoAlpha2Code": "gb-wls"
+    "isoAlpha2Code" : "gb-eng"
+  }, {
+    "i18n" : {
+      "fr" : "Russie",
+      "en" : "Russia"
     },
-    {
-      "i18n": {
-        "fr": "Slovaquie",
-        "en": "Slovakia"
-      },
-      "isoAlpha2Code": "sk"
+    "isoAlpha2Code" : "ru"
+  }, {
+    "i18n" : {
+      "fr" : "Pays de Galles",
+      "en" : "Wales"
     },
-    {
-      "i18n": {
-        "fr": "Allemagne",
-        "en": "Germany"
-      },
-      "isoAlpha2Code": "de"
+    "isoAlpha2Code" : "gb-wls"
+  }, {
+    "i18n" : {
+      "fr" : "Slovaquie",
+      "en" : "Slovakia"
     },
-    {
-      "i18n": {
-        "fr": "Ukraine",
-        "en": "Ukraine"
-      },
-      "isoAlpha2Code": "ua"
+    "isoAlpha2Code" : "sk"
+  }, {
+    "i18n" : {
+      "fr" : "Allemagne",
+      "en" : "Germany"
     },
-    {
-      "i18n": {
-        "fr": "Pologne",
-        "en": "Poland"
-      },
-      "isoAlpha2Code": "pl"
+    "isoAlpha2Code" : "de"
+  }, {
+    "i18n" : {
+      "fr" : "Ukraine",
+      "en" : "Ukraine"
     },
-    {
-      "i18n": {
-        "fr": "Irlande du Nord",
-        "en": "Northern Ireland"
-      },
-      "isoAlpha2Code": "gb-nir"
+    "isoAlpha2Code" : "ua"
+  }, {
+    "i18n" : {
+      "fr" : "Pologne",
+      "en" : "Poland"
     },
-    {
-      "i18n": {
-        "fr": "Espagne",
-        "en": "Spain"
-      },
-      "isoAlpha2Code": "es"
+    "isoAlpha2Code" : "pl"
+  }, {
+    "i18n" : {
+      "fr" : "Irlande du Nord",
+      "en" : "Northern Ireland"
     },
-    {
-      "i18n": {
-        "fr": "République tchèque",
-        "en": "Czech Republic"
-      },
-      "isoAlpha2Code": "cz"
+    "isoAlpha2Code" : "gb-nir"
+  }, {
+    "i18n" : {
+      "fr" : "Espagne",
+      "en" : "Spain"
     },
-    {
-      "i18n": {
-        "fr": "Turquie",
-        "en": "Turkey"
-      },
-      "isoAlpha2Code": "tr"
+    "isoAlpha2Code" : "es"
+  }, {
+    "i18n" : {
+      "fr" : "République tchèque",
+      "en" : "Czech Republic"
     },
-    {
-      "i18n": {
-        "fr": "Croatie",
-        "en": "Croatia"
-      },
-      "isoAlpha2Code": "hr"
+    "isoAlpha2Code" : "cz"
+  }, {
+    "i18n" : {
+      "fr" : "Turquie",
+      "en" : "Turkey"
     },
-    {
-      "i18n": {
-        "fr": "Belgique",
-        "en": "Belgium"
-      },
-      "isoAlpha2Code": "be"
+    "isoAlpha2Code" : "tr"
+  }, {
+    "i18n" : {
+      "fr" : "Croatie",
+      "en" : "Croatia"
     },
-    {
-      "i18n": {
-        "fr": "Italie",
-        "en": "Italy"
-      },
-      "isoAlpha2Code": "it"
+    "isoAlpha2Code" : "hr"
+  }, {
+    "i18n" : {
+      "fr" : "Belgique",
+      "en" : "Belgium"
     },
-    {
-      "i18n": {
-        "fr": "Irlande",
-        "en": "Republic of Ireland"
-      },
-      "isoAlpha2Code": "ie"
+    "isoAlpha2Code" : "be"
+  }, {
+    "i18n" : {
+      "fr" : "Italie",
+      "en" : "Italy"
     },
-    {
-      "i18n": {
-        "fr": "Suède",
-        "en": "Sweden"
-      },
-      "isoAlpha2Code": "se"
+    "isoAlpha2Code" : "it"
+  }, {
+    "i18n" : {
+      "fr" : "Irlande",
+      "en" : "Republic of Ireland"
     },
-    {
-      "i18n": {
-        "fr": "Portugal",
-        "en": "Portugal"
-      },
-      "isoAlpha2Code": "pt"
+    "isoAlpha2Code" : "ie"
+  }, {
+    "i18n" : {
+      "fr" : "Suède",
+      "en" : "Sweden"
     },
-    {
-      "i18n": {
-        "fr": "Islande",
-        "en": "Iceland"
-      },
-      "isoAlpha2Code": "is"
+    "isoAlpha2Code" : "se"
+  }, {
+    "i18n" : {
+      "fr" : "Portugal",
+      "en" : "Portugal"
     },
-    {
-      "i18n": {
-        "fr": "Autriche",
-        "en": "Austria"
-      },
-      "isoAlpha2Code": "at"
+    "isoAlpha2Code" : "pt"
+  }, {
+    "i18n" : {
+      "fr" : "Islande",
+      "en" : "Iceland"
     },
-    {
-      "i18n": {
-        "fr": "Hongrie",
-        "en": "Hungary"
-      },
-      "isoAlpha2Code": "hu"
-    }
-  ]
+    "isoAlpha2Code" : "is"
+  }, {
+    "i18n" : {
+      "fr" : "Autriche",
+      "en" : "Austria"
+    },
+    "isoAlpha2Code" : "at"
+  }, {
+    "i18n" : {
+      "fr" : "Hongrie",
+      "en" : "Hungary"
+    },
+    "isoAlpha2Code" : "hu"
+  } ]
 }
