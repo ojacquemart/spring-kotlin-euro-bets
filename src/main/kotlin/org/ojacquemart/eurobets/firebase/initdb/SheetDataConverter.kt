@@ -81,9 +81,10 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
     }
 
     private fun getPhase(phase: String): Phase18n {
-        val phaseCode = if (phase.startsWith("Group")) "group" else "final"
+        val phaseCode = Phases.clean(phase)
+        val phaseState = if (phase.startsWith("Group")) "group" else phaseCode.toLowerCase()
 
-        return Phase18n(state = phaseCode, code = Phases.clean(phase), i18n = I18ns.getPhase(phase))
+        return Phase18n(state = phaseState, code = phaseCode, i18n = I18ns.getPhase(phase))
     }
 
     fun getStatusFromRawStatus(status: String): Int {

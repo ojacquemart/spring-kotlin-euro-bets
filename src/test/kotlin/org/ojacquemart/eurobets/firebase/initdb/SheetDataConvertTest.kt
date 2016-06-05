@@ -48,9 +48,9 @@ class SheetDataConverterTest {
 
         assertThat(fixture1.stadium.city).isEqualTo("Paris")
 
-        val round16Fixture = sheetData.fixtures.filter { entry -> entry.value.phase.state === "final" }.values.iterator().next()
-        assertThat(round16Fixture.dayId).isEqualTo(4)
-        assertThat(round16Fixture.phase).isEqualTo(Phase18n("final", "Round16", I18n("Huitième de finale", "Round 16")))
+        val round16Fixture1 = sheetData.fixtures.filter { entry -> entry.value.phase.state.equals("round16") }.values.iterator().next()
+        assertThat(round16Fixture1.dayId).isEqualTo(4)
+        assertThat(round16Fixture1.phase).isEqualTo(Phase18n("round16", "Round16", I18n("Huitième de finale", "Round 16")))
 
         val group1 = sheetData.groups.get(0)
         assertThat(group1.code).isEqualTo("GroupA")
