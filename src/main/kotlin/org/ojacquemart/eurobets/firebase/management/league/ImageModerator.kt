@@ -35,6 +35,7 @@ class ImageModerator(val ref: FirebaseRef, val mailSender: MailSender<League>) {
 
     fun copyWithImageAsDataUrl(league: League): Observable<League> {
         return RxFirebase.observe(this.ref.firebase.child(Collections.leaguesImages).child("${league.image}"))
+                .filter { ds -> ds.value != null }
                 .map { ds -> ds.value.toString() }
                 .map { value -> league.copy(image = value) }
     }
