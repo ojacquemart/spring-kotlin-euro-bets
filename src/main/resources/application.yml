@@ -9,3 +9,7 @@ scheduling:
   # every hour
   cron-started: 0 * * * * ?
   cron-matches: 0 * * * * ?
+
+logging:
+  level:
+    org.ojacquemart.eurobets: TRACE
