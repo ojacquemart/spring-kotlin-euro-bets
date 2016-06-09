@@ -10,7 +10,7 @@ class TableAssembler(val bets: List<BetData>) {
         val finalTable = getTableRows()
         val podium = PodiumCreator(finalTable).create()
 
-        return Table(finalTable, podium)
+        return Table(table = finalTable, nbRows = finalTable.size, podium = podium)
     }
 
     private fun getTableRows(): List<TableRow> {

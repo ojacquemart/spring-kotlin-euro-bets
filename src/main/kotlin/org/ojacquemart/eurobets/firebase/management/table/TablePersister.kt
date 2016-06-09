@@ -6,6 +6,7 @@ import org.ojacquemart.eurobets.firebase.management.league.League
 import org.ojacquemart.eurobets.firebase.rx.RxFirebase
 import org.ojacquemart.eurobets.lang.loggerFor
 import org.springframework.stereotype.Component
+import org.springframework.util.StopWatch
 import javax.annotation.PostConstruct
 
 @Component
@@ -15,9 +16,20 @@ class TablePersister(val betsFetcher: BetsFetcher, val ref: FirebaseRef) {
 
     @PostConstruct
     fun persist() {
-        log.info("Start to build & persist tables")
+        val stopWatch = StopWatch()
+
+        val onSubscribe = {
+            log.info("Start to build & persist tables")
+            stopWatch.start()
+        }
+        val onCompleted = {
+            stopWatch.stop()
+            log.info("Compute bets in ${stopWatch.totalTimeMillis}")
+        }
 
         val obsBets = betsFetcher.getBets()
+                .doOnSubscribe(onSubscribe)
+                .doOnCompleted(onCompleted)
         obsBets.subscribe { bets ->
             log.debug("Bets fetched... compute tables")
 
@@ -41,10 +53,13 @@ class TablePersister(val betsFetcher: BetsFetcher, val ref: FirebaseRef) {
         log.debug("Persist user position & points")
 
         val usersTableRef = ref.firebase.child(Collections.usersTableMeta)
-        table.table.forEach { it ->
-            log.debug("Persist ${it.uid} position & points")
-            usersTableRef.child(it.uid).setValue(UserPositionPoints(position = it.position, points = it.points))
-         }
+
+        table.table.forEachIndexed { index, it ->
+            val userPositionPoints = UserIndexed(index = index, position = it.position, points = it.points)
+            log.trace("Persist $userPositionPoints")
+
+            usersTableRef.child(it.uid).setValue(userPositionPoints)
+        }
     }
 
     private fun persistLeaguesTables(bets: List<BetData>) {
@@ -55,7 +70,7 @@ class TablePersister(val betsFetcher: BetsFetcher, val ref: FirebaseRef) {
     }
 
     private fun persistLeagueTable(bets: List<BetData>, league: League) {
-        log.debug("Compute league ${league.slug} table")
+        log.trace("Compute league ${league.slug} table")
 
         val leagueMemberUids = league.members.map { it.key }
         val leagueBets = bets.filter { leagueMemberUids.contains(it.user!!.uid) }
@@ -64,6 +79,6 @@ class TablePersister(val betsFetcher: BetsFetcher, val ref: FirebaseRef) {
         ref.firebase.child(Collections.tablesLeagues).child(league.slug).setValue(leagueTable)
     }
 
-    data class UserPositionPoints(val position: Int = -1, val points: Int = -1)
+    data class UserIndexed(val index: Int = -1, val position: Int = -1, val points: Int = -1)
 
 }
