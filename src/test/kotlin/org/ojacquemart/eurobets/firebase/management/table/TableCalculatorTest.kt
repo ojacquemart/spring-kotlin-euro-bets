@@ -23,7 +23,7 @@ class TableCalculatorTest {
         assertThat(foo.bads).isEqualTo(0)
         assertThat(foo.bets).isEqualTo(5)
         assertThat(foo.percentage).isEqualTo(100)
-        assertThat(foo.recents).isEqualTo(arrayOf(Result.PERFECT, Result.PERFECT, Result.PERFECT, Result.PERFECT, Result.PERFECT, Result.UNDEFINED, Result.UNDEFINED))
+        assertThat(foo.recents).isEqualTo(arrayOf(Result.PERFECT.id, Result.PERFECT.id, Result.PERFECT.id, Result.PERFECT.id, Result.PERFECT.id, Result.UNDEFINED.id, Result.UNDEFINED.id))
 
         // baz #2
         val baz = findUserInTableRows("baz", table)
@@ -37,7 +37,7 @@ class TableCalculatorTest {
         assertThat(baz.bads).isEqualTo(0)
         assertThat(baz.bets).isEqualTo(2)
         assertThat(baz.percentage).isEqualTo(100)
-        assertThat(baz.recents).isEqualTo(arrayOf(Result.UNDEFINED, Result.UNDEFINED, Result.UNDEFINED, Result.UNDEFINED, Result.UNDEFINED, Result.PERFECT, Result.PERFECT))
+        assertThat(baz.recents).isEqualTo(arrayOf(Result.UNDEFINED.id, Result.UNDEFINED.id, Result.UNDEFINED.id, Result.UNDEFINED.id, Result.UNDEFINED.id, Result.PERFECT.id, Result.PERFECT.id))
 
         // bar #3
         val bar = findUserInTableRows("bar", table)
@@ -51,7 +51,7 @@ class TableCalculatorTest {
         assertThat(bar.bads).isEqualTo(0)
         assertThat(bar.bets).isEqualTo(5)
         assertThat(bar.percentage).isEqualTo(100)
-        assertThat(bar.recents).isEqualTo(arrayOf(Result.GOOD, Result.GOOD, Result.GOOD, Result.GOOD, Result.GOOD, Result.UNDEFINED, Result.UNDEFINED))
+        assertThat(bar.recents).isEqualTo(arrayOf(Result.GOOD.id, Result.GOOD.id, Result.GOOD.id, Result.GOOD.id, Result.GOOD.id, Result.UNDEFINED.id, Result.UNDEFINED.id))
     }
 
     fun findUserInTableRows(uid: String, tableRows: List<TableRow>): TableRow = tableRows.find { tableRow -> tableRow.uid.equals(uid) }!!

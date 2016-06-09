@@ -44,7 +44,7 @@ class TableCalculator(val bets: List<BetData>) {
                     percentage = 0,
                     goods = if (result == Result.GOOD) 1 else 0,
                     bads = if (result == Result.BAD) 1 else 0,
-                    recents = arrayOf(result ?: Result.UNDEFINED)
+                    recents = arrayOf(if (result != null) result.id else Result.UNDEFINED.id)
             )
         }.reduce { current, next ->
             current.copy(

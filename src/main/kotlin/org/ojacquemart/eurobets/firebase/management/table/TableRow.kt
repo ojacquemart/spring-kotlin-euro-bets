@@ -11,7 +11,7 @@ data class TableRow(val position: Int = 0,
                     val goods: Int = 0,
                     val bads: Int = 0,
                     val percentage: Int = 0,
-                    val recents: Array<Result> = arrayOf()) {
+                    val recents: Array<Int> = arrayOf()) {
 
     fun getPositionCoefficient(): Double {
         return points + ((perfects * 2.5) + (goods * 1.25))
