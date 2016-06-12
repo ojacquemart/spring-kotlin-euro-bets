@@ -13,9 +13,9 @@ class MatchStatusUpdater {
         log.info("Update match ${match.number}")
 
         ref.firebase.child(Collections.matches).child(match.number.toString())
-                .updateChildren(mapOf("status" to Status.PLAYED.id)) { error, ref ->
+                .updateChildren(mapOf("status" to Status.PLAYING.id)) { error, ref ->
                     when (error) {
-                        null -> log.debug("Match ${match.number} is set to ${Status.PLAYED}")
+                        null -> log.debug("Match ${match.number} is set to ${Status.PLAYING}")
                         else -> log.error("Error while updating the match ${match.number}")
                     }
                 }
