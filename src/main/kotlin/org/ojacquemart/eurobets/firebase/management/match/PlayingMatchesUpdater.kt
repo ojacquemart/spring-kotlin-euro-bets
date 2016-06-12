@@ -5,9 +5,9 @@ import org.ojacquemart.eurobets.firebase.config.FirebaseRef
 import org.ojacquemart.eurobets.firebase.misc.Status
 import org.ojacquemart.eurobets.lang.loggerFor
 
-class MatchStatusUpdater {
+class PlayingMatchesUpdater {
 
-    private val log = loggerFor<MatchStatusUpdater>()
+    private val log = loggerFor<PlayingMatchesUpdater>()
 
     fun update(match: Match, ref: FirebaseRef) {
         log.info("Update match ${match.number}")
