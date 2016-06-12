@@ -6,7 +6,7 @@ class TableCalculator(val bets: List<BetData>) {
 
     fun getRows(): List<TableRow> {
         val tableRows = getTableRows()
-        val positions = getPositions(tableRows)
+        val positions = TableRow.getPositions(tableRows)
 
         val rowsWithPosition = tableRows.map {
             val positionCoefficient = it.getPositionCoefficient()
@@ -56,18 +56,6 @@ class TableCalculator(val bets: List<BetData>) {
                     bads = current.bads + next.bads,
                     recents = current.recents.plus(next.recents[0]))
         }
-    }
-
-    /**
-     * Transform the bets into a list of position
-     * The position is computed with a coefficient to promote perfect & goods bet (each one has a coeff
-     * @see TableRow
-     */
-    private fun getPositions(tableRows: List<TableRow>): List<Double> {
-        return tableRows.groupBy { tableRow -> tableRow.getPositionCoefficient() }
-                .toList()
-                .map { pair -> pair.first }
-                .sortedDescending()
     }
 
 }

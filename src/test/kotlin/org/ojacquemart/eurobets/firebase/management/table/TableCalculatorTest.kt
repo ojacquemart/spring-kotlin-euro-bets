@@ -27,7 +27,7 @@ class TableCalculatorTest {
 
         // baz #2
         val baz = findUserInTableRows("baz", table)
-        assertThat(baz.position).isEqualTo(2)
+        assertThat(baz.position).isEqualTo(1)
         assertThat(baz.uid).isEqualTo("baz")
         assertThat(baz.displayName).isEqualTo("Baz")
         assertThat(baz.profileImageURL).isEqualTo("baz.png")
@@ -41,7 +41,7 @@ class TableCalculatorTest {
 
         // bar #3
         val bar = findUserInTableRows("bar", table)
-        assertThat(bar.position).isEqualTo(3)
+        assertThat(bar.position).isEqualTo(2)
         assertThat(bar.uid).isEqualTo("bar")
         assertThat(bar.displayName).isEqualTo("Bar")
         assertThat(bar.profileImageURL).isEqualTo("bar.png")

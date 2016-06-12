@@ -27,7 +27,7 @@ class TableAssembler(val bets: List<BetData>) {
     private fun getTableRowsWithEvolution(currentTable: List<TableRow>, matchNumbersDesc: List<Int>): List<TableRow> {
         val currentMatchNumber = matchNumbersDesc.last()
 
-        log.debug("Compute table for match < $currentMatchNumber")
+        log.trace("Compute table for match < $currentMatchNumber")
         val previousBets = bets.filter { it.match!!.number < currentMatchNumber }
         val previousTable = TableCalculator(previousBets).getRows()
         val previousTableByUid = previousTable.associateBy({ it.uid }, { it })

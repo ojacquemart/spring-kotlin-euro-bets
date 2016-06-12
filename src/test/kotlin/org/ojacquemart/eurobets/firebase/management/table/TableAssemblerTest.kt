@@ -23,7 +23,7 @@ class TableAssemblerTest {
 
         val podium = table.podium
         assertThat(podium.steps.size).isEqualTo(3)
-        assertThat(podium.steps[1]!!.size).isEqualTo(2)
+        assertThat(podium.steps[1]!!.size).isEqualTo(3)
         assertThat(podium.steps[1]!!).extracting("uid").contains("foo", "foo-clone")
         assertThat(podium.steps[2]!!.size).isEqualTo(1)
         assertThat(podium.steps[3]!!.size).isEqualTo(1)

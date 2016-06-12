@@ -12,7 +12,7 @@ class PodiumCreator(val tableRows: List<TableRow>) {
     }
 
     fun create(): Podium {
-        log.debug("Create podium...")
+        log.trace("Create podium...")
 
         val tableRowsForPodium = tableRows.filter(isBetweenOneAndThree)
         val tableRowsByPosition = tableRowsForPodium.groupBy { it.position }

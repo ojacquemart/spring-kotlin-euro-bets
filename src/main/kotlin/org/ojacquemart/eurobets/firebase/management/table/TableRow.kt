@@ -14,7 +14,9 @@ data class TableRow(val position: Int = 0,
                     val recents: Array<Int> = arrayOf()) {
 
     fun getPositionCoefficient(): Double {
-        return points + ((perfects * 2.5) + (goods * 1.25))
+        val coefficient = if (bets > 0) + ((perfects * 0.5 / bets) + (goods * 0.25 / bets)) else 0.0
+
+        return points + coefficient
     }
 
     companion object {
@@ -24,5 +26,13 @@ data class TableRow(val position: Int = 0,
 
             return (sumOfPerfectOrGoodsBets.toFloat().div(nbBets) * 100).toInt();
         }
+
+        fun getPositions(tableRows: List<TableRow>): List<Double> {
+            return tableRows.groupBy { tableRow -> tableRow.getPositionCoefficient() }
+                    .toList()
+                    .map { pair -> pair.first }
+                    .sortedDescending()
+        }
+
     }
 }
