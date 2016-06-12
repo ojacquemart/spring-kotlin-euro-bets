@@ -1,8 +1,13 @@
 package org.ojacquemart.eurobets.firebase.management.table
 
+import com.firebase.client.ChildEventListener
+import com.firebase.client.DataSnapshot
+import com.firebase.client.FirebaseError
 import org.ojacquemart.eurobets.firebase.Collections
 import org.ojacquemart.eurobets.firebase.config.FirebaseRef
 import org.ojacquemart.eurobets.firebase.management.league.League
+import org.ojacquemart.eurobets.firebase.management.match.Match
+import org.ojacquemart.eurobets.firebase.misc.Status
 import org.ojacquemart.eurobets.firebase.rx.RxFirebase
 import org.ojacquemart.eurobets.lang.loggerFor
 import org.springframework.stereotype.Component
@@ -16,15 +21,48 @@ class TablePersister(val betsFetcher: BetsFetcher, val ref: FirebaseRef) {
 
     @PostConstruct
     fun persist() {
-        val stopWatch = StopWatch()
 
+        log.debug("Start to compute when value changed")
+        ref.firebase.child(Collections.matches).addChildEventListener(object : ChildEventListener {
+
+            override fun onChildChanged(p0: DataSnapshot?, p1: String?) {
+                p0?.let { ds ->
+                    log.info("Child changed detected...")
+
+                    val match = ds.getValue(Match::class.java)
+                    if (match.status.equals(Status.PLAYED.id)) {
+                        log.info("Match #${ds.key} is finished!")
+
+                        doPersist()
+                    }
+                }
+            }
+
+            override fun onChildMoved(p0: DataSnapshot?, p1: String?) {
+            }
+
+            override fun onChildAdded(p0: DataSnapshot?, p1: String?) {
+            }
+
+            override fun onChildRemoved(p0: DataSnapshot?) {
+            }
+
+            override fun onCancelled(p0: FirebaseError?) {
+            }
+        })
+    }
+
+    fun doPersist() {
+        log.info("Compute & persist new tables data")
+
+        val stopWatch = StopWatch()
         val onSubscribe = {
             log.info("Start to build & persist tables")
             stopWatch.start()
         }
         val onCompleted = {
             stopWatch.stop()
-            log.info("Compute bets in ${stopWatch.totalTimeMillis}")
+            log.info("Compute bets in ${stopWatch.totalTimeMillis}ms")
         }
 
         val obsBets = betsFetcher.getBets()
@@ -54,12 +92,14 @@ class TablePersister(val betsFetcher: BetsFetcher, val ref: FirebaseRef) {
 
         val usersTableRef = ref.firebase.child(Collections.usersTableMeta)
 
-        table.table.forEachIndexed { index, it ->
-            val userPositionPoints = UserIndexed(index = index, position = it.position, points = it.points)
-            log.trace("Persist $userPositionPoints")
+        table.table
+                .filter { it.uid.isNotEmpty() }
+                .forEachIndexed { index, it ->
+                    val userPositionPoints = UserIndexed(index = index, position = it.position, points = it.points)
+                    log.trace("Persist $userPositionPoints")
 
-            usersTableRef.child(it.uid).setValue(userPositionPoints)
-        }
+                    usersTableRef.child(it.uid).setValue(userPositionPoints)
+                }
     }
 
     private fun persistLeaguesTables(bets: List<BetData>) {
