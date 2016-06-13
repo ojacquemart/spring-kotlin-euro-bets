@@ -11,8 +11,9 @@ class TableCalculator(val bets: List<BetData>) {
         val rowsWithPosition = tableRows.map {
             val positionCoefficient = it.getPositionCoefficient()
             val position = positions.indexOf(positionCoefficient) + 1
+            val last10Recent = it.recents.takeLast(10).toTypedArray()
 
-            it.copy(position = position)
+            it.copy(position = position, recents = last10Recent)
         }
 
         return rowsWithPosition.sortedWith(compareBy({ it.position }, { it.displayName }))
