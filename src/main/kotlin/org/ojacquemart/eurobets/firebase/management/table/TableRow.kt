@@ -1,5 +1,7 @@
 package org.ojacquemart.eurobets.firebase.management.table
 
+import com.fasterxml.jackson.annotation.JsonIgnore
+
 data class TableRow(val position: Int = 0,
                     val uid: String = "",
                     val displayName: String = "",
@@ -13,6 +15,7 @@ data class TableRow(val position: Int = 0,
                     val percentage: Int = 0,
                     val recents: Array<Int> = arrayOf()) {
 
+    @JsonIgnore
     fun getPositionCoefficient(): Double {
         val coefficient = if (bets > 0) + ((perfects * 0.5 / bets) + (goods * 0.25 / bets)) else 0.0
 
