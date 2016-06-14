@@ -5,6 +5,7 @@ import com.firebase.client.DataSnapshot
 import com.firebase.client.FirebaseError
 import org.ojacquemart.eurobets.firebase.Collections
 import org.ojacquemart.eurobets.firebase.config.FirebaseRef
+import org.ojacquemart.eurobets.firebase.management.group.GroupsUpdateScheduler
 import org.ojacquemart.eurobets.firebase.management.table.TablePersister
 import org.ojacquemart.eurobets.firebase.misc.Status
 import org.ojacquemart.eurobets.lang.loggerFor
@@ -12,7 +13,8 @@ import org.springframework.stereotype.Component
 import javax.annotation.PostConstruct
 
 @Component
-class OnFinishedMatchChangeListener(val tablePersister: TablePersister, val ref: FirebaseRef) {
+class OnFinishedMatchChangeListener(val tablePersister: TablePersister, val groupsUpdateScheduler: GroupsUpdateScheduler,
+                                    val ref: FirebaseRef) {
 
     private val log = loggerFor<OnFinishedMatchChangeListener>()
 
@@ -28,7 +30,8 @@ class OnFinishedMatchChangeListener(val tablePersister: TablePersister, val ref:
                     if (match.status == Status.PLAYED.id) {
                         log.info("Match #${ds.key} is finished!")
 
-                        tablePersister.persist()
+                        persistTable()
+                        scheduleGroupsUpdate()
                     }
                 }
             }
@@ -46,6 +49,18 @@ class OnFinishedMatchChangeListener(val tablePersister: TablePersister, val ref:
             }
         })
 
+    }
+
+    fun persistTable() {
+        log.debug("Persist table")
+
+        tablePersister.persist()
+    }
+
+    fun scheduleGroupsUpdate() {
+        log.debug("Schedule update groups")
+
+        groupsUpdateScheduler.scheduleUpdate()
     }
 
 }

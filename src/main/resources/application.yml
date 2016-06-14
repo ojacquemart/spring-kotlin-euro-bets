@@ -12,4 +12,4 @@ scheduling:
 
 logging:
   level:
-    org.ojacquemart.eurobets: TRACE
+    org.ojacquemart.eurobets: DEBUG

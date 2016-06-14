@@ -20,7 +20,7 @@ data class Sheets(@JsonProperty("NewFixtures") val fixtures: List<RawFixture>,
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class RawFixture(
         @JsonProperty("Match No") val id: Int,
-        val dayId: String,
+        val dayId: String?,
         val date: String,
         @JsonProperty("Match_Categ") val phase: String,
         @JsonProperty("Home_team") val homeTeam: String,

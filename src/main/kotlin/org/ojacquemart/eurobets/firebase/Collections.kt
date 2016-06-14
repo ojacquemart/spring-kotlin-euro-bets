@@ -3,6 +3,7 @@ package org.ojacquemart.eurobets.firebase
 object Collections {
     val settings = "/settings"
     val matches = "/fixtures"
+    val groups = "/groups"
 
     val users = "/users"
     val usersTableMeta = "/users_table_meta"

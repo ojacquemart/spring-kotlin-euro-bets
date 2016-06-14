@@ -4,11 +4,10 @@ import org.ojacquemart.eurobets.firebase.initdb.country.Country
 import org.ojacquemart.eurobets.firebase.initdb.country.CountryFinder
 import org.ojacquemart.eurobets.firebase.initdb.fixture.*
 import org.ojacquemart.eurobets.firebase.initdb.group.Group
-import org.ojacquemart.eurobets.firebase.initdb.group.GroupMember
+import org.ojacquemart.eurobets.firebase.initdb.group.GroupConverter
 import org.ojacquemart.eurobets.firebase.initdb.i18n.I18ns
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixture
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixtures
-import org.ojacquemart.eurobets.firebase.initdb.raw.RawGroupMember
 import org.ojacquemart.eurobets.firebase.initdb.raw.Sheets
 import org.ojacquemart.eurobets.firebase.misc.Settings
 import org.ojacquemart.eurobets.firebase.misc.Status
@@ -20,6 +19,7 @@ import java.time.format.DateTimeFormatter
 class SheetDataConverter(val rawFixtures: RawFixtures) {
 
     val countryFinder = CountryFinder()
+    val groupConverter = GroupConverter()
 
     val ddMMyyyyHHmm = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")
     val ddMMyyyy = DateTimeFormatter.ofPattern("dd/MM/yyyy")
@@ -47,7 +47,7 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
             val status = getStatusFromRawStatus(rawFixture.resultFixture)
 
             Fixture(rawFixture.id,
-                    rawFixture.dayId.toInt(),
+                    getSafeDayId(rawFixture),
                     rawFixture.date,
                     getTimestampDate(rawFixture),
                     rawFixture.kickoffTimeLocal,
@@ -72,6 +72,8 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
 
         return ldt.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli()
     }
+
+    private fun getSafeDayId(rawFixture: RawFixture) = if (rawFixture.dayId != null) rawFixture.dayId.toInt() else -1
 
     // teams
 
@@ -101,34 +103,7 @@ class SheetDataConverter(val rawFixtures: RawFixtures) {
     // groups
 
     private fun getGroups(sheets: Sheets): List<Group> {
-        return listOf(
-                getGroup("GroupA", sheets.groupA),
-                getGroup("GroupB", sheets.groupB),
-                getGroup("GroupC", sheets.groupC),
-                getGroup("GroupD", sheets.groupD),
-                getGroup("GroupE", sheets.groupE),
-                getGroup("GroupF", sheets.groupF)
-        )
-    }
-
-    fun getGroup(groupName: String, rawGroupMembers: List<RawGroupMember>): Group {
-        return Group(
-                code = groupName,
-                i18n = I18ns.getGroup(groupName),
-                members = rawGroupMembers.map { rawGroupMember -> getGroupMember(rawGroupMember) }
-        )
-    }
-
-    fun getGroupMember(rawGroupMember: RawGroupMember): GroupMember {
-        val country = getCountryByName(rawGroupMember.country)
-
-        return GroupMember(
-                i18n = country.i18n,
-                isoAlpha2Code = country.isoAlpha2Code,
-                position = rawGroupMember.position.toInt(),
-                points = rawGroupMember.points.toInt(),
-                win = rawGroupMember.win.toInt(), lose = rawGroupMember.lose.toInt(), draw = rawGroupMember.draw.toInt(),
-                goalsFor = rawGroupMember.goalsFor.toInt(), goalsAgainst = rawGroupMember.goalsAgainst.toInt())
+        return groupConverter.getGroups(sheets)
     }
 
     // helper methods
