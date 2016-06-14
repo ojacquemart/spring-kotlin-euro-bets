@@ -1,8 +1,6 @@
 package org.ojacquemart.eurobets.firebase.management.group
 
-import org.ojacquemart.eurobets.firebase.initdb.group.Group
-import org.ojacquemart.eurobets.firebase.initdb.group.GroupConverter
-import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixtures
+import org.ojacquemart.eurobets.firebase.initdb.group.v2.FixturesV2
 import org.ojacquemart.eurobets.lang.loggerFor
 import org.springframework.web.client.RestTemplate
 
@@ -10,13 +8,12 @@ class GroupCrawler {
 
     private val log = loggerFor<GroupCrawler>()
 
-    fun crawl(): List<Group> {
+    fun crawl(): FixturesV2 {
         log.info("Crawling groups from $GUARDIAN_API_URL")
 
         val restTemplate = RestTemplate()
-        val rawFixtures = restTemplate.getForObject(GUARDIAN_API_URL, RawFixtures::class.java)
 
-        return GroupConverter().getGroups(rawFixtures.sheets)
+        return restTemplate.getForObject(GUARDIAN_API_URL, FixturesV2::class.java)
     }
 
     companion object {
