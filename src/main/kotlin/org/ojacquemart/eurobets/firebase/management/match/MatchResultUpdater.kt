@@ -13,7 +13,7 @@ class MatchResultUpdater(val ref: FirebaseRef) {
         if (p0 == null) {
             log.debug("Success... $message")
         } else {
-            log.error("Error... $message", p0!!.toException())
+            log.error("Error... $message", p0.toException())
         }
     }
 
