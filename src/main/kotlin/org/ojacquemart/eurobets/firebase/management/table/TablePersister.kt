@@ -7,14 +7,26 @@ import org.ojacquemart.eurobets.firebase.rx.RxFirebase
 import org.ojacquemart.eurobets.lang.loggerFor
 import org.springframework.stereotype.Component
 import org.springframework.util.StopWatch
+import rx.lang.kotlin.onError
 
 @Component
 class TablePersister(val betsFetcher: BetsFetcher, val ref: FirebaseRef) {
 
     private val log = loggerFor<TablePersister>()
 
+    var persistRunning = false
+
     fun persist() {
+        when (persistRunning) {
+            true -> log.info("Persist is already running...")
+            false -> doPersist()
+        }
+    }
+
+    private fun doPersist() {
         log.info("Compute & persist tables data")
+
+        persistRunning = true
 
         val stopWatch = StopWatch()
         val onSubscribe = {
@@ -29,11 +41,15 @@ class TablePersister(val betsFetcher: BetsFetcher, val ref: FirebaseRef) {
         val obsBets = betsFetcher.getBets()
                 .doOnSubscribe(onSubscribe)
                 .doOnCompleted(onCompleted)
-        obsBets.subscribe { bets ->
+        obsBets.onError { error ->
+            log.error("Error while persisting table", error)
+            persistRunning = false
+        }.subscribe { bets ->
             log.debug("Bets fetched... compute tables")
 
             persistGlobalTable(bets)
             persistLeaguesTables(bets)
+            persistRunning = false
 
             log.info("Finish to persist bets...")
         }
