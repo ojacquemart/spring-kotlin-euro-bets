@@ -3,7 +3,7 @@ package org.ojacquemart.eurobets.firebase.management.game
 import org.ojacquemart.eurobets.firebase.Collections
 import org.ojacquemart.eurobets.firebase.config.FirebaseRef
 import org.ojacquemart.eurobets.firebase.config.SchedulingSettings
-import org.ojacquemart.eurobets.firebase.misc.Settings
+import org.ojacquemart.eurobets.firebase.support.Settings
 import org.ojacquemart.eurobets.firebase.rx.RxFirebase
 import org.ojacquemart.eurobets.lang.loggerFor
 import org.springframework.scheduling.TaskScheduler

@@ -3,15 +3,14 @@ package org.ojacquemart.eurobets.firebase.management.match
 import org.ojacquemart.eurobets.firebase.Collections
 import org.ojacquemart.eurobets.firebase.config.FirebaseRef
 import org.ojacquemart.eurobets.firebase.config.SchedulingSettings
-import org.ojacquemart.eurobets.firebase.misc.Status
 import org.ojacquemart.eurobets.firebase.rx.RxFirebase
+import org.ojacquemart.eurobets.firebase.support.Status
 import org.ojacquemart.eurobets.lang.loggerFor
 import org.springframework.scheduling.TaskScheduler
+import org.springframework.scheduling.support.CronTrigger
 import org.springframework.stereotype.Component
 import rx.Observable
-import java.util.*
 import java.util.concurrent.ScheduledFuture
-import java.util.concurrent.TimeUnit
 import javax.annotation.PostConstruct
 
 @Component
@@ -45,7 +44,7 @@ open class PlayingMatchTask(val schedulingConfig: SchedulingSettings,
     }
 
     private fun checkPlayingMatches(matches: List<Match>) {
-        scheduled = taskScheduler.scheduleAtFixedRate(PlayingMatchesChecker(matches, ref), Date(), TimeUnit.SECONDS.toMillis(30))
+        scheduled = taskScheduler.schedule(PlayingMatchesChecker(matches, ref), CronTrigger(schedulingConfig.cronMatches))
     }
 
 }

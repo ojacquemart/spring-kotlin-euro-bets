@@ -6,7 +6,7 @@ import org.junit.Test
 import org.ojacquemart.eurobets.firebase.initdb.fixture.Phase18n
 import org.ojacquemart.eurobets.firebase.initdb.i18n.I18n
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixturesJsonFileLoader
-import org.ojacquemart.eurobets.firebase.misc.Status
+import org.ojacquemart.eurobets.firebase.support.Status
 
 class SheetDataConverterTest {
 

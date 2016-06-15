@@ -1,7 +1,7 @@
 package org.ojacquemart.eurobets.firebase.management.match
 
 import org.ojacquemart.eurobets.firebase.management.match.crawler.Fixture
-import org.ojacquemart.eurobets.firebase.misc.Status
+import org.ojacquemart.eurobets.firebase.support.Status
 
 data class MatchWithFixture(val match: Match, val fixture: Fixture) {
 

@@ -4,7 +4,7 @@ import org.ojacquemart.eurobets.firebase.management.match.Match
 import org.ojacquemart.eurobets.firebase.management.match.Phase
 import org.ojacquemart.eurobets.firebase.management.match.Team
 import org.ojacquemart.eurobets.firebase.management.user.User
-import org.ojacquemart.eurobets.firebase.misc.PhaseType
+import org.ojacquemart.eurobets.firebase.support.PhaseType
 
 class DatasourceForTest {
     companion object {

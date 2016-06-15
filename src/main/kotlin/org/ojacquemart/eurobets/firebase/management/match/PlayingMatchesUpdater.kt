@@ -2,7 +2,7 @@ package org.ojacquemart.eurobets.firebase.management.match
 
 import org.ojacquemart.eurobets.firebase.Collections
 import org.ojacquemart.eurobets.firebase.config.FirebaseRef
-import org.ojacquemart.eurobets.firebase.misc.Status
+import org.ojacquemart.eurobets.firebase.support.Status
 import org.ojacquemart.eurobets.lang.loggerFor
 
 class PlayingMatchesUpdater {

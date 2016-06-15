@@ -3,7 +3,7 @@ package org.ojacquemart.eurobets.firebase.initdb
 import org.ojacquemart.eurobets.firebase.initdb.country.Country
 import org.ojacquemart.eurobets.firebase.initdb.fixture.Fixture
 import org.ojacquemart.eurobets.firebase.initdb.group.Group
-import org.ojacquemart.eurobets.firebase.misc.Settings
+import org.ojacquemart.eurobets.firebase.support.Settings
 
 data class SheetData(
     val settings: Settings,

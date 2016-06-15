@@ -1,8 +1,8 @@
 package org.ojacquemart.eurobets.firebase.management.match
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
-import org.ojacquemart.eurobets.firebase.misc.ScoreType
-import org.ojacquemart.eurobets.firebase.misc.Status
+import org.ojacquemart.eurobets.firebase.support.ScoreType
+import org.ojacquemart.eurobets.firebase.support.Status
 import java.util.concurrent.TimeUnit
 
 @JsonIgnoreProperties(ignoreUnknown = true)

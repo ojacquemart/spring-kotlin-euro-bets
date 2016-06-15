@@ -1,4 +1,4 @@
-package org.ojacquemart.eurobets.firebase.misc
+package org.ojacquemart.eurobets.firebase.support
 
 enum class Status constructor(val id: Int) {
     TO_PLAY(0),

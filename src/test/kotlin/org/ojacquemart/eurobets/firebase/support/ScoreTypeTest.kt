@@ -1,4 +1,4 @@
-package org.ojacquemart.eurobets.firebase.misc
+package org.ojacquemart.eurobets.firebase.support
 
 import org.assertj.core.api.AssertionsForInterfaceTypes.assertThat
 import org.junit.Test

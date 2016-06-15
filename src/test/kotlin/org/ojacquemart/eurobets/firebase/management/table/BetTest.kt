@@ -2,7 +2,7 @@ package org.ojacquemart.eurobets.firebase.management.table
 
 import org.assertj.core.api.AssertionsForInterfaceTypes.assertThat
 import org.junit.Test
-import org.ojacquemart.eurobets.firebase.misc.ScoreType
+import org.ojacquemart.eurobets.firebase.support.ScoreType
 
 class BetTest {
 

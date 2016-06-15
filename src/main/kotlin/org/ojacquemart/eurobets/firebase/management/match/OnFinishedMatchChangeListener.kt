@@ -7,7 +7,7 @@ import org.ojacquemart.eurobets.firebase.Collections
 import org.ojacquemart.eurobets.firebase.config.FirebaseRef
 import org.ojacquemart.eurobets.firebase.management.group.GroupsUpdateScheduler
 import org.ojacquemart.eurobets.firebase.management.table.TablePersister
-import org.ojacquemart.eurobets.firebase.misc.Status
+import org.ojacquemart.eurobets.firebase.support.Status
 import org.ojacquemart.eurobets.lang.loggerFor
 import org.springframework.stereotype.Component
 import javax.annotation.PostConstruct

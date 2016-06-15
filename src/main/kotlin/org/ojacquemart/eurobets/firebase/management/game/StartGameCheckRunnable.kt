@@ -1,6 +1,6 @@
 package org.ojacquemart.eurobets.firebase.management.game
 
-import org.ojacquemart.eurobets.firebase.misc.Settings
+import org.ojacquemart.eurobets.firebase.support.Settings
 import org.ojacquemart.eurobets.lang.loggerFor
 
 class StartGameCheckRunnable(val settings: Settings, val updater: SettingsUpdater): Runnable {

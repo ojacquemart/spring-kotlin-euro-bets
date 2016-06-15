@@ -5,7 +5,7 @@ import com.firebase.client.DataSnapshot
 import com.firebase.client.FirebaseError
 import org.ojacquemart.eurobets.firebase.Collections
 import org.ojacquemart.eurobets.firebase.config.FirebaseRef
-import org.ojacquemart.eurobets.firebase.misc.Status
+import org.ojacquemart.eurobets.firebase.support.Status
 import org.ojacquemart.eurobets.lang.loggerFor
 import org.springframework.scheduling.TaskScheduler
 import org.springframework.stereotype.Component

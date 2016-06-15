@@ -9,8 +9,8 @@ import org.ojacquemart.eurobets.firebase.initdb.i18n.I18ns
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixture
 import org.ojacquemart.eurobets.firebase.initdb.raw.RawFixtures
 import org.ojacquemart.eurobets.firebase.initdb.raw.Sheets
-import org.ojacquemart.eurobets.firebase.misc.Settings
-import org.ojacquemart.eurobets.firebase.misc.Status
+import org.ojacquemart.eurobets.firebase.support.Settings
+import org.ojacquemart.eurobets.firebase.support.Status
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.ZoneId

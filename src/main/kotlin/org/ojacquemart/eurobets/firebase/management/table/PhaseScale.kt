@@ -1,6 +1,6 @@
 package org.ojacquemart.eurobets.firebase.management.table
 
-import org.ojacquemart.eurobets.firebase.misc.PhaseType
+import org.ojacquemart.eurobets.firebase.support.PhaseType
 
 data class PhaseScale(val pointsByResult: Map<Result, Int>) {
 

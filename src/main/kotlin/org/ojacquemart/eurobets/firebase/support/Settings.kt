@@ -1,4 +1,4 @@
-package org.ojacquemart.eurobets.firebase.misc
+package org.ojacquemart.eurobets.firebase.support
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 

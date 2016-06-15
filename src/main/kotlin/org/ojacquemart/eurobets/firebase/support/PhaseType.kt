@@ -1,4 +1,4 @@
-package org.ojacquemart.eurobets.firebase.misc
+package org.ojacquemart.eurobets.firebase.support
 
 enum class PhaseType constructor(val state: String) {
     GROUP("group"),
