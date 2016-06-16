@@ -9,8 +9,9 @@ class TableAssembler(val bets: List<BetData>) {
     fun getTable(): Table {
         val finalTable = getTableRows()
         val podium = PodiumCreator(finalTable).create()
+        val lastPosition = getLastPosition(finalTable)
 
-        return Table(table = finalTable, nbRows = finalTable.size, podium = podium)
+        return Table(table = finalTable, nbRows = finalTable.size, lastPosition = lastPosition, podium = podium)
     }
 
     private fun getTableRows(): List<TableRow> {
@@ -42,6 +43,10 @@ class TableAssembler(val bets: List<BetData>) {
                 currentTableRow.copy(evolution = previousTableRowUid.position - currentTableRow.position)
             }
         }
+    }
+
+    private fun getLastPosition(finalTable: List<TableRow>): Int {
+        return finalTable.map { it.position }.max() ?: 0
     }
 
 }
