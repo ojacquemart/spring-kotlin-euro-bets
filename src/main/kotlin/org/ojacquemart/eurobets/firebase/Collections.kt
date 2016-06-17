@@ -10,6 +10,8 @@ object Collections {
     val leagues = "/leagues"
     val leaguesImages = "/leagues_images"
 
+    val newscast = "/newscast"
+
     val bets = "/bets"
     val tables = "/tables"
     val tablesLeagues = "/tables_leagues"

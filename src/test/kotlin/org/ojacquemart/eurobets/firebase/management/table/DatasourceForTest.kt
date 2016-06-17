@@ -39,11 +39,11 @@ class DatasourceForTest {
 
         val bets = listOf(
                 // foo
-                BetData(match = match1_1_0, user = foo, bet = Bet(1, 0)),
-                BetData(match = match2_0_1, user = foo, bet = Bet(0, 1)),
-                BetData(match = match3_1_1, user = foo, bet = Bet(1, 1)),
-                BetData(match = match4_2_4, user = foo, bet = Bet(2, 4)),
-                BetData(match = match5_2_2, user = foo, bet = Bet(2, 2)),
+                BetData(match = match1_1_0, user = foo, bet = Bet(homeGoals = 1, awayGoals = 0)),
+                BetData(match = match2_0_1, user = foo, bet = Bet(homeGoals = 0, awayGoals = 1)),
+                BetData(match = match3_1_1, user = foo, bet = Bet(homeGoals = 1, awayGoals = 1)),
+                BetData(match = match4_2_4, user = foo, bet = Bet(homeGoals = 2, awayGoals = 4)),
+                BetData(match = match5_2_2, user = foo, bet = Bet(homeGoals = 2, awayGoals = 2)),
                 BetData(match = match6_1_0, user = foo, bet = null),
                 BetData(match = match7_2_0, user = foo, bet = null),
 
@@ -53,26 +53,26 @@ class DatasourceForTest {
                 BetData(match = match3_1_1, user = baz, bet = null),
                 BetData(match = match4_2_4, user = baz, bet = null),
                 BetData(match = match5_2_2, user = baz, bet = null),
-                BetData(match = match6_1_0, user = baz, bet = Bet(1, 0)),
-                BetData(match = match7_2_0, user = baz, bet = Bet(2, 0)),
+                BetData(match = match6_1_0, user = baz, bet = Bet(homeGoals = 1, awayGoals = 0)),
+                BetData(match = match7_2_0, user = baz, bet = Bet(homeGoals = 2, awayGoals = 0)),
 
                 // bar
-                BetData(match = match1_1_0, user = bar, bet = Bet(2, 0)),
-                BetData(match = match2_0_1, user = bar, bet = Bet(0, 2)),
-                BetData(match = match3_1_1, user = bar, bet = Bet(2, 2)),
-                BetData(match = match4_2_4, user = bar, bet = Bet(0, 1)),
-                BetData(match = match5_2_2, user = bar, bet = Bet(0, 0)),
+                BetData(match = match1_1_0, user = bar, bet = Bet(homeGoals = 2, awayGoals = 0)),
+                BetData(match = match2_0_1, user = bar, bet = Bet(homeGoals = 0, awayGoals = 2)),
+                BetData(match = match3_1_1, user = bar, bet = Bet(homeGoals = 2, awayGoals = 2)),
+                BetData(match = match4_2_4, user = bar, bet = Bet(homeGoals = 0, awayGoals = 1)),
+                BetData(match = match5_2_2, user = bar, bet = Bet(homeGoals = 0, awayGoals = 0)),
                 BetData(match = match6_1_0, user = bar, bet = null),
                 BetData(match = match7_2_0, user = bar, bet = null),
 
                 // qix
-                BetData(match = match1_1_0, user = qix, bet = Bet(0, 1)),
-                BetData(match = match2_0_1, user = qix, bet = Bet(1, 0)),
-                BetData(match = match3_1_1, user = qix, bet = Bet(1, 0)),
-                BetData(match = match4_2_4, user = qix, bet = Bet(1, 0)),
-                BetData(match = match5_2_2, user = qix, bet = Bet(1, 0)),
-                BetData(match = match6_1_0, user = qix, bet = Bet(0, 1)),
-                BetData(match = match7_2_0, user = qix, bet = Bet(0, 1))
+                BetData(match = match1_1_0, user = qix, bet = Bet(homeGoals = 0, awayGoals = 1)),
+                BetData(match = match2_0_1, user = qix, bet = Bet(homeGoals = 1, awayGoals = 0)),
+                BetData(match = match3_1_1, user = qix, bet = Bet(homeGoals = 1, awayGoals = 0)),
+                BetData(match = match4_2_4, user = qix, bet = Bet(homeGoals = 1, awayGoals = 0)),
+                BetData(match = match5_2_2, user = qix, bet = Bet(homeGoals = 1, awayGoals = 0)),
+                BetData(match = match6_1_0, user = qix, bet = Bet(homeGoals = 0, awayGoals = 1)),
+                BetData(match = match7_2_0, user = qix, bet = Bet(homeGoals = 0, awayGoals = 1))
         )
 
 

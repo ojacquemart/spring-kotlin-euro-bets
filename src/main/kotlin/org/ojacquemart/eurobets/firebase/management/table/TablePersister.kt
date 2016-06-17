@@ -3,6 +3,7 @@ package org.ojacquemart.eurobets.firebase.management.table
 import org.ojacquemart.eurobets.firebase.Collections
 import org.ojacquemart.eurobets.firebase.config.FirebaseRef
 import org.ojacquemart.eurobets.firebase.management.league.League
+import org.ojacquemart.eurobets.firebase.management.match.stat.StatPersister
 import org.ojacquemart.eurobets.firebase.rx.RxFirebase
 import org.ojacquemart.eurobets.lang.loggerFor
 import org.springframework.stereotype.Component
@@ -10,7 +11,7 @@ import org.springframework.util.StopWatch
 import rx.lang.kotlin.onError
 
 @Component
-class TablePersister(val betsFetcher: BetsFetcher, val ref: FirebaseRef) {
+class TablePersister(val betsFetcher: BetsFetcher, val statPersister: StatPersister, val ref: FirebaseRef) {
 
     private val log = loggerFor<TablePersister>()
 
@@ -49,6 +50,7 @@ class TablePersister(val betsFetcher: BetsFetcher, val ref: FirebaseRef) {
 
             persistGlobalTable(bets)
             persistLeaguesTables(bets)
+            persistStat(bets)
             persistRunning = false
 
             log.info("Finish to persist bets...")
@@ -77,6 +79,10 @@ class TablePersister(val betsFetcher: BetsFetcher, val ref: FirebaseRef) {
 
                     usersTableRef.child(it.uid).setValue(userPositionPoints)
                 }
+    }
+
+    private fun persistStat(bets: List<BetData>) {
+        statPersister.persist(bets)
     }
 
     private fun persistLeaguesTables(bets: List<BetData>) {
