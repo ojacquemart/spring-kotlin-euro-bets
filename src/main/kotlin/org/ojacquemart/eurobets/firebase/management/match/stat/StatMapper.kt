@@ -4,6 +4,8 @@ import org.ojacquemart.eurobets.firebase.management.table.Bet
 import org.ojacquemart.eurobets.firebase.management.table.BetData
 import org.ojacquemart.eurobets.firebase.management.table.Result
 import org.ojacquemart.eurobets.firebase.support.ScoreType
+import kotlin.comparisons.compareBy
+import kotlin.comparisons.thenBy
 
 class StatMapper {
 
@@ -22,7 +24,7 @@ class StatMapper {
         val scores = scores(bets, nbBets)
 
         return Stat(
-                match = match,
+                matchNumber = match.number,
                 nbBets = nbBets,
                 goodFeelingLuckyPercentage = goodFeelingLuckyPercentage,
                 lastBetTimestamp = lastBetTimestamp,
@@ -36,11 +38,13 @@ class StatMapper {
         val scoresByHomeAndAWay = bets.map { it -> Stat.Score(homeGoals = it.homeGoals, awayGoals = it.awayGoals, percentage = 0F) }
                 .groupBy { it }
 
+        val comparator = compareBy<Stat.Score> { -it.percentage }.thenBy { it.homeGoals + it.awayGoals }
+
         return scoresByHomeAndAWay.map { score ->
             val scorePercentage = percentage(score.value.size, nbBets)
 
             score.key.copy(percentage = scorePercentage)
-        }.sortedBy { -it.percentage }
+        }.sortedWith(comparator)
     }
 
     fun goodFeelingLuckyPercentage(nonNullBets: List<BetData>, nbBets: Int): Float {
@@ -80,9 +84,7 @@ class StatMapper {
     }
 
     companion object {
-        fun percentage(value: Int, divider: Int): Float = formatPercentage(value.toFloat().div(divider).times(100))
-
-        fun formatPercentage(value: Float): Float = "%.1f".format(value).toFloat()
+        fun percentage(value: Int, divider: Int): Float = value.toFloat().div(divider)
     }
 
 }

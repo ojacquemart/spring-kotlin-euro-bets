@@ -42,26 +42,26 @@ class StatMapperTest {
         val mapper = StatMapper()
         val stat = mapper.map(bets)
 
-        assertThat(stat.match).isEqualTo(match1)
+        assertThat(stat.matchNumber).isEqualTo(match1.number)
 
         assertThat(stat.nbBets).isEqualTo(10)
         assertThat(stat.lastBetTimestamp).isEqualTo(123456789)
-        assertThat(stat.goodFeelingLuckyPercentage).isEqualTo(20.0F)
+        assertThat(stat.goodFeelingLuckyPercentage).isEqualTo(0.2F)
         assertThat(stat.scores.size).isEqualTo(5)
 
-        assertThat(stat.scores[0]).isEqualTo(Stat.Score(homeGoals = 1, awayGoals = 0, percentage = 40.0F))
-        assertThat(stat.scores[1]).isEqualTo(Stat.Score(homeGoals = 1, awayGoals = 1, percentage = 20.0F))
-        assertThat(stat.scores[2]).isEqualTo(Stat.Score(homeGoals = 1, awayGoals = 2, percentage = 20.0F))
-        assertThat(stat.scores[3]).isEqualTo(Stat.Score(homeGoals = 2, awayGoals = 0, percentage = 10.0F))
-        assertThat(stat.scores[4]).isEqualTo(Stat.Score(homeGoals = 0, awayGoals = 0, percentage = 10.0F))
+        assertThat(stat.scores[0]).isEqualTo(Stat.Score(homeGoals = 1, awayGoals = 0, percentage = 0.4F))
+        assertThat(stat.scores[1]).isEqualTo(Stat.Score(homeGoals = 1, awayGoals = 1, percentage = 0.2F))
+        assertThat(stat.scores[2]).isEqualTo(Stat.Score(homeGoals = 1, awayGoals = 2, percentage = 0.2F))
+        assertThat(stat.scores[3]).isEqualTo(Stat.Score(homeGoals = 0, awayGoals = 0, percentage = 0.1F))
+        assertThat(stat.scores[4]).isEqualTo(Stat.Score(homeGoals = 2, awayGoals = 0, percentage = 0.1F))
 
-        assertThat(stat.betsResult.perfect).isEqualTo(40.0F)
-        assertThat(stat.betsResult.good).isEqualTo(10.0F)
-        assertThat(stat.betsResult.bad).isEqualTo(50.0F)
+        assertThat(stat.betsResult.perfect).isEqualTo(0.4F)
+        assertThat(stat.betsResult.good).isEqualTo(0.1F)
+        assertThat(stat.betsResult.bad).isEqualTo(0.5F)
 
-        assertThat(stat.winner.home).isEqualTo(50.0F)
-        assertThat(stat.winner.draw).isEqualTo(30.0F)
-        assertThat(stat.winner.away).isEqualTo(20.0F)
+        assertThat(stat.winner.home).isEqualTo(0.5F)
+        assertThat(stat.winner.draw).isEqualTo(0.3F)
+        assertThat(stat.winner.away).isEqualTo(0.2F)
     }
 
 }
