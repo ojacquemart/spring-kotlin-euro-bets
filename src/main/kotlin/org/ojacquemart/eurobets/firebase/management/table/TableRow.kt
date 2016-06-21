@@ -23,6 +23,7 @@ data class TableRow(val position: Int = 0,
     }
 
     companion object {
+
         fun percentage(tableRow1: TableRow, tableRow2: TableRow): Int {
             val nbBets = tableRow1.bets + tableRow2.bets
             val sumOfPerfectOrGoodsBets = tableRow1.goods + tableRow1.perfects + tableRow2.goods + tableRow2.perfects

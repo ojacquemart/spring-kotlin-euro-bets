@@ -2,16 +2,15 @@ package org.ojacquemart.eurobets.firebase.management.table
 
 import org.ojacquemart.eurobets.firebase.Collections
 import org.ojacquemart.eurobets.firebase.config.FirebaseRef
-import org.ojacquemart.eurobets.firebase.management.league.League
 import org.ojacquemart.eurobets.firebase.management.match.stat.StatPersister
-import org.ojacquemart.eurobets.firebase.rx.RxFirebase
 import org.ojacquemart.eurobets.lang.loggerFor
 import org.springframework.stereotype.Component
 import org.springframework.util.StopWatch
 import rx.lang.kotlin.onError
 
 @Component
-class TablePersister(val betsFetcher: BetsFetcher, val statPersister: StatPersister, val ref: FirebaseRef) {
+class TablePersister(val betsFetcher: BetsFetcher, val leagueTableMapper: LeagueTableMapper,
+                     val statPersister: StatPersister, val ref: FirebaseRef) {
 
     private val log = loggerFor<TablePersister>()
 
@@ -82,24 +81,39 @@ class TablePersister(val betsFetcher: BetsFetcher, val statPersister: StatPersis
     }
 
     private fun persistStat(bets: List<BetData>) {
+        log.debug("Persist bets stats data")
+
         statPersister.persist(bets)
     }
 
     private fun persistLeaguesTables(bets: List<BetData>) {
-        RxFirebase.observeList(this.ref.firebase.child(Collections.leagues), League::class.java)
-                .subscribe { leagues ->
-                    leagues.forEach { league -> persistLeagueTable(bets, league) }
+        log.debug("Persist leagues tables")
+
+        val nbMatches = bets.map { it.match!! }.map { it.number }.max()!!
+
+        leagueTableMapper.map(bets)
+                .subscribe { leaguesTables ->
+                    persistGlobalLeaguesTable(nbMatches, leaguesTables)
+                    persistLeaguesTable(leaguesTables)
                 }
     }
 
-    private fun persistLeagueTable(bets: List<BetData>, league: League) {
-        log.trace("Compute league ${league.slug} table")
+    private fun persistGlobalLeaguesTable(currentMatchNumber: Int, leagueTables: List<LeagueTable>) {
+        log.debug("Compute & persist global leagues table")
+        val rows = GlobalLeaguesTableCalculator().getRows(currentMatchNumber, leagueTables)
 
-        val leagueMemberUids = league.members.map { it.key }
-        val leagueBets = bets.filter { leagueMemberUids.contains(it.user!!.uid) }
-        val leagueTable = TableAssembler(leagueBets).getTable()
+        ref.firebase.child(Collections.tablesGlobalLeagues).setValue(rows)
+    }
 
-        ref.firebase.child(Collections.tablesLeagues).child(league.slug).setValue(leagueTable)
+    private fun persistLeaguesTable(leaguesTable: List<LeagueTable>) {
+        log.debug("Compute & persist single leagues table")
+
+        leaguesTable.forEach { leagueTable ->
+            val league = leagueTable.league
+            val table = leagueTable.table
+
+            ref.firebase.child(Collections.tablesLeagues).child(league.slug).setValue(table)
+        }
     }
 
     data class UserIndexed(val index: Int = -1, val position: Int = -1, val points: Int = -1)

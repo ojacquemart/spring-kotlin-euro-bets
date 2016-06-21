@@ -14,5 +14,6 @@ object Collections {
 
     val bets = "/bets"
     val tables = "/tables"
+    val tablesGlobalLeagues = "/tables_global_leagues"
     val tablesLeagues = "/tables_leagues"
 }
