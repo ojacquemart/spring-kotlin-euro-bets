@@ -38,8 +38,8 @@ class GlobalLeaguesTableCalculator {
                 .sortedDescending()
 
         val comparator = compareBy<LeagueStatRow> { it.position }
-                .thenBy { it.perfects }.thenBy { it.goods }
-                .thenBy { it.assiduity }
+                .thenBy { -it.perfects }.thenBy { -it.goods }
+                .thenBy { -it.assiduity }
 
         return leaguesStatRows
                 .map { leagueStatRow ->
