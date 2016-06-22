@@ -46,7 +46,6 @@ class TablePersister(val betsFetcher: BetsFetcher, val leagueTableMapper: League
             persistRunning = false
         }.subscribe { bets ->
             log.debug("Bets fetched... compute tables")
-
             persistGlobalTable(bets)
             persistLeaguesTables(bets)
             persistStat(bets)

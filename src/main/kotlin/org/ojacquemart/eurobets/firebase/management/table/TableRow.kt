@@ -1,7 +1,5 @@
 package org.ojacquemart.eurobets.firebase.management.table
 
-import com.fasterxml.jackson.annotation.JsonIgnore
-
 data class TableRow(val position: Int = 0,
                     val uid: String = "",
                     val displayName: String = "",
@@ -15,13 +13,6 @@ data class TableRow(val position: Int = 0,
                     val percentage: Int = 0,
                     val recents: Array<Int> = arrayOf()) {
 
-    @JsonIgnore
-    fun getPositionCoefficient(): Double {
-        val coefficient = if (bets > 0) + ((perfects * 0.5 / bets) + (goods * 0.25 / bets)) else 0.0
-
-        return points + coefficient
-    }
-
     companion object {
 
         fun percentage(tableRow1: TableRow, tableRow2: TableRow): Int {
@@ -31,8 +22,8 @@ data class TableRow(val position: Int = 0,
             return (sumOfPerfectOrGoodsBets.toFloat().div(nbBets) * 100).toInt();
         }
 
-        fun getPositions(tableRows: List<TableRow>): List<Double> {
-            return tableRows.groupBy { tableRow -> tableRow.getPositionCoefficient() }
+        fun getPositions(tableRows: List<TableRow>): List<Int> {
+            return tableRows.groupBy { it.points }
                     .toList()
                     .map { pair -> pair.first }
                     .sortedDescending()

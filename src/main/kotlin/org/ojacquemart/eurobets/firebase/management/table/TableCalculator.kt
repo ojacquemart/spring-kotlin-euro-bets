@@ -1,6 +1,7 @@
 package org.ojacquemart.eurobets.firebase.management.table
 
 import kotlin.comparisons.compareBy
+import kotlin.comparisons.thenBy
 
 class TableCalculator(val bets: List<BetData>) {
 
@@ -9,14 +10,17 @@ class TableCalculator(val bets: List<BetData>) {
         val positions = TableRow.getPositions(tableRows)
 
         val rowsWithPosition = tableRows.map {
-            val positionCoefficient = it.getPositionCoefficient()
-            val position = positions.indexOf(positionCoefficient) + 1
-            val last10Recent = it.recents.takeLast(10).toTypedArray()
+            val position = positions.indexOf(it.points) + 1
+            val last10Recents = it.recents.takeLast(10).toTypedArray()
 
-            it.copy(position = position, recents = last10Recent)
+            it.copy(position = position, recents = last10Recents)
         }
 
-        return rowsWithPosition.sortedWith(compareBy({ it.position }, { it.displayName }))
+        val comparator = compareBy<TableRow> { it.position }
+            .thenBy { -it.bets }.thenBy { -it.perfects }.thenBy { -it.goods }
+            .thenBy { it.displayName }
+
+        return rowsWithPosition.sortedWith(comparator)
     }
 
     private fun getTableRows(): List<TableRow> {

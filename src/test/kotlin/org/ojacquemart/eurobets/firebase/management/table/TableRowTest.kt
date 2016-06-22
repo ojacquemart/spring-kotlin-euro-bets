@@ -21,11 +21,12 @@ class TableRowTest {
     @Test
     fun testGetPositionCoefficient() {
         val rowsPositions = TableRow.getPositions(rows)
-        assertThat(rowsPositions[0]).isEqualTo(30.5)
-        assertThat(rowsPositions[1]).isEqualTo(30.25)
-        assertThat(rowsPositions[2]).isEqualTo(10.166666666666666)
-        assertThat(rowsPositions[3]).isEqualTo(10.125)
-        assertThat(rowsPositions[4]).isEqualTo(9.1875)
-        assertThat(rowsPositions[5]).isEqualTo(0.0)
+
+        assertThat(rowsPositions).hasSize(4)
+        assertThat(rowsPositions[0]).isEqualTo(30)
+        assertThat(rowsPositions[1]).isEqualTo(10)
+        assertThat(rowsPositions[2]).isEqualTo(9)
+        assertThat(rowsPositions[3]).isEqualTo(0)
     }
+
 }
