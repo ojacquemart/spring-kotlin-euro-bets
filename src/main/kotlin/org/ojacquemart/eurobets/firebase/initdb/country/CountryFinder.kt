@@ -8,7 +8,7 @@ class CountryFinder {
     private val countriesByEnglishCountryName = countries.countries.associateBy({ it.i18n.en }, { it })
 
     fun find(countryName: String): Country {
-        return countriesByEnglishCountryName.getOrElse(countryName, { Country(I18n(countryName, countryName), "???") })
+        return countriesByEnglishCountryName.getOrElse(countryName.trim(), { Country(I18n(countryName, countryName), "???") })
     }
 
 }

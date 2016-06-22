@@ -14,6 +14,7 @@ class CountryFinderTest {
         assertThat(finder.find("England")).isEqualTo(Country(I18n("Angleterre", "England"), "gb-eng"))
         assertThat(finder.find("Scotland")).isEqualTo(Country(I18n("Ecosse", "Scotland"), "gb-sct"))
         assertThat(finder.find("France")).isEqualTo(Country(I18n("France", "France"), "fr"))
+        assertThat(finder.find("France ")).isEqualTo(Country(I18n("France", "France"), "fr"))
         assertThat(finder.find("???")).isEqualTo(Country(I18n("???", "???"), "???"))
     }
 
