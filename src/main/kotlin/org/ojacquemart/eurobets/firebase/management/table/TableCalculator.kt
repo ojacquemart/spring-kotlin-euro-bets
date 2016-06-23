@@ -16,10 +16,6 @@ class TableCalculator(val bets: List<BetData>) {
             it.copy(position = position, recents = last10Recents)
         }
 
-        val comparator = compareBy<TableRow> { it.position }
-            .thenBy { -it.bets }.thenBy { -it.perfects }.thenBy { -it.goods }
-            .thenBy { it.displayName }
-
         return rowsWithPosition.sortedWith(comparator)
     }
 
@@ -61,6 +57,13 @@ class TableCalculator(val bets: List<BetData>) {
                     bads = current.bads + next.bads,
                     recents = current.recents.plus(next.recents[0]))
         }
+    }
+
+    companion object {
+
+        val comparator = compareBy<TableRow> { it.position }
+                .thenBy { -it.bets }.thenBy { -it.perfects }.thenBy { -it.goods }
+                .thenBy { it.displayName }
     }
 
 }

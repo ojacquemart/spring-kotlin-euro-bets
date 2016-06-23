@@ -99,7 +99,7 @@ class TablePersister(val betsFetcher: BetsFetcher, val leagueTableMapper: League
 
     private fun persistGlobalLeaguesTable(currentMatchNumber: Int, leagueTables: List<LeagueTable>) {
         log.debug("Compute & persist global leagues table")
-        val rows = GlobalLeaguesTableCalculator().getRows(currentMatchNumber, leagueTables)
+        val rows = LeaguesTableCalculator().getRows(currentMatchNumber, leagueTables)
 
         ref.firebase.child(Collections.tablesGlobalLeagues).setValue(rows)
     }
