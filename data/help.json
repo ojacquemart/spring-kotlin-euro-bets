@@ -15,6 +15,7 @@
         <th class='md-text-cell'></th>
         <th >Bad prevision</th>
         <th>Good prevision</th>
+        <th>Good goals gap</th>
         <th>Score perfect</th>
         </tr>
         </thead>
@@ -23,30 +24,35 @@
         <td class='md-text-cell'>Group phase</td>
         <td>0 pts</td>
         <td>3 pts</td>
+        <td>-</td>
         <td>10 pts</td>
         </tr>
         <tr>
         <td class='md-text-cell'>Round 16</td>
         <td>0 pts</td>
         <td>10 pts</td>
+        <td>18 pts</td>
         <td>25 pts</td>
         </tr>
         <tr>
         <td class='md-text-cell'>Quarter final</td>
         <td>0 pts</td>
         <td>25 pts</td>
+        <td>35 pts</td>
         <td>50 pts</td>
         </tr>
         <tr>
         <td class='md-text-cell'>Semi final</td>
         <td>0 pts</td>
         <td>50 pts</td>
+        <td>80 pts</td>
         <td>100 pts</td>
         </tr>
         <tr>
         <td class='md-text-cell'>Final</td>
         <td>1 pt</td>
         <td>100 pts</td>
+        <td>160 pts</td>
         <td>200 pts</td>
         </tr>
         </tbody>
@@ -107,6 +113,7 @@
         </div>
 
         <p>It should help to win even by joining the game late</p>
+        <p><b>During the final phase, the winner and score will be taken at the end of the extra time.</b></p>
         <p>It could evolve during the game...</p>
         ",
         "fr": "Voici le tableau qui déterminera la répartition des points:<br />
@@ -118,6 +125,7 @@
         <th class='md-text-cell'></th>
         <th>Mauvais prono</th>
         <th>Bon prono</th>
+        <th>Bon écart de buts</th>
         <th>Score parfait</th>
         </tr>
         </thead>
@@ -126,30 +134,35 @@
         <td class='md-text-cell'>Phase de groupes</td>
         <td>0 pts</td>
         <td>3 pts</td>
+        <td>-</td>
         <td>10 pts</td>
         </tr>
         <tr>
         <td class='md-text-cell'>Huitième de finale</td>
         <td>0 pts</td>
         <td>10 pts</td>
+        <td>18 pts</td>
         <td>25 pts</td>
         </tr>
         <tr>
         <td class='md-text-cell'>Quart de finale</td>
         <td>0 pts</td>
         <td>25 pts</td>
+        <td>35 pts</td>
         <td>50 pts</td>
         </tr>
         <tr>
         <td class='md-text-cell'>Demi finale</td>
         <td>0 pts</td>
         <td>50 pts</td>
+        <td>80 pts</td>
         <td>100 pts</td>
         </tr>
         <tr>
         <td class='md-text-cell'>Finale</td>
         <td>1 pt</td>
         <td>100 pts</td>
+        <td>160 pts</td>
         <td>200 pts</td>
         </tr>
         </tbody>
@@ -209,6 +222,7 @@
         </table>
 
         <p>Même un participant ayant rejoint le jeu tardivement pourrait gagner.</p>
+        <p><b>Durant la phase finale, en cas de prolongation, les vainqueur et score seront arrêtés à la fin des prolongations. L'issue des tirs aux buts n'est pas considérée.</b></p>
         <p>Ce système de points est soumis à évolution. Notamment, pour récompenser les nombreux scores parfaits consécutifs.</p>
         </div>
         "
