@@ -9,6 +9,7 @@ data class TableRow(val position: Int = 0,
                     val bets: Int = 0,
                     val perfects: Int = 0,
                     val goods: Int = 0,
+                    val goodGaps: Int = 0,
                     val bads: Int = 0,
                     val percentage: Int = 0,
                     val recents: Array<Int> = arrayOf()) {

@@ -41,8 +41,9 @@ class TableCalculator(val bets: List<BetData>) {
                     uid = user.uid, displayName = user.displayName, profileImageURL = user.profileImageURL,
                     points = resultPoints?.points ?: 0,
                     bets = if (result != null) 1 else 0,
-                    perfects = if (result == Result.PERFECT) 1 else 0,
                     percentage = 0,
+                    perfects = if (result == Result.PERFECT) 1 else 0,
+                    goodGaps = if (result == Result.GOOD_GAP) 1 else 0,
                     goods = if (result == Result.GOOD) 1 else 0,
                     bads = if (result == Result.BAD) 1 else 0,
                     recents = arrayOf(if (result != null) result.id else Result.UNDEFINED.id)
@@ -51,8 +52,9 @@ class TableCalculator(val bets: List<BetData>) {
             current.copy(
                     points = current.points + next.points,
                     bets = current.bets + next.bets,
-                    perfects = current.perfects + next.perfects,
                     percentage = TableRow.percentage(next, current),
+                    perfects = current.perfects + next.perfects,
+                    goodGaps = current.goodGaps + next.goodGaps,
                     goods = current.goods + next.goods,
                     bads = current.bads + next.bads,
                     recents = current.recents.plus(next.recents[0]))
@@ -62,7 +64,7 @@ class TableCalculator(val bets: List<BetData>) {
     companion object {
 
         val comparator = compareBy<TableRow> { it.position }
-                .thenBy { -it.bets }.thenBy { -it.perfects }.thenBy { -it.goods }
+                .thenBy { -it.bets }.thenBy { -it.perfects }.thenBy { -it.goodGaps }.thenBy { -it.goods }
                 .thenBy { it.displayName }
     }
 

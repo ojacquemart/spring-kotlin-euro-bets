@@ -30,6 +30,11 @@ data class Match(val number: Int = -1,
         isStarted && remainingTime > 0L
     }
 
+    fun getScoreGap(): Int {
+        if (home == null || away == null) return 0
+        return ScoreGap.toScoreGap(home.goals!!, away.goals!!)
+    }
+
     fun getScoreType(): ScoreType {
         if (home == null || away == null) return ScoreType.UNDEFINED
         else return ScoreType.toScoreType(home.goals!!, away.goals!!)

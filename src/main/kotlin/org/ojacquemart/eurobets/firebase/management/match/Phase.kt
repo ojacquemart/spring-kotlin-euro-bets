@@ -5,4 +5,10 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class Phase(
         val state: String = "",
-        val code: String = "")
+        val code: String = "") {
+
+    companion object {
+        val groupState = "group"
+    }
+
+}

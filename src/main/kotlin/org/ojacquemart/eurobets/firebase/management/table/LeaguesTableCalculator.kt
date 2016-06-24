@@ -25,6 +25,7 @@ class LeaguesTableCalculator {
                     points = pointsAvg,
                     assiduity = leagueBets.toFloat().div(nbMatches * players),
                     perfects = tableReduced.perfects.toFloat().div(leagueBets),
+                    goodGaps = tableReduced.goodGaps.toFloat().div(leagueBets),
                     goods = tableReduced.goods.toFloat().div(leagueBets),
                     bads = tableReduced.bads.toFloat().div(leagueBets))
         }
@@ -48,6 +49,7 @@ class LeaguesTableCalculator {
             current.copy(bets = current.bets + next.bets,
                     points = current.points + next.points,
                     perfects = current.perfects + next.perfects,
+                    goodGaps = current.goodGaps + next.goodGaps,
                     goods = current.goods + next.goods,
                     bads = current.bads + next.bads)
         }
@@ -67,7 +69,7 @@ class LeaguesTableCalculator {
         val atLeastOneMember: (LeagueTable) -> Boolean = { it.table.nbRows > 1 }
 
         val comparator = compareBy<LeagueStatRow> { it.position }
-                .thenBy { -it.perfects }.thenBy { -it.goods }
+                .thenBy { -it.perfects }.thenBy { -it.goodGaps }.thenBy { -it.goods }
                 .thenBy { -it.assiduity }
     }
 

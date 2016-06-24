@@ -7,5 +7,6 @@ data class LeagueStatRow(val slug: String,
                          val points: Float,
                          val assiduity: Float,
                          val perfects: Float,
+                         val goodGaps: Float,
                          val goods: Float,
                          val bads: Float)

@@ -30,7 +30,8 @@ class StatMapper {
                 lastBetTimestamp = lastBetTimestamp,
                 betsResult = betResult,
                 winner = winnerRepartition,
-                scores = scores
+                scores = scores,
+                timestamp = match.timestamp
         )
     }
 
@@ -52,7 +53,7 @@ class StatMapper {
                 .map {
                     val result = it.getResult()
 
-                    (result == Result.PERFECT || result == Result.GOOD) && it.bet!!.feelingLucky
+                    result!!.hasReportedPoints() && it.bet!!.feelingLucky
                 }
                 .filter { it }
                 .size
@@ -68,6 +69,7 @@ class StatMapper {
 
         return Stat.BetResultRepartition(
                 perfect = betsByResult[Result.PERFECT] ?: 0F,
+                goodGap = betsByResult[Result.GOOD_GAP] ?: 0F,
                 good = betsByResult[Result.GOOD] ?: 0F,
                 bad = betsByResult[Result.BAD] ?: 0F)
     }
