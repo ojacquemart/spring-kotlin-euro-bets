@@ -27,7 +27,6 @@
         <rxjava.version>1.1.5</rxjava.version>
         <rxkotlin.version>0.55.0</rxkotlin.version>
 
-        <guava.version>19.0</guava.version>
         <lombok.version>1.16.8</lombok.version>
         <assertj-core.version>3.4.1</assertj-core.version>
     </properties>
@@ -72,12 +71,6 @@
             <groupId>io.reactivex</groupId>
             <artifactId>rxkotlin</artifactId>
             <version>${rxkotlin.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>${guava.version}</version>
         </dependency>
 
         <dependency>

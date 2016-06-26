@@ -1,6 +1,6 @@
 package org.ojacquemart.eurobets.firebase.management.match
 
-import org.ojacquemart.eurobets.firebase.management.match.crawler.Crawler
+import org.ojacquemart.eurobets.firebase.management.match.crawler.ApiDataFootballClient
 import org.ojacquemart.eurobets.lang.loggerFor
 
 class MatchResultFinder {
@@ -10,7 +10,7 @@ class MatchResultFinder {
     fun find(match: Match): MatchWithFixture? {
         log.info("Crawl for playing matches")
 
-        val fixtures = CRAWLER.crawl()
+        val fixtures = API_DATAFOOTBALL_CLIENT.getFixtures()
         val playingOrFinishedFixtures = fixtures.filter { it.isFinished() }
 
         val maybeFixture = playingOrFinishedFixtures.find { it.matches(match) }
@@ -22,6 +22,6 @@ class MatchResultFinder {
     }
 
     companion object {
-        val CRAWLER = Crawler()
+        val API_DATAFOOTBALL_CLIENT = ApiDataFootballClient()
     }
 }
