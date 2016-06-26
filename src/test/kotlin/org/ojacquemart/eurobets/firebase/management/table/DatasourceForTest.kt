@@ -26,6 +26,8 @@ class DatasourceForTest {
         val match6_1_0 = homeWinner_1_0.copy(number = 6, phase = phaseRound16, home = Team(goals = 1), away = Team(goals = 0))
         val match7_2_0 = homeWinner_1_0.copy(number = 7, phase = phaseRound16, home = Team(goals = 2), away = Team(goals = 0))
 
+        val matches = listOf(match1_1_0, match2_0_1, match3_1_1, match4_2_4, match5_2_2, match6_1_0, match7_2_0)
+
         // baz: start game on round16, 2 round16 perfect matches = 50 pts
         val baz = User(uid = "baz", displayName = "Baz", profileImageURL = "baz.png")
         // foo: perfect bets on 5 first matches = 50pts
@@ -34,6 +36,8 @@ class DatasourceForTest {
         val bar = User(uid = "bar", displayName = "Bar", profileImageURL = "bar.png")
         // qix: always losing... = 0pt
         val qix = User(uid = "qix", displayName = "Qix", profileImageURL = "qix.png")
+        // bee: never betting = not in the table
+        val bee = User(uid = "bee", displayName = "Bee", profileImageURL = "bee.png")
 
         // foo should be first because of its number of perfect bets
 
@@ -72,7 +76,16 @@ class DatasourceForTest {
                 BetData(match = match4_2_4, user = qix, bet = Bet(homeGoals = 1, awayGoals = 0)),
                 BetData(match = match5_2_2, user = qix, bet = Bet(homeGoals = 1, awayGoals = 0)),
                 BetData(match = match6_1_0, user = qix, bet = Bet(homeGoals = 0, awayGoals = 1)),
-                BetData(match = match7_2_0, user = qix, bet = Bet(homeGoals = 0, awayGoals = 1))
+                BetData(match = match7_2_0, user = qix, bet = Bet(homeGoals = 0, awayGoals = 1)),
+
+                // bee
+                BetData(match = match1_1_0, user = bee, bet = null),
+                BetData(match = match2_0_1, user = bee, bet = null),
+                BetData(match = match3_1_1, user = bee, bet = null),
+                BetData(match = match4_2_4, user = bee, bet = null),
+                BetData(match = match5_2_2, user = bee, bet = null),
+                BetData(match = match6_1_0, user = bee, bet = null),
+                BetData(match = match7_2_0, user = bee, bet = null)
         )
 
 

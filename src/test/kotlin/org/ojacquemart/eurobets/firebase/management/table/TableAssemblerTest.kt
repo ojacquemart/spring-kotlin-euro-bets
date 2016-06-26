@@ -18,15 +18,15 @@ class TableAssemblerTest {
         val table = assembler.getTable()
 
         val rows = table.table
-        assertThat(rows.size).isEqualTo(5)
-        assertThat(rows).extracting("uid").contains("foo", "foo-clone", "baz", "bar", "qix")
+        assertThat(rows.size).isEqualTo(6)
+        assertThat(rows).extracting("uid").contains("foo", "foo-clone", "baz", "bar", "qix", "bee")
 
         val podium = table.podium
         assertThat(podium.steps.size).isEqualTo(3)
         assertThat(podium.steps[1]!!.size).isEqualTo(3)
         assertThat(podium.steps[1]!!).extracting("uid").contains("foo", "foo-clone")
         assertThat(podium.steps[2]!!.size).isEqualTo(1)
-        assertThat(podium.steps[3]!!.size).isEqualTo(1)
+        assertThat(podium.steps[3]!!.size).isEqualTo(2)
     }
 
 }

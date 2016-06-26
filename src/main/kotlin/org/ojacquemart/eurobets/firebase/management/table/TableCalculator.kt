@@ -3,20 +3,26 @@ package org.ojacquemart.eurobets.firebase.management.table
 import kotlin.comparisons.compareBy
 import kotlin.comparisons.thenBy
 
-class TableCalculator(val bets: List<BetData>) {
+class TableCalculator(val bets: List<BetData>, val recentsSize: Int = TableCalculator.RECENTS_SIZE) {
 
     fun getRows(): List<TableRow> {
         val tableRows = getTableRows()
         val positions = TableRow.getPositions(tableRows)
 
-        val rowsWithPosition = tableRows.map {
-            val position = positions.indexOf(it.points) + 1
-            val last10Recents = it.recents.takeLast(10).toTypedArray()
+        val rowsWithPosition = tableRows
+                .map {
+                    val position = positions.indexOf(it.points) + 1
+                    val last10Recents = it.recents.takeLast(recentsSize).toTypedArray()
 
-            it.copy(position = position, recents = last10Recents)
-        }
+                    it.copy(position = position, recents = last10Recents)
+                }
+                .filterNot {
+                    val undefinedRecents = it.recents.filter { it == Result.UNDEFINED.id }
 
-        return rowsWithPosition.sortedWith(comparator)
+                    undefinedRecents.size == recentsSize
+                }
+
+        return rowsWithPosition.sortedWith(COMPARATOR)
     }
 
     private fun getTableRows(): List<TableRow> {
@@ -63,7 +69,9 @@ class TableCalculator(val bets: List<BetData>) {
 
     companion object {
 
-        val comparator = compareBy<TableRow> { it.position }
+        val RECENTS_SIZE = 10
+
+        val COMPARATOR = compareBy<TableRow> { it.position }
                 .thenBy { -it.bets }.thenBy { -it.perfects }.thenBy { -it.goodGaps }.thenBy { -it.goods }
                 .thenBy { it.displayName }
     }

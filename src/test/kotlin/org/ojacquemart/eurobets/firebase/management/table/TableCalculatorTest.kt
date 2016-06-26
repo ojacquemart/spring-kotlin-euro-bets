@@ -7,12 +7,12 @@ class TableCalculatorTest {
 
     @Test
     fun testGetTable() {
-        val table = TableCalculator(DatasourceForTest.bets).getRows()
+        val table = TableCalculator(bets = DatasourceForTest.bets, recentsSize = DatasourceForTest.matches.size).getRows()
 
         assertThat(table).isNotEmpty()
 
         // foo #1
-        val foo = findUserInTableRows("foo", table)
+        val foo = findUserInTableRows("foo", table)!!
         assertThat(foo.position).isEqualTo(1)
         assertThat(foo.uid).isEqualTo("foo")
         assertThat(foo.displayName).isEqualTo("Foo")
@@ -26,7 +26,7 @@ class TableCalculatorTest {
         assertThat(foo.recents).isEqualTo(arrayOf(Result.PERFECT.id, Result.PERFECT.id, Result.PERFECT.id, Result.PERFECT.id, Result.PERFECT.id, Result.UNDEFINED.id, Result.UNDEFINED.id))
 
         // baz #2
-        val baz = findUserInTableRows("baz", table)
+        val baz = findUserInTableRows("baz", table)!!
         assertThat(baz.position).isEqualTo(1)
         assertThat(baz.uid).isEqualTo("baz")
         assertThat(baz.displayName).isEqualTo("Baz")
@@ -40,7 +40,7 @@ class TableCalculatorTest {
         assertThat(baz.recents).isEqualTo(arrayOf(Result.UNDEFINED.id, Result.UNDEFINED.id, Result.UNDEFINED.id, Result.UNDEFINED.id, Result.UNDEFINED.id, Result.PERFECT.id, Result.PERFECT.id))
 
         // bar #3
-        val bar = findUserInTableRows("bar", table)
+        val bar = findUserInTableRows("bar", table)!!
         assertThat(bar.position).isEqualTo(2)
         assertThat(bar.uid).isEqualTo("bar")
         assertThat(bar.displayName).isEqualTo("Bar")
@@ -52,7 +52,12 @@ class TableCalculatorTest {
         assertThat(bar.bets).isEqualTo(5)
         assertThat(bar.percentage).isEqualTo(100)
         assertThat(bar.recents).isEqualTo(arrayOf(Result.GOOD.id, Result.GOOD.id, Result.GOOD.id, Result.GOOD.id, Result.GOOD.id, Result.UNDEFINED.id, Result.UNDEFINED.id))
+
+        // bee #nofound
+        val bee = findUserInTableRows("bee", table)
+        assertThat(bee).isNull()
     }
 
-    fun findUserInTableRows(uid: String, tableRows: List<TableRow>): TableRow = tableRows.find { tableRow -> tableRow.uid.equals(uid) }!!
+    fun findUserInTableRows(uid: String, tableRows: List<TableRow>): TableRow? = tableRows.find { tableRow -> tableRow.uid.equals(uid) }
+
 }
