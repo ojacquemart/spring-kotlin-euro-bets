@@ -6,6 +6,7 @@ import com.firebase.client.FirebaseError
 import org.ojacquemart.eurobets.firebase.Collections
 import org.ojacquemart.eurobets.firebase.config.FirebaseRef
 import org.ojacquemart.eurobets.firebase.support.Status
+import org.ojacquemart.eurobets.firebase.support.TimeInterval
 import org.ojacquemart.eurobets.lang.loggerFor
 import org.springframework.scheduling.TaskScheduler
 import org.springframework.stereotype.Component
@@ -58,7 +59,7 @@ class OnPlayingMatchChangeListener(val ref: FirebaseRef, val scheduler: TaskSche
             if (remainingMinutes > 0) {
                 log.info("Schedule check task for #${match.number}")
                 log.debug("$remainingMinutes minutes remaining in match ${match.number}")
-                scheduleAtEndOfMatch(match, remainingMinutes)
+                scheduleAtEndOfMatch(match, TimeInterval.minutes(remainingMinutes))
             } else {
                 log.debug("Match ${match.number} is finished but status is still at playing... Will try to update it")
                 tryToUpdate(match)
@@ -66,8 +67,8 @@ class OnPlayingMatchChangeListener(val ref: FirebaseRef, val scheduler: TaskSche
         }
     }
 
-    fun scheduleAtEndOfMatch(match: Match, triggerTaskInMinutes: Long) {
-        val ldt = LocalDateTime.now().plusMinutes(triggerTaskInMinutes)
+    fun scheduleAtEndOfMatch(match: Match, timeInterval: TimeInterval) {
+        val ldt = LocalDateTime.now().plus(timeInterval.value, timeInterval.unit)
         val instant = ldt.atZone(ZoneId.systemDefault()).toInstant()
         val triggerDate = Date.from(instant)
         log.info("Schedule task at $ldt")
@@ -75,8 +76,9 @@ class OnPlayingMatchChangeListener(val ref: FirebaseRef, val scheduler: TaskSche
         scheduler.schedule({
             val maybeResult = tryToUpdate(match)
             if (maybeResult == null) {
-                log.info("No result found... reschedule task in 1 minute")
-                scheduleAtEndOfMatch(match, 1)
+                log.info("No result found... reschedule task in $RETRY_INTERVAL")
+
+                scheduleAtEndOfMatch(match, RETRY_INTERVAL)
             }
         }, triggerDate)
     }
@@ -91,6 +93,10 @@ class OnPlayingMatchChangeListener(val ref: FirebaseRef, val scheduler: TaskSche
 
             return maybeResult
         }
+    }
+
+    companion object {
+        val RETRY_INTERVAL = TimeInterval.seconds(15)
     }
 
 }
