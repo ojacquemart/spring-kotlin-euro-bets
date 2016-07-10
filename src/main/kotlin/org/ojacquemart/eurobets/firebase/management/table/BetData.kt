@@ -7,12 +7,22 @@ import org.ojacquemart.eurobets.firebase.support.ScoreType
 
 data class BetData(val match: Match? = null,
                    val user: User? = null,
-                   val bet: Bet? = null) {
+                   val bet: Bet? = null,
+                   val winner: Winner? = null) {
 
     fun getResultPoints(): ResultPoints? {
         val result = getResult()
         if (result == null) return null
         else return ResultPoints(result = result, points = getPoints(result))
+    }
+
+    fun getFinalePoints(): Int {
+        return winner?.good.let { goodFinale ->
+            when (goodFinale) {
+                true -> PhaseScale.finaleWinner
+                else -> 0
+            }
+        }
     }
 
     fun getResult(): Result? {

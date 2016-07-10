@@ -40,6 +40,7 @@ open class BetsFetcher(val ref: FirebaseRef) {
                 UserMapMatchBet(user, bets)
             }
         }
+        val obsWinnersByUid = getWinnersByUid()
 
         log.debug("Associate matches with users & bets")
 
@@ -47,10 +48,10 @@ open class BetsFetcher(val ref: FirebaseRef) {
                 .flatMapIterable { it -> it }
                 .filter { it.hasStarted() }
                 .flatMap { match ->
-                    obsUserWithBets.map { userBets ->
+                    Observable.zip(obsUserWithBets, obsWinnersByUid) { userBets, userWinners ->
                         log.debug("Computing matches: ${match.number}")
 
-                        combineMatchWithUser(match, userBets!!)
+                        combineMatchWithUser(match, userBets, userWinners)
                     }
                 }
                 .doOnTerminate { log.info("Finish to concat all the bets") }
@@ -63,13 +64,40 @@ open class BetsFetcher(val ref: FirebaseRef) {
         return ds.children.map { it -> MatchNumberBet(it.key.toInt(), it.getValue(Bet::class.java)) }
     }
 
-    private fun combineMatchWithUser(match: Match, userBets: List<UserMapMatchBet>): List<BetData> {
+    private fun combineMatchWithUser(match: Match, userBets: List<UserMapMatchBet>, userWinners: Map<String, String>): List<BetData> {
         return userBets.map { it ->
             val matchNumber = match.number
             val bet = it.bets?.get(matchNumber)
+            val maybeUserFinaleWinner = userWinners[it.user.uid]
+            val finaleWinner = resolveWinner(match, maybeUserFinaleWinner)
 
-            BetData(match = match, user = it.user, bet = bet)
+            BetData(match = match, user = it.user, bet = bet, winner = finaleWinner)
         }
+    }
+
+    private fun resolveWinner(match: Match, userIsoAlpha2odeWinner: String?): Winner? {
+        if (userIsoAlpha2odeWinner == null) return null
+        if (!match.isFinale()) return null
+
+        val finaleWinner = match.getWinner() ?: return null
+
+        return Winner(userIsoAlpha2odeWinner, userIsoAlpha2odeWinner.equals(finaleWinner))
+    }
+
+    private fun getWinnersByUid(): Observable<Map<String, String>>? {
+        log.debug("Fetch users winners")
+
+        return RxFirebase.observe(ref.firebase.child(Collections.betsWinners))
+                .map { ds ->
+                    ds.children!!.map { dsUser ->
+                        val uid = dsUser.key
+                        val country = dsUser.children.filter { it.key.equals("country") }
+                            .map { ds -> ds.getValue(String::class.java) }
+                            .first()
+
+                        Pair(uid, country)
+                    }.associateBy({ it.first }, { it.second })
+                }
     }
 
     data class UserMapMatchBet(val user: User, val bets: Map<Int, Bet>?)

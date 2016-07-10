@@ -14,6 +14,18 @@ data class Match(val number: Int = -1,
                  val home: Team? = null,
                  val away: Team? = null) {
 
+    fun isFinale() = number == 51
+
+    fun getWinner(): String? {
+        if (status != Status.PLAYED.id) return null
+
+        val home = home!!
+        val homeWinner = home.winner!!
+        if (homeWinner) return home.isoAlpha2Code
+
+        return away!!.isoAlpha2Code
+    }
+
     fun getRemainingTime(timestamp: Long): Long {
         return this.timestamp + TimeUnit.MINUTES.toMillis(MATCH_DURATION_IN_MINUTES) - timestamp
     }

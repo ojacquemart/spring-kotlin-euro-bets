@@ -12,6 +12,7 @@ data class TableRow(val position: Int = 0,
                     val goodGaps: Int = 0,
                     val bads: Int = 0,
                     val percentage: Int = 0,
+                    val winner: Winner? = null,
                     val recents: Array<Int> = arrayOf()) {
 
     companion object {

@@ -37,7 +37,7 @@ class TableCalculator(val bets: List<BetData>, val recentsSize: Int = TableCalcu
     }
 
     fun reduce(bets: List<BetData>): TableRow {
-        return bets.map { bet ->
+        val tableRow = bets.map { bet ->
             val user = bet.user!!
 
             val resultPoints = bet.getResultPoints()
@@ -65,6 +65,11 @@ class TableCalculator(val bets: List<BetData>, val recentsSize: Int = TableCalcu
                     bads = current.bads + next.bads,
                     recents = current.recents.plus(next.recents[0]))
         }
+
+        val winnerBet = bets.filter { it.winner != null }.getOrNull(0)
+        val winnerPoints = winnerBet?.getFinalePoints() ?: 0
+
+        return tableRow.copy(points = tableRow.points + winnerPoints, winner = winnerBet?.winner)
     }
 
     companion object {

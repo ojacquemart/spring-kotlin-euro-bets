@@ -20,5 +20,7 @@ data class PhaseScale(val pointsByResult: Map<Result, Int>) {
                 PhaseType.FINAL.state       to final
         )
 
+        val finaleWinner = 50
+
     }
 }
